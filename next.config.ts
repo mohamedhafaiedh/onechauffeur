@@ -1,7 +1,66 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  trailingSlash: true,
+  async redirects() {
+    return [
+      {
+        source: "/a-propos",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/author/oncmoudir",
+        destination: "/contact/",
+        permanent: true,
+      },
+      {
+        source: "/boutique",
+        destination: "/flotte/",
+        permanent: true,
+      },
+      {
+        source: "/category/uncategorized",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/commander",
+        destination: "/reservation/",
+        permanent: true,
+      },
+      {
+        source: "/devis",
+        destination: "/reservation/",
+        permanent: true,
+      },
+      {
+        source: "/hello-world",
+        destination: "/services/",
+        permanent: true,
+      },
+      {
+        source: "/mon-compte",
+        destination: "/reservation/",
+        permanent: true,
+      },
+      {
+        source: "/paiement-recu",
+        destination: "/merci/",
+        permanent: true,
+      },
+      {
+        source: "/panier",
+        destination: "/reservation/",
+        permanent: true,
+      },
+      {
+        source: "/reservation-recue",
+        destination: "/merci/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

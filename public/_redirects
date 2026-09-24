@@ -1,0 +1,23 @@
+# 301 Redirects for Legacy WordPress URLs
+/a-propos/                /services/                 301!
+/a-propos                 /services/                 301!
+/author/oncmoudir/        /contact/                  301!
+/author/oncmoudir         /contact/                  301!
+/boutique/                /flotte/                   301!
+/boutique                 /flotte/                   301!
+/category/uncategorized/  /services/                 301!
+/category/uncategorized   /services/                 301!
+/commander/               /reservation/              301!
+/commander                /reservation/              301!
+/devis/                   /reservation/              301!
+/devis                    /reservation/              301!
+/hello-world/             /services/                 301!
+/hello-world              /services/                 301!
+/mon-compte/              /reservation/              301!
+/mon-compte               /reservation/              301!
+/paiement-recu/           /merci/                    301!
+/paiement-recu            /merci/                    301!
+/panier/                  /reservation/              301!
+/panier                   /reservation/              301!
+/reservation-recue/       /merci/                    301!
+/reservation-recue        /merci/                    301!

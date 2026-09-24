@@ -1,4 +1,7 @@
-"use client";
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata("services", "en");
 
 import React from "react";
 import Header from "@/components/Header";

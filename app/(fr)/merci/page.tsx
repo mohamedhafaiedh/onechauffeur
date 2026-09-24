@@ -1,4 +1,7 @@
-"use client";
+import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createPageMetadata("merci", "fr", { noindex: true });
 
 import React from "react";
 import Link from "next/link";
