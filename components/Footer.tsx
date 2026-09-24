@@ -279,7 +279,7 @@ export default function Footer({ lang, currentPath }: FooterProps) {
                         data-widget_type="heading.default"
                       >
                         <div className="elementor-widget-container">
-                          <h3 className="elementor-heading-title elementor-size-default">E-mail</h3>
+                          <h3 className="elementor-heading-title elementor-size-default">WhatsApp</h3>
                         </div>
                       </div>
                       <div
@@ -292,8 +292,8 @@ export default function Footer({ lang, currentPath }: FooterProps) {
                         <div className="elementor-widget-container">
                           <ul className="elementor-icon-list-items">
                             <li className="elementor-icon-list-item">
-                              <a href="mailto:contact@onechauffeur.fr">
-                                <span className="elementor-icon-list-text">contact@onechauffeur.fr</span>
+                              <a href="https://wa.me/33667520677" target="_blank" rel="noopener noreferrer">
+                                <span className="elementor-icon-list-text">+33 (0)6 67 52 06 77</span>
                               </a>
                             </li>
                           </ul>
