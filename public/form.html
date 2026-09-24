@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Netlify Forms Skeleton - One Chauffeur</title>
+</head>
+<body>
+  <!-- Formulaire de réservation (FR) -->
+  <form name="reservation" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="reservation" />
+    <input type="hidden" name="subject" value="" />
+    <input type="text" name="adresse_depart" value="" />
+    <input type="text" name="adresse_arrivee" value="" />
+    <input type="date" name="date" value="" />
+    <input type="time" name="heure" value="" />
+    <select name="vehicule">
+      <option value="Berline (Tesla Model 3 ou similaire - 3 pax)">Berline (Tesla Model 3 ou similaire - 3 pax)</option>
+      <option value="Berline Business (Mercedes Classe E - 3 pax)">Berline Business (Mercedes Classe E - 3 pax)</option>
+      <option value="Berline de Luxe (Mercedes Classe S - 3 pax)">Berline de Luxe (Mercedes Classe S - 3 pax)</option>
+      <option value="Van (Mercedes Classe V - 7 pax)">Van (Mercedes Classe V - 7 pax)</option>
+    </select>
+    <input type="email" name="email" value="" />
+    <input type="tel" name="telephone" value="" />
+    <textarea name="message"></textarea>
+    <input type="hidden" name="pageUrl" value="" />
+    <input type="hidden" name="timestamp" value="" />
+    <input type="hidden" name="source" value="" />
+  </form>
+
+  <!-- Formulaire de réservation (EN) -->
+  <form name="reservation-en" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="reservation-en" />
+    <input type="hidden" name="subject" value="" />
+    <input type="text" name="pickup_address" value="" />
+    <input type="text" name="dropoff_address" value="" />
+    <input type="date" name="date" value="" />
+    <input type="time" name="time" value="" />
+    <select name="vehicle">
+      <option value="Sedan (Tesla Model 3 or similar - 3 pax)">Sedan (Tesla Model 3 or similar - 3 pax)</option>
+      <option value="Business Sedan (Mercedes E-Class - 3 pax)">Business Sedan (Mercedes E-Class - 3 pax)</option>
+      <option value="Luxury Sedan (Mercedes S-Class - 3 pax)">Luxury Sedan (Mercedes S-Class - 3 pax)</option>
+      <option value="Van (Mercedes V-Class - 7 pax)">Van (Mercedes V-Class - 7 pax)</option>
+    </select>
+    <input type="email" name="email" value="" />
+    <input type="tel" name="phone" value="" />
+    <textarea name="message"></textarea>
+    <input type="hidden" name="pageUrl" value="" />
+    <input type="hidden" name="timestamp" value="" />
+    <input type="hidden" name="source" value="" />
+  </form>
+
+  <!-- Formulaire de contact (FR) -->
+  <form name="contact" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="hidden" name="subject" value="" />
+    <input type="text" name="nom" value="" />
+    <input type="tel" name="telephone" value="" />
+    <input type="email" name="email" value="" />
+    <select name="objet">
+      <option value="Information">Information</option>
+      <option value="Devis">Devis</option>
+      <option value="Réservation">Réservation</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input type="hidden" name="pageUrl" value="" />
+    <input type="hidden" name="timestamp" value="" />
+    <input type="hidden" name="source" value="" />
+  </form>
+
+  <!-- Formulaire de contact (EN) -->
+  <form name="contact-en" method="POST" data-netlify="true" hidden>
+    <input type="hidden" name="form-name" value="contact-en" />
+    <input type="hidden" name="subject" value="" />
+    <input type="text" name="name" value="" />
+    <input type="tel" name="phone" value="" />
+    <input type="email" name="email" value="" />
+    <select name="topic">
+      <option value="Information">Information</option>
+      <option value="Quote">Quote</option>
+      <option value="Booking">Booking</option>
+    </select>
+    <textarea name="message"></textarea>
+    <input type="hidden" name="pageUrl" value="" />
+    <input type="hidden" name="timestamp" value="" />
+    <input type="hidden" name="source" value="" />
+  </form>
+</body>
+</html>
