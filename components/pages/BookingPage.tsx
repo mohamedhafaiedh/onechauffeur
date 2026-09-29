@@ -39,7 +39,7 @@ export default function BookingPage({ lang }: { lang: Lang }) {
             </section>
 
             {/* Formulaire de réservation */}
-            <section style={{ maxWidth: "860px", margin: "40px auto 80px", padding: "0 20px", width: "100%", boxSizing: "border-box" }}>
+            <section className="booking-form-section">
               <ReservationForm lang={lang} />
             </section>
           </div>

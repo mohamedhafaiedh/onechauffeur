@@ -1090,3 +1090,42 @@ button[type="submit"]:disabled,
 .site-main .page-content a {
   overflow-wrap: anywhere;
 }
+
+/* ==========================================================================
+   Largeur du site : tout le contenu s'aligne sur la largeur du header (1140 px).
+   Les fonds et photos restent pleine largeur ; en dessous de 1188 px, rien ne change.
+   ========================================================================== */
+:root {
+  --site-width: 1140px;
+}
+
+@media (min-width: 1188px) {
+  .elementor-section-boxed > .elementor-container,
+  .elementor-element-3b3f552,
+  .elementor-element-c76a6d4,
+  .elementor-element-7ab2e7c2 > .elementor-element-populated,
+  .elementor-element-5ca6b1c > .elementor-element-populated {
+    max-width: var(--site-width) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Titres des pages intérieures : largeur fixe au lieu de marges de 20 % (qui les rétrécissaient) */
+  .elementor-element-39b0b79 > .elementor-widget-container,
+  .elementor-element-9342668 > .elementor-widget-container,
+  .elementor-element-39676c81 > .elementor-widget-container,
+  .elementor-element-320d1d6 > .elementor-widget-container {
+    max-width: 860px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+/* Réservation : le formulaire garde une colonne étroite et centrée, lisible */
+.booking-form-section {
+  width: 100%;
+  max-width: 760px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
