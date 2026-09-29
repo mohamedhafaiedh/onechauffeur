@@ -126,17 +126,7 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:
     text-decoration: none !important; 
 }
 
-/* Interactivity overrides */
-.jkit-menu-wrapper.is-active {
-  visibility: visible !important;
-  opacity: 1 !important;
-  transform: translateX(0) !important;
-}
-.jkit-overlay.is-active {
-  visibility: visible !important;
-  opacity: 0.6 !important;
-  display: block !important;
-}.jki-angle-right-solid:before{content:"\e925"}.jki-baby-solid:before{content:"\e957"}.jki-calendar-solid:before{content:"\e9bd"}.jki-phone-solid:before{content:"\ecfe"}.jki-plane-departure-solid:before{content:"\ed10"}.jki-suitcase-solid:before{content:"\ee12"}.jki-times-solid:before{content:"\ee51"}.jki-user-tie-solid:before{content:"\eea8"}.jki-package-line:before{content:"\efb8"}.jki-users-light::before{content:"\f82b"}.jki-clock1-light::before{content:"\f864"}.jki-chevron-down-light::before{content:"\f874"}.jki-check-light::before{content:"絛"}.jki-team2-light::before{content:"慠"}.jki-wifi-light::before{content:"画"}.jki-car-light::before{content:"ﬆ"}.jki-menu-7-light::before{content:"ﬣ"}.jki-User-light::before{content:"ﯦ"}
+.jki-angle-right-solid:before{content:"\e925"}.jki-baby-solid:before{content:"\e957"}.jki-calendar-solid:before{content:"\e9bd"}.jki-phone-solid:before{content:"\ecfe"}.jki-plane-departure-solid:before{content:"\ed10"}.jki-suitcase-solid:before{content:"\ee12"}.jki-times-solid:before{content:"\ee51"}.jki-user-tie-solid:before{content:"\eea8"}.jki-package-line:before{content:"\efb8"}.jki-users-light::before{content:"\f82b"}.jki-clock1-light::before{content:"\f864"}.jki-chevron-down-light::before{content:"\f874"}.jki-check-light::before{content:"絛"}.jki-team2-light::before{content:"慠"}.jki-wifi-light::before{content:"画"}.jki-car-light::before{content:"ﬆ"}.jki-menu-7-light::before{content:"ﬣ"}.jki-User-light::before{content:"ﯦ"}
 
 /* 1. Make invisible animation elements visible without forcing broken display types */
 .elementor-invisible {
@@ -376,7 +366,6 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:
 .elementor-element-5a6dad1 > .elementor-container {
   display: flex !important;
   flex-direction: row !important;
-  flex-wrap: nowrap !important;
   justify-content: center !important;
   gap: 0 !important;
   width: 100% !important;
@@ -384,14 +373,26 @@ html{line-height:1.15;-webkit-text-size-adjust:100%}*,:after,:before{box-sizing:
   margin: 0 auto !important;
 }
 
-/* 4 colonnes strictement égales à 25% (280px sur 1120px utiles) */
+/* 4 colonnes strictement égales à 25% (280px sur 1120px utiles) sur ordinateur ;
+   passage à 2 puis 1 colonne : voir « Corrections responsive » en fin de fichier */
+@media (min-width: 1025px) {
+  .elementor-element-5a6dad1 > .elementor-container {
+    flex-wrap: nowrap !important;
+  }
+  .elementor-element-60ee791,
+  .elementor-element-ff16c85,
+  .elementor-element-68d0443,
+  .elementor-element-8054530 {
+    width: 25% !important;
+    max-width: 25% !important;
+    flex: 0 0 25% !important;
+  }
+}
+
 .elementor-element-60ee791,
 .elementor-element-ff16c85,
 .elementor-element-68d0443,
 .elementor-element-8054530 {
-  width: 25% !important;
-  max-width: 25% !important;
-  flex: 0 0 25% !important;
   box-sizing: border-box !important;
   padding: 0 15px !important;
   margin: 0 !important;
@@ -1072,3 +1073,35 @@ button[type="submit"]:disabled,
   transform: none !important;
 }
 
+/* ==========================================================================
+   Corrections responsive
+   ========================================================================== */
+
+/* Accueil, « Nos valeurs » : 4 colonnes → 2 (tablette) → 1 (mobile) */
+@media (max-width: 1024px) {
+  .elementor-element-5a6dad1 > .elementor-container {
+    flex-wrap: wrap;
+    row-gap: 48px !important;
+  }
+  .elementor-element-5a6dad1 > .elementor-container > .elementor-column {
+    flex: 0 0 50% !important;
+    width: 50% !important;
+    max-width: 50%;
+  }
+  .elementor-element-5a6dad1 > .elementor-container > .elementor-column > .elementor-element-populated {
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .elementor-element-5a6dad1 > .elementor-container > .elementor-column {
+    flex-basis: 100% !important;
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+/* Pages juridiques : les longues URL passent à la ligne au lieu d'élargir la page sur mobile */
+.site-main .page-content a {
+  overflow-wrap: anywhere;
+}

@@ -47,7 +47,8 @@
     "contact": "Contact",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "homeLink": "Accueil"
+    "homeLink": "Accueil",
+    "menu": "Menu principal"
   },
   "footer": {
     "quickLinks": "Liens rapides",
@@ -145,10 +146,10 @@
     "leaveAMessageHere": "Nous laisser un message"
   },
   "thankYou": {
-    "thankYouForYour": "Merci pour votre demande",
-    "yourBookingRequestHas": "Votre message a bien été transmis à notre équipe. Un chauffeur privé One Chauffeur traitera votre demande et vous confirmera les détails dans les plus brefs délais.",
-    "immediateInquiryOrUrgent": "Une urgence ou un départ immédiat ?",
-    "returnToHomepage": "Retour à l'accueil"
+    "title": "Merci pour votre demande",
+    "message": "Votre message a bien été transmis à notre équipe. Un chauffeur privé One Chauffeur traitera votre demande et vous confirmera les détails dans les plus brefs délais.",
+    "urgent": "Une urgence ou un départ immédiat ?",
+    "backHome": "Retour à l'accueil"
   },
   "contactForm": {
     "submitError": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone.",

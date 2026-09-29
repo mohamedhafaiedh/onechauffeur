@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import MobileMenu from "@/components/MobileMenu";
 import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang, type PageKey } from "@/lib/seo";
 
@@ -13,47 +14,19 @@ interface HeaderProps {
 
 export default function Header({ lang, page }: HeaderProps) {
   useEffect(() => {
-    // Mobile menu toggle
-    const hamburger = document.querySelectorAll(".jkit-hamburger-menu");
-    const closeBtns = document.querySelectorAll(".jkit-close-menu");
-    const overlays = document.querySelectorAll(".jkit-overlay");
-    const menuWrappers = document.querySelectorAll(".jkit-menu-wrapper");
-
-    const openMenu = () => {
-      menuWrappers.forEach((el) => el.classList.add("is-active"));
-      overlays.forEach((el) => el.classList.add("is-active"));
-    };
-
-    const closeMenu = () => {
-      menuWrappers.forEach((el) => el.classList.remove("is-active"));
-      overlays.forEach((el) => el.classList.remove("is-active"));
-    };
-
-    hamburger.forEach((btn) => btn.addEventListener("click", openMenu));
-    closeBtns.forEach((btn) => btn.addEventListener("click", closeMenu));
-    overlays.forEach((ov) => ov.addEventListener("click", closeMenu));
-
-    // Handle hash links and smooth scrolling
+    // Défilement doux vers les ancres de la page courante
     const handleHashClick = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      const anchor = target.closest("a");
+      const anchor = (e.target as HTMLElement).closest("a");
       if (anchor && anchor.hash && anchor.pathname === window.location.pathname) {
         const el = document.querySelector(anchor.hash);
         if (el) {
           e.preventDefault();
           el.scrollIntoView({ behavior: "smooth" });
-          closeMenu();
         }
       }
     };
     document.addEventListener("click", handleHashClick);
-
-    return () => {
-      hamburger.forEach((btn) => btn.removeEventListener("click", openMenu));
-      closeBtns.forEach((btn) => btn.removeEventListener("click", closeMenu));
-      overlays.forEach((ov) => ov.removeEventListener("click", closeMenu));
-      document.removeEventListener("click", handleHashClick);
-    };
+    return () => document.removeEventListener("click", handleHashClick);
   }, []);
 
   const t = getMessages(lang).header;
@@ -316,78 +289,19 @@ export default function Header({ lang, page }: HeaderProps) {
                       className="jeg-elementor-kit jkit-nav-menu break-point-tablet submenu-click-title jeg_module_98_1_6aae20c7d37b1"
                       data-item-indicator='&lt;i aria-hidden="true" className="jki jki-chevron-down-light"&gt;&lt;/i&gt;'
                     >
-                      <button aria-label={t.openMenu} className="jkit-hamburger-menu">
-                        <i aria-hidden="true" className="jki jki-menu-7-light"></i>
-                      </button>
-                      <div className="jkit-menu-wrapper">
-                        <div className="jkit-menu-container">
-                          <ul
-                            className="jkit-menu jkit-menu-direction-flex jkit-submenu-position-top"
-                            id="menu-mainmenumobile"
-                          >
-                            <li
-                              className={`menu-item menu-item-type-post_type menu-item-object-page ${
-                                isHomeActive ? "current-menu-item page_item current_page_item" : ""
-                              } menu-item-822`}
-                              id="menu-item-822"
-                            >
-                              <Link aria-current={isHomeActive ? "page" : undefined} href={homeHref}>
-                                {homeText}
-                              </Link>
-                            </li>
-                            <li
-                              className={`menu-item menu-item-type-post_type menu-item-object-page ${
-                                isServicesActive ? "current-menu-item page_item current_page_item" : ""
-                              } menu-item-820`}
-                              id="menu-item-820"
-                            >
-                              <Link href={servicesHref}>{servicesText}</Link>
-                            </li>
-                            <li
-                              className={`menu-item menu-item-type-post_type menu-item-object-page ${
-                                isFlotteActive ? "current-menu-item page_item current_page_item" : ""
-                              } menu-item-819`}
-                              id="menu-item-819"
-                            >
-                              <Link href={flotteHref}>{flotteText}</Link>
-                            </li>
-                            <li
-                              className={`menu-item menu-item-type-post_type menu-item-object-page ${
-                                isContactActive ? "current-menu-item page_item current_page_item" : ""
-                              } menu-item-818`}
-                              id="menu-item-818"
-                            >
-                              <Link href={contactHref}>{contactText}</Link>
-                            </li>
-                            <li
-                              className={`menu-item menu-item-type-post_type menu-item-object-page ${
-                                isReservationActive ? "current-menu-item page_item current_page_item" : ""
-                              } menu-item-817`}
-                              id="menu-item-817"
-                            >
-                              <Link href={reservationHref}>{reservationMenuText}</Link>
-                            </li>
-                          </ul>
-                        </div>
-                        <div className="jkit-nav-identity-panel">
-                          <div className="jkit-nav-site-title">
-                            <Link aria-label={t.homeLink} className="jkit-nav-logo" href={homeHref}>
-                              <img
-                                alt="One Chauffeur"
-                                className="attachment-full size-full"
-                                height="140"
-                                sizes="(max-width: 1000px) 100vw, 1000px"
-                                src="/images/logo-one-chauffeur.webp"
-                                width="1000"
-                              />
-                            </Link>
-                          </div>
-                          <button aria-label={t.closeMenu} className="jkit-close-menu">
-                            <i aria-hidden="true" className="jki jki-times-solid"></i>
-                          </button>
-                        </div>
-                      </div>
-                      <div className="jkit-overlay"></div>
+                      <MobileMenu
+                        items={[
+                          { href: homeHref, label: homeText, active: isHomeActive },
+                          { href: servicesHref, label: servicesText, active: isServicesActive },
+                          { href: flotteHref, label: flotteText, active: isFlotteActive },
+                          { href: contactHref, label: contactText, active: isContactActive },
+                          { href: reservationHref, label: reservationMenuText, active: isReservationActive },
+                        ]}
+                        homeHref={homeHref}
+                        cta={{ href: reservationHref, label: reservationBtnText }}
+                        phone={{ href: "tel:+33667520677", label: "+33 6 67 52 06 77" }}
+                        labels={{ open: t.openMenu, close: t.closeMenu, home: t.homeLink, menu: t.menu }}
+                      />
                     </div>
                   </div>
                 </div>

@@ -108,6 +108,14 @@
     visibility: visible;
     transform: none;
   }
+
+  .root:hover .chevron {
+    transform: rotate(180deg);
+  }
+
+  .root:hover .trigger {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 }
 
 /* Pont invisible entre le bouton et le menu pour que le survol ne se coupe pas */

@@ -47,7 +47,8 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "homeLink": "Home"
+    "homeLink": "Home",
+    "menu": "Main menu"
   },
   "footer": {
     "quickLinks": "Quick Links",
@@ -145,10 +146,10 @@
     "leaveAMessageHere": "Leave a message here"
   },
   "thankYou": {
-    "thankYouForYour": "Thank You for Your Request",
-    "yourBookingRequestHas": "Your booking request has been successfully received. A One Chauffeur private concierge will review your details and confirm your ride shortly.",
-    "immediateInquiryOrUrgent": "Immediate inquiry or urgent transfer?",
-    "returnToHomepage": "Return to Homepage"
+    "title": "Thank You for Your Request",
+    "message": "Your booking request has been successfully received. A One Chauffeur private concierge will review your details and confirm your ride shortly.",
+    "urgent": "Immediate inquiry or urgent transfer?",
+    "backHome": "Return to Homepage"
   },
   "contactForm": {
     "submitError": "An error occurred while sending your message. Please try again or call us directly.",
