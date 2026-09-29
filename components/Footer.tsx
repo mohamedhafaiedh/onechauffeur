@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang, type PageKey } from "@/lib/seo";
 
 interface FooterProps {
@@ -11,7 +12,8 @@ interface FooterProps {
 }
 
 export default function Footer({ lang, page }: FooterProps) {
-  const isEn = lang === "en";
+
+  const t = getMessages(lang).footer;
 
   // Links
   const homeHref = pagePath("", lang);
@@ -87,19 +89,7 @@ export default function Footer({ lang, page }: FooterProps) {
                         data-widget_type="text-editor.default"
                       >
                         <div className="elementor-widget-container">
-                          {isEn ? (
-                            <p>
-                              Your private driver in Paris and the Île-de-France region for all your transfers
-                              (airports, train stations, or within the city), business trips, long-distance journeys,
-                              hourly disposal and city tours.
-                            </p>
-                          ) : (
-                            <p>
-                              Votre chauffeur privé à Paris et en Île-de-France pour tous vos transferts (aéroports,
-                              gares ou en ville) déplacements professionnels, trajets longues distances, mises à
-                              disposition, visites touristiques.
-                            </p>
-                          )}
+                          <p>{t.tagline}</p>
                         </div>
                       </div>
                     </div>
@@ -120,7 +110,7 @@ export default function Footer({ lang, page }: FooterProps) {
                       >
                         <div className="elementor-widget-container">
                           <h3 className="elementor-heading-title elementor-size-default">
-                            {isEn ? "Quick Links" : "Liens rapides"}
+                            {t.quickLinks}
                           </h3>
                         </div>
                       </div>
@@ -135,22 +125,22 @@ export default function Footer({ lang, page }: FooterProps) {
                           <ul className="elementor-icon-list-items">
                             <li className="elementor-icon-list-item">
                               <Link href={servicesHref}>
-                                <span className="elementor-icon-list-text">Services</span>
+                                <span className="elementor-icon-list-text">{t.services}</span>
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
                               <Link href={flotteHref}>
-                                <span className="elementor-icon-list-text">{isEn ? "Fleet" : "Flotte"}</span>
+                                <span className="elementor-icon-list-text">{t.fleet}</span>
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
                               <Link href={contactHref}>
-                                <span className="elementor-icon-list-text">Contact</span>
+                                <span className="elementor-icon-list-text">{t.contact}</span>
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
                               <Link href={reservationHref}>
-                                <span className="elementor-icon-list-text">{isEn ? "Booking" : "Réservation"}</span>
+                                <span className="elementor-icon-list-text">{t.booking}</span>
                               </Link>
                             </li>
                           </ul>
@@ -174,7 +164,7 @@ export default function Footer({ lang, page }: FooterProps) {
                       >
                         <div className="elementor-widget-container">
                           <h3 className="elementor-heading-title elementor-size-default">
-                            {isEn ? "Legal" : "Légal"}
+                            {t.legal}
                           </h3>
                         </div>
                       </div>
@@ -190,21 +180,21 @@ export default function Footer({ lang, page }: FooterProps) {
                             <li className="elementor-icon-list-item">
                               <Link href={cgvHref}>
                                 <span className="elementor-icon-list-text">
-                                  {isEn ? "Terms of Sales" : "Conditions générales de vente"}
+                                  {t.termsOfSale}
                                 </span>
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
                               <Link href={privacyHref}>
                                 <span className="elementor-icon-list-text">
-                                  {isEn ? "Privacy Policy" : "Politique de confidentialité"}
+                                  {t.privacyPolicy}
                                 </span>
                               </Link>
                             </li>
                             <li className="elementor-icon-list-item">
                               <Link href={mentionsHref}>
                                 <span className="elementor-icon-list-text">
-                                  {isEn ? "Legal Notes" : "Mentions légales"}
+                                  {t.legalNotice}
                                 </span>
                               </Link>
                             </li>
@@ -229,7 +219,7 @@ export default function Footer({ lang, page }: FooterProps) {
                       >
                         <div className="elementor-widget-container">
                           <h3 className="elementor-heading-title elementor-size-default">
-                            {isEn ? "Phone" : "Téléphone"}
+                            {t.phone}
                           </h3>
                         </div>
                       </div>
@@ -317,19 +307,11 @@ export default function Footer({ lang, page }: FooterProps) {
                         data-widget_type="text-editor.default"
                       >
                         <div className="elementor-widget-container">
-                          {isEn ? (
-                            <p>
-                              All rights reserved - One Chauffeur
-                              <br />
-                              31 boulevard Troussel – 78700 Conflans-Sainte-Honorine
-                            </p>
-                          ) : (
-                            <p>
-                              © Tous droits réservés · One Chauffeur
-                              <br />
-                              31 boulevard Troussel – 78700 Conflans-Sainte-Honorine
-                            </p>
-                          )}
+                          <p>
+                            {t.copyright}
+                            <br />
+                            31 boulevard Troussel – 78700 Conflans-Sainte-Honorine
+                          </p>
                         </div>
                       </div>
                     </div>

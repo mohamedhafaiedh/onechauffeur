@@ -2,16 +2,11 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
+import { getMessages } from "@/lib/i18n";
 import { LOCALES, pagePath, type Lang, type PageKey } from "@/lib/seo";
 import styles from "./LanguageSwitcher.module.css";
 
 const LANGS = Object.keys(LOCALES) as Lang[];
-
-// Libellé du bouton pour les lecteurs d'écran, dans la langue de la page
-const BUTTON_LABEL: Record<Lang, string> = {
-  fr: "Choisir la langue",
-  en: "Choose language",
-};
 
 // Sélecteur de langue : globe + code de la langue active ; le menu liste les langues
 // en toutes lettres, chacune dans sa propre langue, vers la page équivalente.
@@ -54,7 +49,7 @@ export default function LanguageSwitcher({
         className={styles.trigger}
         aria-expanded={open}
         aria-controls={menuId}
-        aria-label={`${BUTTON_LABEL[lang]} (${LOCALES[lang].name})`}
+        aria-label={`${getMessages(lang).languageSwitcher.chooseLanguage} (${LOCALES[lang].name})`}
         onClick={() => setOpen((v) => !v)}
       >
         <svg className={styles.globe} viewBox="0 0 24 24" aria-hidden="true">

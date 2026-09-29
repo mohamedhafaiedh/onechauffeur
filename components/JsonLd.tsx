@@ -1,13 +1,12 @@
 import React from "react";
-import { SITE_URL, Lang } from "@/lib/seo";
+import { getMessages } from "@/lib/i18n";
+import { SITE_URL, pagePath, type Lang } from "@/lib/seo";
 
 interface JsonLdProps {
   lang?: Lang;
 }
 
 export default function JsonLd({ lang = "fr" }: JsonLdProps) {
-  const isEn = lang === "en";
-
   const schema = {
     "@context": "https://schema.org",
     "@type": "LimousineService",
@@ -15,12 +14,10 @@ export default function JsonLd({ lang = "fr" }: JsonLdProps) {
     name: "One Chauffeur",
     legalName: "One Chauffeur SASU",
     alternateName: "One Chauffeur Paris",
-    url: isEn ? `${SITE_URL}/en/` : `${SITE_URL}/`,
+    url: `${SITE_URL}${pagePath("", lang)}`,
     logo: `${SITE_URL}/images/favicon-one-chauffeur.png`,
     image: `${SITE_URL}/images/favicon-one-chauffeur.png`,
-    description: isEn
-      ? "Luxury private chauffeur and VTC service in Paris and Île-de-France: airport transfers (CDG, Orly), train stations, corporate travel and 24/7 disposals."
-      : "Service de chauffeur privé VTC de prestige à Paris et en Île-de-France : transferts aéroports CDG et Orly, gares, voyages d'affaires et mise à disposition 24/7.",
+    description: getMessages(lang).jsonLd.description,
     telephone: "+33667520677",
     email: "contact@onechauffeur.fr",
     priceRange: "$$$",

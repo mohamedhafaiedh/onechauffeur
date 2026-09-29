@@ -3,6 +3,7 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang, type PageKey } from "@/lib/seo";
 
 interface HeaderProps {
@@ -55,7 +56,7 @@ export default function Header({ lang, page }: HeaderProps) {
     };
   }, []);
 
-  const isEn = lang === "en";
+  const t = getMessages(lang).header;
 
   // Links
   const homeHref = pagePath("", lang);
@@ -65,13 +66,13 @@ export default function Header({ lang, page }: HeaderProps) {
   const reservationHref = pagePath("reservation", lang);
 
   // Labels
-  const skipText = isEn ? "Skip to content" : "Aller au contenu";
-  const homeText = isEn ? "Home" : "Accueil";
-  const servicesText = "Services";
-  const flotteText = isEn ? "Fleet" : "Flotte";
-  const contactText = "Contact";
-  const reservationBtnText = isEn ? "Book my driver" : "Je réserve mon chauffeur";
-  const reservationMenuText = isEn ? "Booking" : "Réservation";
+  const skipText = t.skipToContent;
+  const homeText = t.home;
+  const servicesText = t.services;
+  const flotteText = t.fleet;
+  const contactText = t.contact;
+  const reservationBtnText = t.bookMyDriver;
+  const reservationMenuText = t.booking;
 
   const isHomeActive = page === "";
   const isServicesActive = page === "services";
@@ -123,7 +124,7 @@ export default function Header({ lang, page }: HeaderProps) {
                       className="jeg-elementor-kit jkit-nav-menu break-point-tablet submenu-click-title jeg_module_98__6aae20c7d192c"
                       data-item-indicator='&lt;i aria-hidden="true" className="jki jki-chevron-down-light"&gt;&lt;/i&gt;'
                     >
-                      <button aria-label="open-menu" className="jkit-hamburger-menu">
+                      <button aria-label={t.openMenu} className="jkit-hamburger-menu">
                         <i aria-hidden="true" className="jki jki-menu-7-light"></i>
                       </button>
                       <div className="jkit-menu-wrapper">
@@ -170,9 +171,9 @@ export default function Header({ lang, page }: HeaderProps) {
                         </div>
                         <div className="jkit-nav-identity-panel">
                           <div className="jkit-nav-site-title">
-                            <Link aria-label="Home Link" className="jkit-nav-logo" href={homeHref}></Link>
+                            <Link aria-label={t.homeLink} className="jkit-nav-logo" href={homeHref}></Link>
                           </div>
-                          <button aria-label="close-menu" className="jkit-close-menu">
+                          <button aria-label={t.closeMenu} className="jkit-close-menu">
                             <i aria-hidden="true" className="jki jki-times-solid"></i>
                           </button>
                         </div>
@@ -315,7 +316,7 @@ export default function Header({ lang, page }: HeaderProps) {
                       className="jeg-elementor-kit jkit-nav-menu break-point-tablet submenu-click-title jeg_module_98_1_6aae20c7d37b1"
                       data-item-indicator='&lt;i aria-hidden="true" className="jki jki-chevron-down-light"&gt;&lt;/i&gt;'
                     >
-                      <button aria-label="open-menu" className="jkit-hamburger-menu">
+                      <button aria-label={t.openMenu} className="jkit-hamburger-menu">
                         <i aria-hidden="true" className="jki jki-menu-7-light"></i>
                       </button>
                       <div className="jkit-menu-wrapper">
@@ -370,7 +371,7 @@ export default function Header({ lang, page }: HeaderProps) {
                         </div>
                         <div className="jkit-nav-identity-panel">
                           <div className="jkit-nav-site-title">
-                            <Link aria-label="Home Link" className="jkit-nav-logo" href={homeHref}>
+                            <Link aria-label={t.homeLink} className="jkit-nav-logo" href={homeHref}>
                               <img
                                 alt="One Chauffeur"
                                 className="attachment-full size-full"
@@ -381,7 +382,7 @@ export default function Header({ lang, page }: HeaderProps) {
                               />
                             </Link>
                           </div>
-                          <button aria-label="close-menu" className="jkit-close-menu">
+                          <button aria-label={t.closeMenu} className="jkit-close-menu">
                             <i aria-hidden="true" className="jki jki-times-solid"></i>
                           </button>
                         </div>

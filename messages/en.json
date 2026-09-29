@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – Private Chauffeur Service in Paris",
+      "description": "One Chauffeur offers luxury private chauffeur services in Paris and Île-de-France: airport transfers (CDG, Orly), train stations, corporate travel and 24/7 hourly service."
+    },
+    "services": {
+      "title": "Chauffeur Services – One Chauffeur",
+      "description": "Discover our premium private driver services in Paris: airport transfers (CDG, Orly), Parisian train stations, corporate transport and VIP hourly disposal."
+    },
+    "fleet": {
+      "title": "Fleet – One Chauffeur",
+      "description": "Explore our prestigious luxury vehicle fleet in Paris: premium Mercedes E-Class, S-Class, V-Class vans and Tesla with professional chauffeur."
+    },
+    "booking": {
+      "title": "Booking – One Chauffeur",
+      "description": "Book your luxury private chauffeur in Paris online with One Chauffeur. Transparent pricing, instant confirmation and executive travel."
+    },
+    "contact": {
+      "title": "Contact Us – One Chauffeur",
+      "description": "Contact One Chauffeur in Paris 24/7. Call us at +33 6 67 52 06 77 or send an inquiry for bookings, bespoke corporate travel, and airport transfers."
+    },
+    "termsOfSale": {
+      "title": "Terms and Conditions of Sale – One Chauffeur",
+      "description": "General terms and conditions of sale for premium chauffeur transport services provided by One Chauffeur in Paris and the Île-de-France region."
+    },
+    "legalNotice": {
+      "title": "Legal Notices – One Chauffeur",
+      "description": "Legal notices and corporate details of One Chauffeur SASU: company registration, registered headquarters, publication manager, and hosting information."
+    },
+    "privacyPolicy": {
+      "title": "Privacy Policy – One Chauffeur",
+      "description": "Privacy policy and personal data protection principles applied by One Chauffeur for its private driver clients in Paris in accordance with GDPR."
+    },
+    "thankYou": {
+      "title": "Thank You for Your Request – One Chauffeur",
+      "description": "Confirmation of your booking or inquiry submission with One Chauffeur private driver service in Paris."
+    }
+  },
+  "header": {
+    "skipToContent": "Skip to content",
+    "home": "Home",
+    "fleet": "Fleet",
+    "bookMyDriver": "Book my driver",
+    "booking": "Booking",
+    "services": "Services",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "homeLink": "Home"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "fleet": "Fleet",
+    "booking": "Booking",
+    "legal": "Legal",
+    "termsOfSale": "Terms of Sale",
+    "privacyPolicy": "Privacy Policy",
+    "legalNotice": "Legal Notice",
+    "phone": "Phone",
+    "services": "Services",
+    "contact": "Contact",
+    "tagline": "Your private driver in Paris and the Île-de-France region for all your transfers (airports, train stations, or within the city), business trips, long-distance journeys, hourly disposal and city tours.",
+    "copyright": "© All rights reserved · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "Choose language"
+  },
+  "shared": {
+    "getQuoteBook": "Get quote & book",
+    "ourServices": "Our services",
+    "transfers": "Transfers",
+    "airportTransfersTrainStation": "Airport transfers, train station transfers, leisure parks transfers, etc.",
+    "carHourlyDisposal": "Car hourly disposal",
+    "aVehicleWithDriver": "A vehicle with driver, for the duration you want",
+    "cityTours": "City tours",
+    "packagesToHelpYou": "Packages to help you discover the city of Paris",
+    "businessTrips": "Business trips",
+    "forYourTransportNeeds": "For your transport needs and those of your employees",
+    "longDistances": "Long distances",
+    "forLongDistanceJourneys": "For long distance journeys, in France and neighboring countries",
+    "privateEvents": "Private events",
+    "aServiceAdaptedTo": "A service adapted to your private, personal or professional services",
+    "chooseTheCarYou": "Choose the car you need",
+    "aLargeFleetOf": "A large fleet of vehicles that combines comfort and discretion",
+    "sedan": "Sedan",
+    "upTo3Passengers": "Up to 3 passengers",
+    "upTo3Bags": "Up to 3 bags",
+    "details": "Details",
+    "businessSedan": "Business sedan",
+    "luxurySedan": "Luxury sedan",
+    "minivan": "Minivan",
+    "upTo7Passengers": "Up to 7 passengers",
+    "upTo7Bags": "Up to 7 bags",
+    "simpleStepsToBook": "Simple steps to book your driver",
+    "toBookYourCar": "To book your car with driver, nothing could be simpler",
+    "n1ContactUs": "1. Contact us",
+    "emailTelephoneContactForm": "Email, telephone, contact form or online reservation form",
+    "n2ConfirmYourBooking": "2. Confirm your booking details",
+    "tellUsAboutYour": "Tell us about your needs and we will recommend the service that best suits your situation",
+    "n3YourDriverWill": "3. Your driver will be waiting for you on time",
+    "aboutOneChauffeur": "About One Chauffeur",
+    "byOfferingATailor": "By offering a tailor-made service, One Chauffeur strives to exceed its clients' expectations. The drivers, carefully selected for their professionalism and discretion, are the embodiment of elegance and quality of service.",
+    "theVehiclesWeProvide": "The vehicles we provide reflect One Chauffeur's constant concern for comfort and style, offering clients a means of transportation that combines sophistication and convenience. Whatever the need, the company is committed to creating a memorable travel experience, characterized by a sense of service and personalized attention."
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "Your chauffeur-driven car in Paris",
+    "withOneChauffeurYou": "With One Chauffeur, you benefit from a high-end and tailor made private driver service that adapts to all of your needs.",
+    "ourValues": "Our values",
+    "professionalismDiscretion": "Professionalism & Discretion",
+    "youAreDrivenBy": "You are driven by experienced, courteous and discreet drivers",
+    "comfortRespectForThe": "Comfort & Respect for the environment",
+    "ourVehiclesAreSelected": "Our vehicles are selected for their comfort, elegance and respect for the environment",
+    "availabilityAndEfficiency": "Availability and Efficiency",
+    "weAreAvailable24": "We are available 24/7, your quote requests are processed in record time",
+    "punctuality": "Punctuality",
+    "punctualityIsANon": "Punctuality is a non-negotiable value. Each driver will be present well before the scheduled pickup time",
+    "anEnjoyableTransportExperience": "An enjoyable transport experience",
+    "atOneChauffeurWe": "At One Chauffeur, we guarantee you an experience marked by comfort and serenity. Our regularly renewed fleet of vehicles offers optimal comfort. Our professional drivers, carefully selected, provide a courteous and tailor-made service, with guaranteed punctuality. Choose excellent service, optimal comfort and peace of mind throughout your journey with One Chauffeur.",
+    "freeCancellationUpTo": "Free cancellation up to 24 hours before departure",
+    "flexibleAndTailorMade": "Flexible and tailor-made service",
+    "onlineOrOnBoard": "Online or on-board payments",
+    "pricesFixedInAdvance": "Prices fixed in advance"
+  },
+  "services": {
+    "ourPrivateDriverServices": "Our private driver services"
+  },
+  "fleet": {
+    "ourFleet": "Our fleet",
+    "aStylishSedanCombining": "A stylish sedan, combining comfort and elegance",
+    "childSeats": "Child seats",
+    "wiFi": "Wi-Fi",
+    "refreshments": "Refreshments",
+    "moreComfortMoreElegance": "More comfort, more elegance",
+    "toGetIntoThe": "To get into the world of luxury, nothing beats the Mercedes S-Class",
+    "theFamousMercedesV": "The famous Mercedes V-Class, when traveling in a group or with a lot of luggage"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "Private driver online booking"
+  },
+  "contact": {
+    "contact": "Contact",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "leaveAMessageHere": "Leave a message here"
+  },
+  "thankYou": {
+    "thankYouForYour": "Thank You for Your Request",
+    "yourBookingRequestHas": "Your booking request has been successfully received. A One Chauffeur private concierge will review your details and confirm your ride shortly.",
+    "immediateInquiryOrUrgent": "Immediate inquiry or urgent transfer?",
+    "returnToHomepage": "Return to Homepage"
+  },
+  "contactForm": {
+    "submitError": "An error occurred while sending your message. Please try again or call us directly.",
+    "formLabel": "Contact Form",
+    "nameLabel": "Name *",
+    "namePlaceholder": "Your name",
+    "name": "Name",
+    "emailLabel": "Email *",
+    "emailPlaceholder": "Your email",
+    "email": "Email",
+    "phoneLabel": "Phone *",
+    "phonePlaceholder": "e.g. +33 6 67 52 06 77",
+    "phone": "Phone",
+    "subjectLabel": "Subject *",
+    "subject": "Subject",
+    "subjectPlaceholder": "— Please choose a topic —",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Your message here...",
+    "message": "Message",
+    "sending": "Sending...",
+    "submit": "Send Message",
+    "subjectOptions": [
+      "Request Information",
+      "Request Quote",
+      "Booking"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "An error occurred while sending your booking request. Please try again or call us directly.",
+    "formLabel": "Online Booking Quote",
+    "pickupLocationLabel": "Pickup Location *",
+    "pickupPlaceholder": "e.g. CDG Airport Terminal 2E, Hotel Ritz...",
+    "pickupLocation": "Pickup Location",
+    "dropoffDestinationLabel": "Dropoff Destination *",
+    "dropoffPlaceholder": "e.g. Gare de Lyon, Eiffel Tower, Versailles...",
+    "dropoffDestination": "Dropoff Destination",
+    "pickupDateLabel": "Pickup Date *",
+    "pickupDate": "Pickup Date",
+    "pickupTimeLabel": "Pickup Time *",
+    "pickupTime": "Pickup Time",
+    "vehicleCategoryLabel": "Vehicle Category *",
+    "vehicleCategory": "Vehicle Category",
+    "vehiclePlaceholder": "— Please choose a vehicle category —",
+    "emailAddressLabel": "Email Address *",
+    "emailPlaceholder": "e.g. client@company.com",
+    "emailAddress": "Email Address",
+    "phoneNumberLabel": "Phone Number *",
+    "phonePlaceholder": "e.g. +33 6 67 52 06 77",
+    "phoneNumber": "Phone Number",
+    "message": "Special Requests or Instructions",
+    "messagePlaceholder": "e.g. Flight number, child seat needed, oversized luggage...",
+    "sending": "Sending your booking...",
+    "submit": "Book / Get Free Quote",
+    "vehicleOptions": [
+      "Sedan (Tesla Model 3 or similar - 3 pax)",
+      "Business Sedan (Mercedes E-Class - 3 pax)",
+      "Luxury Sedan (Mercedes S-Class - 3 pax)",
+      "Van (Mercedes V-Class - 7 pax)"
+    ]
+  },
+  "jsonLd": {
+    "description": "Luxury private chauffeur and VTC service in Paris and Île-de-France: airport transfers (CDG, Orly), train stations, corporate travel and 24/7 disposals."
+  }
+}

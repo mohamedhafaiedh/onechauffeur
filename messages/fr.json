@@ -1,0 +1,215 @@
+{
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – Votre chauffeur privé à Paris et Île-de-France",
+      "description": "One Chauffeur propose un service de chauffeur privé VTC haut de gamme à Paris et en Île-de-France : transferts aéroports (CDG, Orly), gares parisiennes, trajets professionnels et mise à disposition 24/7."
+    },
+    "services": {
+      "title": "Services – One Chauffeur",
+      "description": "Découvrez nos prestations de chauffeur privé VTC à Paris : transferts aéroports CDG et Orly, gares parisiennes, déplacements professionnels et mise à disposition avec chauffeur."
+    },
+    "fleet": {
+      "title": "Flotte – One Chauffeur",
+      "description": "Explorez la flotte de véhicules haut de gamme One Chauffeur : berlines et vans de luxe Mercedes Classe E, Classe S, Classe V et Tesla avec chauffeur privé à Paris."
+    },
+    "booking": {
+      "title": "Réservation – One Chauffeur",
+      "description": "Réservez votre chauffeur privé en ligne à Paris et en Île-de-France avec One Chauffeur. Tarification transparente, confirmation immédiate et service de prestige."
+    },
+    "contact": {
+      "title": "Contact – One Chauffeur",
+      "description": "Contactez l'équipe One Chauffeur pour vos réservations de VTC, devis sur mesure ou demandes urgentes à Paris au +33 6 67 52 06 77 ou via notre formulaire."
+    },
+    "termsOfSale": {
+      "title": "Conditions Générales de Vente – One Chauffeur",
+      "description": "Consultez les conditions générales de vente et d'utilisation des services de transport avec chauffeur privé de prestige proposés par One Chauffeur à Paris."
+    },
+    "legalNotice": {
+      "title": "Mentions Légales – One Chauffeur",
+      "description": "Consultez les mentions légales de One Chauffeur : informations sur l'éditeur SASU, le siège social, le directeur de publication et l'hébergement web."
+    },
+    "privacyPolicy": {
+      "title": "Politique de confidentialité – One Chauffeur",
+      "description": "Politique de confidentialité et protection des données personnelles de la société One Chauffeur conformément au RGPD pour tous ses clients et utilisateurs."
+    },
+    "thankYou": {
+      "title": "Merci pour votre demande – One Chauffeur",
+      "description": "Confirmation de votre demande de réservation ou de contact auprès de votre service de chauffeur privé One Chauffeur."
+    }
+  },
+  "header": {
+    "skipToContent": "Aller au contenu",
+    "home": "Accueil",
+    "fleet": "Flotte",
+    "bookMyDriver": "Je réserve mon chauffeur",
+    "booking": "Réservation",
+    "services": "Services",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "homeLink": "Accueil"
+  },
+  "footer": {
+    "quickLinks": "Liens rapides",
+    "fleet": "Flotte",
+    "booking": "Réservation",
+    "legal": "Légal",
+    "termsOfSale": "Conditions générales de vente",
+    "privacyPolicy": "Politique de confidentialité",
+    "legalNotice": "Mentions légales",
+    "phone": "Téléphone",
+    "services": "Services",
+    "contact": "Contact",
+    "tagline": "Votre chauffeur privé à Paris et en Île-de-France pour tous vos transferts (aéroports, gares ou en ville), déplacements professionnels, trajets longues distances, mises à disposition, visites touristiques.",
+    "copyright": "© Tous droits réservés · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "Choisir la langue"
+  },
+  "shared": {
+    "getQuoteBook": "Obtenir un devis et réserver",
+    "ourServices": "Nos différents services",
+    "transfers": "Transferts",
+    "airportTransfersTrainStation": "Transferts aéroports, gares, parcs de loisirs, etc.",
+    "carHourlyDisposal": "Mises à disposition",
+    "aVehicleWithDriver": "Un véhicule avec chauffeur, pour la durée que vous souhaitez",
+    "cityTours": "Visites touristiques",
+    "packagesToHelpYou": "Des forfaits pour vous faire découvrir la ville de Paris",
+    "businessTrips": "Déplacements professionnels",
+    "forYourTransportNeeds": "Pour vos besoins de transport et ceux de vos collaborateurs",
+    "longDistances": "Longues distances",
+    "forLongDistanceJourneys": "Pour des trajets longues distances, en France et dans les pays voisins.",
+    "privateEvents": "Evènements privés",
+    "aServiceAdaptedTo": "Un service adapté à vos services privés, personnels ou professionnels",
+    "chooseTheCarYou": "Choisissez le véhicule qui vous convient",
+    "aLargeFleetOf": "Une large flotte de véhicules qui allie confort et discrétion",
+    "sedan": "Berline",
+    "upTo3Passengers": "Jusqu'à 3 passagers",
+    "upTo3Bags": "Jusqu'à 3 bagages",
+    "details": "Détails",
+    "businessSedan": "Berline Business",
+    "luxurySedan": "Berline de luxe",
+    "minivan": "Minivan",
+    "upTo7Passengers": "Jusqu'à 7 passagers",
+    "upTo7Bags": "Jusqu'à 7 bagages",
+    "simpleStepsToBook": "Des étapes simples pour réserver mon chauffeur",
+    "toBookYourCar": "Pour réserver votre voiture avec chauffeur, rien de plus simple",
+    "n1ContactUs": "1. Nous contacter",
+    "emailTelephoneContactForm": "E-mail, téléphone, formulaire de contact ou formulaire de réservation en ligne",
+    "n2ConfirmYourBooking": "2. Confirmez la réservation",
+    "tellUsAboutYour": "Décrivez-nous votre besoin détaillé et nous vous conseillerons la meilleure prestation qui s'adapte le mieux à votre situation​",
+    "n3YourDriverWill": "3. Notre chauffeur sera là à l'heure prévue",
+    "aboutOneChauffeur": "À propos de One Chauffeur",
+    "byOfferingATailor": "En mettant l’accent sur un service sur-mesure, l’entreprise One Chauffeur s’efforce de surpasser les attentes de sa clientèle. Les chauffeurs privés, soigneusement sélectionnés pour leur professionnalisme et leur discrétion, sont les ambassadeurs de l’élégance et de la qualité de service.",
+    "theVehiclesWeProvide": "Les véhicules mis à disposition reflètent le souci constant de One Chauffeur pour le confort et le style, offrant à ses clients un moyen de transport qui allie sophistication et commodité. Quel que soit le besoin, l’entreprise s’engage à créer une expérience de voyage mémorable, marquée par le sens du service et l’attention personnalisée."
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "Votre chauffeur privé à Paris",
+    "withOneChauffeurYou": "Avec One Chauffeur, vous profitez d’un service de chauffeur privé sur-mesure et de haute qualité qui s’adapte à l’ensemble de vos besoins.",
+    "ourValues": "Nos valeurs",
+    "professionalismDiscretion": "Professionnalisme & Discrétion",
+    "youAreDrivenBy": "Vous êtes conduit par des chauffeurs expérimentés, courtois et discrets",
+    "comfortRespectForThe": "Confort & Respect de l’environnement",
+    "ourVehiclesAreSelected": "Nos véhicules sont sélectionnés pour leur confort, élégance et respect de l'environnement",
+    "availabilityAndEfficiency": "Disponibilité & Efficacité",
+    "weAreAvailable24": "Nous sommes disponibles 24h/24 et 7j/7, vos demandes de devis sont traitées en un temps record",
+    "punctuality": "Ponctualité",
+    "punctualityIsANon": "La ponctualité est une valeur non-négociable. Chaque chauffeur sera présent bien avant l'heure de départ",
+    "anEnjoyableTransportExperience": "Une expérience de transport agréable",
+    "atOneChauffeurWe": "Chez One Chauffeur, nous vous garantissons une expérience empreinte de confort et de sérénité. Notre flotte de véhicules régulièrement renouvelée offre un confort optimal. Nos chauffeurs professionnels, sélectionnés avec soin, assurent un service courtois et personnalisé, garantissant la ponctualité. Optez pour l’excellence du service, un confort optimal et une tranquillité d’esprit tout au long de votre trajet avec One Chauffeur.",
+    "freeCancellationUpTo": "Annulation gratuite jusqu'à 24h avant le départ",
+    "flexibleAndTailorMade": "Service flexible et sur-mesure",
+    "onlineOrOnBoard": "Paiements en ligne ou à bord",
+    "pricesFixedInAdvance": "Prix fixés à l'avance"
+  },
+  "services": {
+    "ourPrivateDriverServices": "Nos services de chauffeur privé"
+  },
+  "fleet": {
+    "ourFleet": "Notre flotte de véhicules",
+    "aStylishSedanCombining": "Une berline stylée, alliant confort et élégance",
+    "childSeats": "Sièges enfants",
+    "wiFi": "Wi-Fi",
+    "refreshments": "Rafraîchissement",
+    "moreComfortMoreElegance": "Plus de confort, plus d’élégance",
+    "toGetIntoThe": "Pour entrer dans le monde du luxe, rien ne bat la Mercedes Classe-S",
+    "theFamousMercedesV": "L’incontournable Mercedes Classe-V, en cas de déplacement en groupe ou avec beaucoup de bagages"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "Réservez votre chauffeur privé en ligne"
+  },
+  "contact": {
+    "contact": "Contact",
+    "phone": "Téléphone",
+    "whatsapp": "WhatsApp",
+    "leaveAMessageHere": "Nous laisser un message"
+  },
+  "thankYou": {
+    "thankYouForYour": "Merci pour votre demande",
+    "yourBookingRequestHas": "Votre message a bien été transmis à notre équipe. Un chauffeur privé One Chauffeur traitera votre demande et vous confirmera les détails dans les plus brefs délais.",
+    "immediateInquiryOrUrgent": "Une urgence ou un départ immédiat ?",
+    "returnToHomepage": "Retour à l'accueil"
+  },
+  "contactForm": {
+    "submitError": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone.",
+    "formLabel": "Formulaire de contact",
+    "nameLabel": "Nom *",
+    "namePlaceholder": "Votre nom",
+    "name": "Nom",
+    "emailLabel": "E-mail *",
+    "emailPlaceholder": "Votre e-mail",
+    "email": "E-mail",
+    "phoneLabel": "Téléphone *",
+    "phonePlaceholder": "Ex. : +33 6 67 52 06 77",
+    "phone": "Téléphone",
+    "subjectLabel": "Objet de la demande *",
+    "subject": "Objet de la demande",
+    "subjectPlaceholder": "— Veuillez choisir un objet —",
+    "messageLabel": "Message *",
+    "messagePlaceholder": "Votre message ici...",
+    "message": "Message",
+    "sending": "Envoi en cours...",
+    "submit": "Envoyer le message",
+    "subjectOptions": [
+      "Demande d'information",
+      "Demande de devis",
+      "Réservation"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "Une erreur est survenue lors de l'envoi de votre réservation. Veuillez réessayer ou nous contacter par téléphone.",
+    "formLabel": "Devis réservation en ligne",
+    "pickupLocationLabel": "Lieu de prise en charge *",
+    "pickupPlaceholder": "Ex. : Aéroport CDG Terminal 2E, Hôtel Ritz, Paris 8e...",
+    "pickupLocation": "Lieu de prise en charge",
+    "dropoffDestinationLabel": "Lieu de destination *",
+    "dropoffPlaceholder": "Ex. : Gare de Lyon, Tour Eiffel, Versailles, Paris 16e...",
+    "dropoffDestination": "Lieu de destination",
+    "pickupDateLabel": "Date de prise en charge *",
+    "pickupDate": "Date de prise en charge",
+    "pickupTimeLabel": "Heure de prise en charge *",
+    "pickupTime": "Heure de prise en charge",
+    "vehicleCategoryLabel": "Catégorie de véhicule *",
+    "vehicleCategory": "Catégorie de véhicule",
+    "vehiclePlaceholder": "— Veuillez choisir une catégorie de véhicule —",
+    "emailAddressLabel": "Adresse e-mail *",
+    "emailPlaceholder": "Ex. : contact@entreprise.com",
+    "emailAddress": "Adresse e-mail",
+    "phoneNumberLabel": "Numéro de téléphone *",
+    "phonePlaceholder": "Ex. : +33 6 67 52 06 77",
+    "phoneNumber": "Numéro de téléphone",
+    "message": "Précisions ou demandes particulières",
+    "messagePlaceholder": "Ex. : Numéro de vol, besoin d'un siège bébé, nombre de bagages volumineux...",
+    "sending": "Envoi de votre réservation en cours...",
+    "submit": "Demander mon devis / Réserver",
+    "vehicleOptions": [
+      "Berline (Tesla Model 3 ou similaire - 3 pax)",
+      "Berline Business (Mercedes Classe E - 3 pax)",
+      "Berline de Luxe (Mercedes Classe S - 3 pax)",
+      "Van (Mercedes Classe V - 7 pax)"
+    ]
+  },
+  "jsonLd": {
+    "description": "Service de chauffeur privé VTC de prestige à Paris et en Île-de-France : transferts aéroports CDG et Orly, gares, voyages d'affaires et mise à disposition 24/7."
+  }
+}

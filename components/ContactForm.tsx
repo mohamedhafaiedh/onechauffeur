@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { pagePath } from "@/lib/seo";
+import { getMessages } from "@/lib/i18n";
+import { pagePath, type Lang } from "@/lib/seo";
 import {
   User,
   Phone,
@@ -13,7 +14,7 @@ import {
 } from "lucide-react";
 
 export interface ContactFormProps {
-  lang?: "fr" | "en";
+  lang?: Lang;
   redirectUrl?: string;
 }
 
@@ -34,31 +35,37 @@ function getFormattedTimestamp() {
   return `${dateStr} à ${timeStr} (heure de Paris)`;
 }
 
+// Configuration Netlify Forms (noms du formulaire et des champs déclarés dans public/form.html,
+// objet et valeurs reçus dans l'e-mail) : technique, ne passe pas par les dictionnaires.
+const FORM_CONFIG: Record<Lang, {
+  formName: string;
+  emailSubject: string;
+  fields: { name: string; phone: string; email: string; subject: string; message: string };
+  subjectValues: [string, string, string];
+}> = {
+  fr: {
+    formName: "contact",
+    emailSubject: "Nouvelle demande de contact - One Chauffeur",
+    fields: { name: "nom", phone: "telephone", email: "email", subject: "objet", message: "message" },
+    subjectValues: ["Information", "Devis", "Réservation"],
+  },
+  en: {
+    formName: "contact-en",
+    emailSubject: "Contact Request - One Chauffeur",
+    fields: { name: "name", phone: "phone", email: "email", subject: "topic", message: "message" },
+    subjectValues: ["Information", "Quote", "Booking"],
+  },
+};
+
 export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormProps) {
   const router = useRouter();
-  const isEn = lang === "en";
+  const t = getMessages(lang).contactForm;
+  const { formName, emailSubject, fields, subjectValues } = FORM_CONFIG[lang];
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const formName = isEn ? "contact-en" : "contact";
-  const emailSubject = isEn ? "Contact Request - One Chauffeur" : "Nouvelle demande de contact - One Chauffeur";
-
-  const fields = isEn
-    ? { name: "name", phone: "phone", email: "email", subject: "topic", message: "message" }
-    : { name: "nom", phone: "telephone", email: "email", subject: "objet", message: "message" };
-
-  const subjectOptions = isEn
-    ? [
-        { value: "Information", label: "Request Information" },
-        { value: "Quote", label: "Request Quote" },
-        { value: "Booking", label: "Booking" }
-      ]
-    : [
-        { value: "Information", label: "Demande d'information" },
-        { value: "Devis", label: "Demande de devis" },
-        { value: "Réservation", label: "Réservation" }
-      ];
+  const subjectOptions = subjectValues.map((value, i) => ({ value, label: t.subjectOptions[i] }));
 
   const targetRedirectUrl = redirectUrl || pagePath("merci", lang);
 
@@ -117,9 +124,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
     } catch (error) {
       console.error("Erreur:", error);
       setErrorMessage(
-        isEn
-          ? "An error occurred while sending your message. Please try again or call us directly."
-          : "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone."
+        t.submitError
       );
       setIsSubmitting(false);
     }
@@ -136,7 +141,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
       className="elementor-form"
       method="post"
       name={formName}
-      aria-label={isEn ? "Contact Form" : "Formulaire de contact"}
+      aria-label={t.formLabel}
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value={formName} />
@@ -157,21 +162,21 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <User size={18} strokeWidth={2} />
             </div>
             <label htmlFor="contact-field-name" className="floating-label">
-              {isEn ? "Name *" : "Nom *"}
+              {t.nameLabel}
             </label>
             <input
               type="text"
               name={fields.name}
               id="contact-field-name"
               className="floating-input-control"
-              placeholder={isEn ? "Your name" : "Votre nom"}
+              placeholder={t.namePlaceholder}
               value={nameVal}
               onChange={handleChange}
               onFocus={() => setFocusedField(fields.name)}
               onBlur={() => setFocusedField(null)}
               required={true}
               disabled={isSubmitting}
-              aria-label={isEn ? "Name" : "Nom"}
+              aria-label={t.name}
             />
           </div>
         </div>
@@ -187,21 +192,21 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <Mail size={18} strokeWidth={2} />
             </div>
             <label htmlFor="contact-field-email" className="floating-label">
-              {isEn ? "Email *" : "E-mail *"}
+              {t.emailLabel}
             </label>
             <input
               type="email"
               name={fields.email}
               id="contact-field-email"
               className="floating-input-control"
-              placeholder={isEn ? "Your email" : "Votre e-mail"}
+              placeholder={t.emailPlaceholder}
               value={emailVal}
               onChange={handleChange}
               onFocus={() => setFocusedField(fields.email)}
               onBlur={() => setFocusedField(null)}
               required={true}
               disabled={isSubmitting}
-              aria-label={isEn ? "Email" : "E-mail"}
+              aria-label={t.email}
             />
           </div>
         </div>
@@ -217,14 +222,14 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <Phone size={18} strokeWidth={2} />
             </div>
             <label htmlFor="contact-field-phone" className="floating-label">
-              {isEn ? "Phone *" : "Téléphone *"}
+              {t.phoneLabel}
             </label>
             <input
               type="tel"
               name={fields.phone}
               id="contact-field-phone"
               className="floating-input-control"
-              placeholder={isEn ? "e.g. +33 6 67 52 06 77" : "Ex. : +33 6 67 52 06 77"}
+              placeholder={t.phonePlaceholder}
               value={phoneVal}
               onChange={handleChange}
               onFocus={() => setFocusedField(fields.phone)}
@@ -232,7 +237,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               required={true}
               disabled={isSubmitting}
               pattern="[0-9()#&+*-=.\s]+"
-              aria-label={isEn ? "Phone" : "Téléphone"}
+              aria-label={t.phone}
             />
           </div>
         </div>
@@ -248,7 +253,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <HelpCircle size={18} strokeWidth={2} />
             </div>
             <label htmlFor="contact-field-subject" className="floating-label">
-              {isEn ? "Subject *" : "Objet de la demande *"}
+              {t.subjectLabel}
             </label>
             <select
               name={fields.subject}
@@ -262,10 +267,10 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               onBlur={() => setFocusedField(null)}
               required={true}
               disabled={isSubmitting}
-              aria-label={isEn ? "Subject" : "Objet de la demande"}
+              aria-label={t.subject}
             >
               <option value="" disabled>
-                {isEn ? "— Please choose a topic —" : "— Veuillez choisir un objet —"}
+                {t.subjectPlaceholder}
               </option>
               {subjectOptions.map((opt, i) => (
                 <option key={i} value={opt.value}>
@@ -290,21 +295,21 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <MessageSquare size={18} strokeWidth={2} />
             </div>
             <label htmlFor="contact-field-message" className="floating-label">
-              {isEn ? "Message *" : "Message *"}
+              {t.messageLabel}
             </label>
             <textarea
               name={fields.message}
               id="contact-field-message"
               className="floating-input-control floating-textarea"
               rows={4}
-              placeholder={isEn ? "Your message here..." : "Votre message ici..."}
+              placeholder={t.messagePlaceholder}
               value={messageVal}
               onChange={handleChange}
               onFocus={() => setFocusedField(fields.message)}
               onBlur={() => setFocusedField(null)}
               required={true}
               disabled={isSubmitting}
-              aria-label={isEn ? "Message" : "Message"}
+              aria-label={t.message}
             ></textarea>
           </div>
         </div>
@@ -339,10 +344,10 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
                   <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.5" strokeOpacity="0.25" fill="none" />
                   <path d="M12 3a9 9 0 0 1 9 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
                 </svg>
-                <span>{isEn ? "Sending..." : "Envoi en cours..."}</span>
+                <span>{t.sending}</span>
               </>
             ) : (
-              <span>{isEn ? "Send Message" : "Envoyer le message"}</span>
+              <span>{t.submit}</span>
             )}
           </button>
         </div>
