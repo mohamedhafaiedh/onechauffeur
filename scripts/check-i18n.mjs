@@ -1,9 +1,10 @@
 // Vérifie la cohérence des dictionnaires : mêmes clés dans toutes les langues, aucune valeur vide.
 // Signale aussi (sans bloquer) les textes identiques d'une langue à l'autre : souvent un oubli de traduction.
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 
 const REFERENCE = "fr";
-const LANGS = ["fr", "en"];
+// toutes les langues présentes dans messages/
+const LANGS = readdirSync(new URL("../messages/", import.meta.url)).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
 // Textes identiques légitimes (noms propres, termes internationaux)
 const SAME_OK = new Set(["Contact", "Services", "WhatsApp", "Wi-Fi", "Minivan", "Message *", "Message"]);
 

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
-import { pagePath, type Lang } from "@/lib/seo";
+import { DEFAULT_LANG, pagePath, type Lang } from "@/lib/seo";
 import {
   MapPin,
   Navigation,
@@ -38,55 +38,25 @@ function getFormattedTimestamp() {
   return `${dateStr} à ${timeStr} (heure de Paris)`;
 }
 
-// Configuration Netlify Forms (noms du formulaire et des champs déclarés dans public/form.html,
-// objet et valeurs reçus dans l'e-mail) : technique, ne passe pas par les dictionnaires.
-const FORM_CONFIG: Record<Lang, {
-  formName: string;
-  emailSubjectPrefix: string;
-  fields: Record<"pickup" | "dropoff" | "date" | "time" | "vehicle" | "email" | "phone" | "message", string>;
-  vehicleValues: [string, string, string, string];
-}> = {
-  fr: {
-    formName: "reservation",
-    emailSubjectPrefix: "Nouvelle demande de réservation - One Chauffeur",
-    fields: {
-      pickup: "adresse_depart",
-      dropoff: "adresse_arrivee",
-      date: "date",
-      time: "heure",
-      vehicle: "vehicule",
-      email: "email",
-      phone: "telephone",
-      message: "message",
-    },
-    vehicleValues: [
-      "Berline (Tesla Model 3 ou similaire - 3 pax)",
-      "Berline Business (Mercedes Classe E - 3 pax)",
-      "Berline de Luxe (Mercedes Classe S - 3 pax)",
-      "Van (Mercedes Classe V - 7 pax)",
-    ],
-  },
-  en: {
-    formName: "reservation-en",
-    emailSubjectPrefix: "New Booking Request - One Chauffeur",
-    fields: {
-      pickup: "pickup_address",
-      dropoff: "dropoff_address",
-      date: "date",
-      time: "time",
-      vehicle: "vehicle",
-      email: "email",
-      phone: "phone",
-      message: "message",
-    },
-    vehicleValues: [
-      "Sedan (Tesla Model 3 or similar - 3 pax)",
-      "Business Sedan (Mercedes E-Class - 3 pax)",
-      "Luxury Sedan (Mercedes S-Class - 3 pax)",
-      "Van (Mercedes V-Class - 7 pax)",
-    ],
-  },
+// Configuration Netlify Forms : un seul formulaire pour toutes les langues (déclaré dans public/form.html).
+// Champs et valeurs en français pour des e-mails homogènes ; la langue du visiteur est dans le champ « langue ».
+const FORM_NAME = "reservation";
+const FIELDS = {
+  pickup: "adresse_depart",
+  dropoff: "adresse_arrivee",
+  date: "date",
+  time: "heure",
+  vehicle: "vehicule",
+  email: "email",
+  phone: "telephone",
+  message: "message",
 };
+const VEHICLE_VALUES = [
+  "Berline (Tesla Model 3 ou similaire - 3 pax)",
+  "Berline Business (Mercedes Classe E - 3 pax)",
+  "Berline de Luxe (Mercedes Classe S - 3 pax)",
+  "Van (Mercedes Classe V - 7 pax)",
+];
 
 export default function ReservationForm({ lang = "fr", redirectUrl }: ReservationFormProps) {
   const router = useRouter();
@@ -106,8 +76,10 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
     }
   });
 
-  const { formName, emailSubjectPrefix, fields, vehicleValues } = FORM_CONFIG[lang];
-  const vehicleOptions = vehicleValues.map((value, i) => ({ value, label: t.vehicleOptions[i] }));
+  const formName = FORM_NAME;
+  const fields = FIELDS;
+  const emailSubjectPrefix = `Nouvelle demande de réservation - One Chauffeur${lang === DEFAULT_LANG ? "" : ` (${lang.toUpperCase()})`}`;
+  const vehicleOptions = VEHICLE_VALUES.map((value, i) => ({ value, label: t.vehicleOptions[i] }));
 
   const targetRedirectUrl = redirectUrl || pagePath("merci", lang);
 
@@ -196,6 +168,7 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value={formName} />
+      <input type="hidden" name="langue" value={lang} />
       <input type="hidden" name="subject" value="" />
       <input type="hidden" name="pageUrl" value={typeof window !== "undefined" ? window.location.href : ""} />
       <input type="hidden" name="timestamp" value="" />

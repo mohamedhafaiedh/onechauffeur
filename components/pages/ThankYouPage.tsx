@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang } from "@/lib/seo";
-import styles from "./ThankYouPage.module.css";
+import styles from "./StatusPage.module.css";
 
 export default function ThankYouPage({ lang }: { lang: Lang }) {
   const { thankYou: t } = getMessages(lang);

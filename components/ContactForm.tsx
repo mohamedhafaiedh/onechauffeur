@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
-import { pagePath, type Lang } from "@/lib/seo";
+import { DEFAULT_LANG, pagePath, type Lang } from "@/lib/seo";
 import {
   User,
   Phone,
@@ -35,37 +35,23 @@ function getFormattedTimestamp() {
   return `${dateStr} à ${timeStr} (heure de Paris)`;
 }
 
-// Configuration Netlify Forms (noms du formulaire et des champs déclarés dans public/form.html,
-// objet et valeurs reçus dans l'e-mail) : technique, ne passe pas par les dictionnaires.
-const FORM_CONFIG: Record<Lang, {
-  formName: string;
-  emailSubject: string;
-  fields: { name: string; phone: string; email: string; subject: string; message: string };
-  subjectValues: [string, string, string];
-}> = {
-  fr: {
-    formName: "contact",
-    emailSubject: "Nouvelle demande de contact - One Chauffeur",
-    fields: { name: "nom", phone: "telephone", email: "email", subject: "objet", message: "message" },
-    subjectValues: ["Information", "Devis", "Réservation"],
-  },
-  en: {
-    formName: "contact-en",
-    emailSubject: "Contact Request - One Chauffeur",
-    fields: { name: "name", phone: "phone", email: "email", subject: "topic", message: "message" },
-    subjectValues: ["Information", "Quote", "Booking"],
-  },
-};
+// Configuration Netlify Forms : un seul formulaire pour toutes les langues (déclaré dans public/form.html).
+// Champs et valeurs en français pour des e-mails homogènes ; la langue du visiteur est dans le champ « langue ».
+const FORM_NAME = "contact";
+const FIELDS = { name: "nom", phone: "telephone", email: "email", subject: "objet", message: "message" };
+const SUBJECT_VALUES = ["Information", "Devis", "Réservation"];
 
 export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormProps) {
   const router = useRouter();
   const t = getMessages(lang).contactForm;
-  const { formName, emailSubject, fields, subjectValues } = FORM_CONFIG[lang];
+  const formName = FORM_NAME;
+  const fields = FIELDS;
+  const emailSubject = `Nouvelle demande de contact - One Chauffeur${lang === DEFAULT_LANG ? "" : ` (${lang.toUpperCase()})`}`;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
-  const subjectOptions = subjectValues.map((value, i) => ({ value, label: t.subjectOptions[i] }));
+  const subjectOptions = SUBJECT_VALUES.map((value, i) => ({ value, label: t.subjectOptions[i] }));
 
   const targetRedirectUrl = redirectUrl || pagePath("merci", lang);
 
@@ -145,6 +131,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value={formName} />
+      <input type="hidden" name="langue" value={lang} />
       <input type="hidden" name="subject" value="" />
       <input type="hidden" name="pageUrl" value={typeof window !== "undefined" ? window.location.href : ""} />
       <input type="hidden" name="timestamp" value="" />

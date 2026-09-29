@@ -212,5 +212,11 @@
   },
   "jsonLd": {
     "description": "Service de chauffeur privé VTC de prestige à Paris et en Île-de-France : transferts aéroports CDG et Orly, gares, voyages d'affaires et mise à disposition 24/7."
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "message": "La page que vous cherchez n'existe pas ou a été déplacée. Voici quelques liens utiles pour poursuivre votre visite.",
+    "backHome": "Retour à l'accueil",
+    "metaTitle": "Page introuvable – One Chauffeur"
   }
 }

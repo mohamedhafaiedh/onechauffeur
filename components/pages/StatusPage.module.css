@@ -30,6 +30,15 @@
   color: #e5a93c;
 }
 
+.code {
+  margin: 0 0 4px;
+  color: #e5a93c;
+  font-family: var(--font-syne), sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
 .title {
   margin: 0 0 16px;
   color: #000;
