@@ -97,9 +97,6 @@ export default function Header({ lang, page }: HeaderProps) {
                       className="jeg-elementor-kit jkit-nav-menu break-point-tablet submenu-click-title jeg_module_98__6aae20c7d192c"
                       data-item-indicator='&lt;i aria-hidden="true" className="jki jki-chevron-down-light"&gt;&lt;/i&gt;'
                     >
-                      <button aria-label={t.openMenu} className="jkit-hamburger-menu">
-                        <i aria-hidden="true" className="jki jki-menu-7-light"></i>
-                      </button>
                       <div className="jkit-menu-wrapper">
                         <div className="jkit-menu-container">
                           <ul
@@ -142,16 +139,7 @@ export default function Header({ lang, page }: HeaderProps) {
                             </li>
                           </ul>
                         </div>
-                        <div className="jkit-nav-identity-panel">
-                          <div className="jkit-nav-site-title">
-                            <Link aria-label={t.homeLink} className="jkit-nav-logo" href={homeHref}></Link>
-                          </div>
-                          <button aria-label={t.closeMenu} className="jkit-close-menu">
-                            <i aria-hidden="true" className="jki jki-times-solid"></i>
-                          </button>
-                        </div>
                       </div>
-                      <div className="jkit-overlay"></div>
                     </div>
                   </div>
                 </div>

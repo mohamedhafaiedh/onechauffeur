@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { getMessages, type Messages } from "./i18n";
 
-export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://onechauffeur.fr";
-export const SITE_URL = BASE_URL;
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://onechauffeur.fr";
 
 // `code` sert à l'attribut lang et aux hreflang ; `ogLocale` au format Open Graph (langue_TERRITOIRE)
 export const LOCALES = {
@@ -56,14 +55,20 @@ export const LEGACY_EN_REDIRECTS = (Object.keys(EN_SLUGS) as PageKey[])
 
 export function buildAlternates(page: PageKey, lang: Lang) {
   return {
-    canonical: `${BASE_URL}${pagePath(page, lang)}`,
+    canonical: `${SITE_URL}${pagePath(page, lang)}`,
     languages: {
-      [LOCALES.fr.code]: `${BASE_URL}${pagePath(page, "fr")}`,
-      [LOCALES.en.code]: `${BASE_URL}${pagePath(page, "en")}`,
-      "x-default": `${BASE_URL}${pagePath(page, "fr")}`,
+      [LOCALES.fr.code]: `${SITE_URL}${pagePath(page, "fr")}`,
+      [LOCALES.en.code]: `${SITE_URL}${pagePath(page, "en")}`,
+      "x-default": `${SITE_URL}${pagePath(page, "fr")}`,
     },
   };
 }
+
+// Icônes du site (app/favicon.ico est déclaré automatiquement par Next.js)
+export const SITE_ICONS: Metadata["icons"] = {
+  icon: [{ url: "/images/favicon-one-chauffeur.png", type: "image/png", sizes: "192x192" }],
+  apple: [{ url: "/images/favicon-one-chauffeur.png", sizes: "192x192" }],
+};
 
 // Identifiant stable de chaque page dans les dictionnaires (messages/*.json → meta)
 const META_KEYS = {
@@ -93,14 +98,14 @@ export function createPageMetadata(
     openGraph: {
       title: data.title,
       description: data.description,
-      url: `${BASE_URL}${pagePath(slug, lang)}`,
+      url: `${SITE_URL}${pagePath(slug, lang)}`,
       siteName: "One Chauffeur",
       locale: LOCALES[lang].ogLocale,
       alternateLocale: LOCALES[otherLang(lang)].ogLocale,
       type: "website",
       images: [
         {
-          url: `${BASE_URL}/images/favicon-one-chauffeur.png`,
+          url: `${SITE_URL}/images/favicon-one-chauffeur.png`,
           width: 192,
           height: 192,
           alt: "One Chauffeur",

@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import BaseLayout from "@/components/BaseLayout";
+import { SITE_ICONS } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  icons: {
-    icon: [{ url: "/images/favicon-one-chauffeur.png" }, { url: "/favicon.ico" }],
-    apple: [{ url: "/images/favicon-one-chauffeur.png" }],
-  },
+  icons: SITE_ICONS,
 };
 
 export default function FRLayout({

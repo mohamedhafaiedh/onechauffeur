@@ -64,7 +64,7 @@
   width: 10px;
   height: 10px;
   stroke-width: 1.6;
-  transition: transform 0.15s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .root.open .chevron {
