@@ -8,7 +8,7 @@ export default function ServicesPage({ lang }: { lang: Lang }) {
   const { services: t, shared: s } = getMessages(lang);
 
   return (
-    <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
+    <div>
       <Header lang={lang} page="services" />
       <main className="site-main post-108 page type-page status-publish hentry" id="content">
 <div className="page-content">

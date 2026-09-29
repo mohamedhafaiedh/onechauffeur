@@ -9,7 +9,7 @@ export default function BookingPage({ lang }: { lang: Lang }) {
   const { booking: t } = getMessages(lang);
 
   return (
-    <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
+    <div>
       <Header lang={lang} page="reservation" />
       <main className="site-main post-116 page type-page status-publish hentry" id="content">
         <div className="page-content">

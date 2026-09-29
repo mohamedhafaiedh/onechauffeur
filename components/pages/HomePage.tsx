@@ -8,7 +8,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const { home: t, shared: s } = getMessages(lang);
 
   return (
-    <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
+    <div>
       <Header lang={lang} page="" />
       <main className="site-main post-98 page type-page status-publish hentry" id="content">
 <div className="page-content">
