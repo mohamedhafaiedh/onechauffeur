@@ -225,7 +225,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                         className="attachment-full size-full wp-image-665"
                         height="140"
                         sizes="(max-width: 1000px) 100vw, 1000px"
-                        src="/images/logo-one-chauffeur.png"
+                        src="/images/logo-one-chauffeur.webp"
                         width="1000"
                       />
                     </Link>
@@ -257,7 +257,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                   alt="en_US"
                                   className="trp-flag-image"
                                   height="12"
-                                  src="/images/en_US.png"
+                                  src="/images/drapeau-en.png"
                                   title="English"
                                   width="18"
                                 />{" "}
@@ -270,7 +270,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                   alt="fr_FR"
                                   className="trp-flag-image"
                                   height="12"
-                                  src="/images/fr_FR.png"
+                                  src="/images/drapeau-fr.png"
                                   title="French"
                                   width="18"
                                 />{" "}
@@ -290,7 +290,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                   alt="fr_FR"
                                   className="trp-flag-image"
                                   height="12"
-                                  src="/images/fr_FR.png"
+                                  src="/images/drapeau-fr.png"
                                   title="French"
                                   width="18"
                                 />{" "}
@@ -303,7 +303,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                   alt="en_US"
                                   className="trp-flag-image"
                                   height="12"
-                                  src="/images/en_US.png"
+                                  src="/images/drapeau-en.png"
                                   title="English"
                                   width="18"
                                 />{" "}
@@ -368,7 +368,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                         className="attachment-full size-full wp-image-665"
                         height="140"
                         sizes="(max-width: 1000px) 100vw, 1000px"
-                        src="/images/logo-one-chauffeur.png"
+                        src="/images/logo-one-chauffeur.webp"
                         width="1000"
                       />
                     </Link>
@@ -404,7 +404,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                     alt="en_US"
                                     className="trp-flag-image"
                                     height="12"
-                                    src="/images/en_US.png"
+                                    src="/images/drapeau-en.png"
                                     title="English"
                                     width="18"
                                   />{" "}
@@ -417,7 +417,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                     alt="fr_FR"
                                     className="trp-flag-image"
                                     height="12"
-                                    src="/images/fr_FR.png"
+                                    src="/images/drapeau-fr.png"
                                     title="French"
                                     width="18"
                                   />{" "}
@@ -437,7 +437,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                     alt="fr_FR"
                                     className="trp-flag-image"
                                     height="12"
-                                    src="/images/fr_FR.png"
+                                    src="/images/drapeau-fr.png"
                                     title="French"
                                     width="18"
                                   />{" "}
@@ -450,7 +450,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                     alt="en_US"
                                     className="trp-flag-image"
                                     height="12"
-                                    src="/images/en_US.png"
+                                    src="/images/drapeau-en.png"
                                     title="English"
                                     width="18"
                                   />{" "}
@@ -537,7 +537,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                                 className="attachment-full size-full"
                                 height="140"
                                 sizes="(max-width: 1000px) 100vw, 1000px"
-                                src="/images/logo-one-chauffeur.png"
+                                src="/images/logo-one-chauffeur.webp"
                                 width="1000"
                               />
                             </Link>

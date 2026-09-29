@@ -100,7 +100,7 @@ export default function FlottePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-eaab21f elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="eaab21f" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-220" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/Tesla3.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-220" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/tesla-model-3.webp" width="439" /> </div>
 </div>
 </div>
 </div>
@@ -112,7 +112,7 @@ export default function FlottePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-2dfbb3d elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="2dfbb3d" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-1136" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/eclass.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-1136" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-e.webp" width="439" /> </div>
 </div>
 </div>
 </div>
@@ -242,7 +242,7 @@ export default function FlottePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-af26357 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="af26357" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-219" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/S-Class.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-219" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-s.webp" width="439" /> </div>
 </div>
 </div>
 </div>
@@ -254,7 +254,7 @@ export default function FlottePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-321f786 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="321f786" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-221" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/V-Class.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-221" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-v.webp" width="439" /> </div>
 </div>
 </div>
 </div>
@@ -346,15 +346,15 @@ export default function FlottePage() {
 </div>
 <div className="elementor-element elementor-element-163abd74 elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="163abd74" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="contact" src="/images/contact-qjctjylcg0j1kejkhmuphl665h5gveo9fluwf87mo0.png" title="contact"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">1. Nous contacter</h3><p className="elementor-image-box-description">E-mail, téléphone, formulaire de contact ou formulaire de réservation en ligne</p></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="contact" src="/images/icone-contact.png" title="contact"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">1. Nous contacter</h3><p className="elementor-image-box-description">E-mail, téléphone, formulaire de contact ou formulaire de réservation en ligne</p></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-53dd77de elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="53dd77de" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="livraison-de-la-commande" src="/images/livraison-de-la-commande-qjctjylcg0j1kejkhmuphl665h5gveo9fluwf87mo0.png" title="livraison-de-la-commande"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">2. Confirmez la réservation</h3><p className="elementor-image-box-description">Décrivez-nous votre besoin détaillé et nous vous conseillerons la meilleure prestation qui s'adapte le mieux à votre situation​</p></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="livraison-de-la-commande" src="/images/icone-livraison.png" title="livraison-de-la-commande"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">2. Confirmez la réservation</h3><p className="elementor-image-box-description">Décrivez-nous votre besoin détaillé et nous vous conseillerons la meilleure prestation qui s'adapte le mieux à votre situation​</p></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-133b0930 elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="133b0930" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="reservation-en-ligne" src="/images/reservation-en-ligne-qjctjvrtvif6lknny3mts3vsdbjd8bd2f7wfzebt6o.png" title="reservation-en-ligne"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">3. Notre chauffeur sera là à l'heure prévue</h3></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="reservation-en-ligne" src="/images/icone-reservation.png" title="reservation-en-ligne"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">3. Notre chauffeur sera là à l'heure prévue</h3></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-1347e8ae elementor-align-center btndec elementor-widget elementor-widget-global elementor-global-582 elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="1347e8ae" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -397,7 +397,7 @@ export default function FlottePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-6163ddef elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="6163ddef" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-905" height="2048" sizes="(max-width: 1317px) 100vw, 1317px" src="/images/tesla3.jpg" width="1317"/> </div>
+<img alt="" className="attachment-full size-full wp-image-905" height="2048" sizes="(max-width: 1317px) 100vw, 1317px" src="/images/tesla-model-3-calandre.webp" width="1317"/> </div>
 </div>
 </div>
 </div>

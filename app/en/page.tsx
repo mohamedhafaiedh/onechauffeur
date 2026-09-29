@@ -317,7 +317,7 @@ export default function EnglishHomePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-3df8bc0c elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="3df8bc0c" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-904" height="415" sizes="(max-width: 413px) 100vw, 413px" src="/images/tesla2.jpg" width="413" /> </div>
+<img alt="" className="attachment-full size-full wp-image-904" height="415" sizes="(max-width: 413px) 100vw, 413px" src="/images/tesla-model-3-profil.webp" width="413" /> </div>
 </div>
 </div>
 </div>
@@ -369,7 +369,7 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-element elementor-element-649c4e82 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="649c4e82" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-220" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/Tesla3.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-220" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/tesla-model-3.webp" width="439" /> </div>
 </div>
 <div className="elementor-element elementor-element-2c32e641 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="2c32e641" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -410,7 +410,7 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-element elementor-element-6a862db0 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="6a862db0" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-1136" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/eclass.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-1136" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-e.webp" width="439" /> </div>
 </div>
 <div className="elementor-element elementor-element-75922c2c elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="75922c2c" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -451,7 +451,7 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-element elementor-element-12c43a6a elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="12c43a6a" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-219" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/S-Class.png" width="439" /> </div>
+<img alt="" className="attachment-full size-full wp-image-219" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-s.webp" width="439" /> </div>
 </div>
 <div className="elementor-element elementor-element-26e4ba67 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="26e4ba67" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -492,7 +492,7 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-element elementor-element-d9aaaea elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="d9aaaea" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-221" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/V-Class.png" width="439"/> </div>
+<img alt="" className="attachment-full size-full wp-image-221" height="340" sizes="(max-width: 439px) 100vw, 439px" src="/images/mercedes-classe-v.webp" width="439"/> </div>
 </div>
 <div className="elementor-element elementor-element-d258320 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="d258320" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -550,15 +550,15 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-element elementor-element-163abd74 elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="163abd74" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="contact" src="/images/contact-qjctjylcg0j1kejkhmuphl665h5gveo9fluwf87mo0.png" title="contact"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">1. Contact us</h3><p className="elementor-image-box-description">Email, telephone, contact form or online reservation form</p></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="contact" src="/images/icone-contact.png" title="contact"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">1. Contact us</h3><p className="elementor-image-box-description">Email, telephone, contact form or online reservation form</p></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-53dd77de elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="53dd77de" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="livraison-de-la-commande" src="/images/livraison-de-la-commande-qjctjylcg0j1kejkhmuphl665h5gveo9fluwf87mo0.png" title="livraison-de-la-commande"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">2. Confirm your booking details</h3><p className="elementor-image-box-description">Tell us your need and we will advise you on the best service that best suits your situation</p></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="livraison-de-la-commande" src="/images/icone-livraison.png" title="livraison-de-la-commande"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">2. Confirm your booking details</h3><p className="elementor-image-box-description">Tell us your need and we will advise you on the best service that best suits your situation</p></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-133b0930 elementor-position-left elementor-vertical-align-middle elementor-widget elementor-widget-image-box" data-e-type="widget" data-element_type="widget" data-id="133b0930" data-widget_type="image-box.default">
 <div className="elementor-widget-container">
-<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="reservation-en-ligne" src="/images/reservation-en-ligne-qjctjvrtvif6lknny3mts3vsdbjd8bd2f7wfzebt6o.png" title="reservation-en-ligne"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">3. Your driver will be waiting for you on time</h3></div></div> </div>
+<div className="elementor-image-box-wrapper"><figure className="elementor-image-box-img"><img alt="reservation-en-ligne" src="/images/icone-reservation.png" title="reservation-en-ligne"/></figure><div className="elementor-image-box-content"><h3 className="elementor-image-box-title">3. Your driver will be waiting for you on time</h3></div></div> </div>
 </div>
 <div className="elementor-element elementor-element-1347e8ae elementor-align-center btndec elementor-widget elementor-widget-global elementor-global-582 elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="1347e8ae" data-widget_type="button.default">
 <div className="elementor-widget-container">
@@ -706,18 +706,10 @@ export default function EnglishHomePage() {
 </div>
 <div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7281ae95" data-e-type="column" data-element_type="column" data-id="7281ae95">
 <div className="elementor-widget-wrap elementor-element-populated">
-<div className="elementor-element elementor-element-3ca15be7 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="3ca15be7" data-widget_type="image.default">
-<div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-61" height="1333" sizes="(max-width: 2000px) 100vw, 2000px" src="/images/businessman-looking-at-the-watch-on-the-back-of-the-limousine.jpg" width="2000"/> </div>
-</div>
 </div>
 </div>
 </div>
 </section>
-<div className="elementor-element elementor-element-27d42fe1 elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="27d42fe1" data-widget_type="image.default">
-<div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-64" height="1335" sizes="(max-width: 2000px) 100vw, 2000px" src="/images/taxi-driver-opening-car-door-for-smiling-woman.jpg" width="2000"/> </div>
-</div>
 </div>
 </div>
 </div>
@@ -736,7 +728,7 @@ export default function EnglishHomePage() {
 <div className="elementor-widget-wrap elementor-element-populated">
 <div className="elementor-element elementor-element-6163ddef elementor-widget elementor-widget-image" data-e-type="widget" data-element_type="widget" data-id="6163ddef" data-widget_type="image.default">
 <div className="elementor-widget-container">
-<img alt="" className="attachment-full size-full wp-image-905" height="2048" sizes="(max-width: 1317px) 100vw, 1317px" src="/images/tesla3.jpg" width="1317"/> </div>
+<img alt="" className="attachment-full size-full wp-image-905" height="2048" sizes="(max-width: 1317px) 100vw, 1317px" src="/images/tesla-model-3-calandre.webp" width="1317"/> </div>
 </div>
 </div>
 </div>
