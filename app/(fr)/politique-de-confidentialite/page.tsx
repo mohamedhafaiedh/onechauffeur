@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function PolitiquePage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/politique-de-confidentialite/" />
+      <Header lang="fr" page="politique-de-confidentialite" />
       <main className="site-main post-3 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-3" data-elementor-id="3" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -46,7 +46,7 @@ export default function PolitiquePage() {
 </div>
 </div>
 </main>
-      <Footer lang="fr" currentPath="/politique-de-confidentialite/" />
+      <Footer lang="fr" page="politique-de-confidentialite" />
     </div>
   );
 }

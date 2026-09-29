@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function FlottePage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/flotte/" />
+      <Header lang="fr" page="flotte" />
       <main className="site-main post-110 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-110" data-elementor-id="110" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -437,7 +437,7 @@ export default function FlottePage() {
 </div>
 </div>
 </main>
-      <Footer lang="fr" currentPath="/flotte/" />
+      <Footer lang="fr" page="flotte" />
     </div>
   );
 }

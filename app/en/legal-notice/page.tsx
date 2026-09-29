@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function EnglishMentionsPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="en" currentPath="/en/mentions-legales/" />
+      <Header lang="en" page="mentions-legales" />
       <main className="site-main post-120 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-120" data-elementor-id="120" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -29,7 +29,7 @@ export default function EnglishMentionsPage() {
 </div>
 </div>
 </main>
-      <Footer lang="en" currentPath="/en/mentions-legales/" />
+      <Footer lang="en" page="mentions-legales" />
     </div>
   );
 }

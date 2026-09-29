@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function ServicesPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/services/" />
+      <Header lang="fr" page="services" />
       <main className="site-main post-108 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-108" data-elementor-id="108" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -231,7 +231,7 @@ export default function ServicesPage() {
 <div className="elementor-element elementor-element-2c32e641 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="2c32e641" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#berline">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#berline">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -272,7 +272,7 @@ export default function ServicesPage() {
 <div className="elementor-element elementor-element-75922c2c elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="75922c2c" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#business">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#business">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -313,7 +313,7 @@ export default function ServicesPage() {
 <div className="elementor-element elementor-element-26e4ba67 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="26e4ba67" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#luxe">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#luxe">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -354,7 +354,7 @@ export default function ServicesPage() {
 <div className="elementor-element elementor-element-d258320 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="d258320" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#minivan">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#minivan">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -498,7 +498,7 @@ export default function ServicesPage() {
 </div>
 </div>
 </main>
-      <Footer lang="fr" currentPath="/services/" />
+      <Footer lang="fr" page="services" />
     </div>
   );
 }

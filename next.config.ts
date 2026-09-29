@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import { LEGACY_EN_REDIRECTS } from "./lib/seo";
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
@@ -59,6 +60,7 @@ const nextConfig: NextConfig = {
         destination: "/merci/",
         permanent: true,
       },
+      ...LEGACY_EN_REDIRECTS.map((r) => ({ ...r, permanent: true })),
     ];
   },
 };

@@ -21,3 +21,17 @@
 /panier                   /reservation/              301!
 /reservation-recue/       /merci/                    301!
 /reservation-recue        /merci/                    301!
+
+# 301 Redirects for former English URLs (French slugs → translated slugs)
+/en/flotte/                          /en/fleet/            301!
+/en/flotte                           /en/fleet/            301!
+/en/reservation/                     /en/booking/          301!
+/en/reservation                      /en/booking/          301!
+/en/cgv/                             /en/terms-of-sale/    301!
+/en/cgv                              /en/terms-of-sale/    301!
+/en/mentions-legales/                /en/legal-notice/     301!
+/en/mentions-legales                 /en/legal-notice/     301!
+/en/politique-de-confidentialite/    /en/privacy-policy/   301!
+/en/politique-de-confidentialite     /en/privacy-policy/   301!
+/en/merci/                           /en/thank-you/        301!
+/en/merci                            /en/thank-you/        301!

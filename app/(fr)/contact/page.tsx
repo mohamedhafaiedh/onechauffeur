@@ -11,7 +11,7 @@ import ContactForm from "@/components/ContactForm";
 export default function ContactPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/contact/" />
+      <Header lang="fr" page="contact" />
       <main className="site-main post-112 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-112" data-elementor-id="112" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -86,7 +86,7 @@ export default function ContactPage() {
 </div>
 </div>
 </main>
-      <Footer lang="fr" currentPath="/contact/" />
+      <Footer lang="fr" page="contact" />
     </div>
   );
 }

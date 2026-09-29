@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { pagePath } from "@/lib/seo";
 import {
   User,
   Phone,
@@ -59,7 +60,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
         { value: "Réservation", label: "Réservation" }
       ];
 
-  const targetRedirectUrl = redirectUrl || (isEn ? "/en/merci" : "/merci");
+  const targetRedirectUrl = redirectUrl || pagePath("merci", lang);
 
   const [fieldValues, setFieldValues] = useState<{ [key: string]: string }>({
     [fields.name]: "",

@@ -3,9 +3,10 @@ import type { Metadata } from "next";
 export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://onechauffeur.fr";
 export const SITE_URL = BASE_URL;
 
+// `code` sert à l'attribut lang et aux hreflang ; `ogLocale` au format Open Graph (langue_TERRITOIRE)
 export const LOCALES = {
-  fr: { code: "fr-FR", prefix: "", dir: "ltr" },
-  en: { code: "en-US", prefix: "/en", dir: "ltr" },
+  fr: { code: "fr", ogLocale: "fr_FR", prefix: "", dir: "ltr", name: "Français" },
+  en: { code: "en", ogLocale: "en_US", prefix: "/en", dir: "ltr", name: "English" },
 } as const;
 
 export type Lang = keyof typeof LOCALES;
@@ -22,19 +23,43 @@ export const SITE_ROUTES = [
 ] as const;
 
 export type RouteSlug = (typeof SITE_ROUTES)[number];
+export type PageKey = RouteSlug | "merci";
 
-export function buildAlternates(slug: string, lang: Lang) {
-  const cleanSlug = slug.replace(/^\/|\/$/g, "");
-  const path = cleanSlug ? `${cleanSlug}/` : "";
+// Les pages sont identifiées par leur slug français ; seule la version anglaise a des slugs traduits
+const EN_SLUGS: Record<PageKey, string> = {
+  "": "",
+  services: "services",
+  flotte: "fleet",
+  reservation: "booking",
+  contact: "contact",
+  cgv: "terms-of-sale",
+  "mentions-legales": "legal-notice",
+  "politique-de-confidentialite": "privacy-policy",
+  merci: "thank-you",
+};
 
-  const canonical = lang === "en" ? `${BASE_URL}/en/${path}` : `${BASE_URL}/${path}`;
+export function otherLang(lang: Lang): Lang {
+  return lang === "en" ? "fr" : "en";
+}
 
+/** Chemin relatif d'une page dans une langue : pagePath("flotte", "en") → "/en/fleet/" */
+export function pagePath(page: PageKey, lang: Lang): string {
+  const slug = lang === "en" ? EN_SLUGS[page] : page;
+  return `${LOCALES[lang].prefix}/${slug ? `${slug}/` : ""}`;
+}
+
+/** Anciennes URL anglaises (slugs français) à rediriger vers les slugs traduits */
+export const LEGACY_EN_REDIRECTS = (Object.keys(EN_SLUGS) as PageKey[])
+  .filter((page) => page && EN_SLUGS[page] !== page)
+  .map((page) => ({ source: `/en/${page}`, destination: pagePath(page, "en") }));
+
+export function buildAlternates(page: PageKey, lang: Lang) {
   return {
-    canonical,
+    canonical: `${BASE_URL}${pagePath(page, lang)}`,
     languages: {
-      "fr-FR": `${BASE_URL}/${path}`,
-      "en-US": `${BASE_URL}/en/${path}`,
-      "x-default": `${BASE_URL}/${path}`,
+      [LOCALES.fr.code]: `${BASE_URL}${pagePath(page, "fr")}`,
+      [LOCALES.en.code]: `${BASE_URL}${pagePath(page, "en")}`,
+      "x-default": `${BASE_URL}${pagePath(page, "fr")}`,
     },
   };
 }
@@ -142,7 +167,7 @@ export const SEO_DATA: Record<Lang, Record<RouteSlug | "merci", PageSeoConfig>> 
 };
 
 export function createPageMetadata(
-  slug: RouteSlug | "merci",
+  slug: PageKey,
   lang: Lang,
   options?: { noindex?: boolean }
 ): Metadata {
@@ -156,9 +181,10 @@ export function createPageMetadata(
     openGraph: {
       title: data.title,
       description: data.description,
-      url: alternates?.canonical || `${BASE_URL}${lang === "en" ? "/en" : ""}/${slug ? `${slug}/` : ""}`,
+      url: `${BASE_URL}${pagePath(slug, lang)}`,
       siteName: "One Chauffeur",
-      locale: lang === "en" ? "en_US" : "fr_FR",
+      locale: LOCALES[lang].ogLocale,
+      alternateLocale: LOCALES[otherLang(lang)].ogLocale,
       type: "website",
       images: [
         {

@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function HomePage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/" />
+      <Header lang="fr" page="" />
       <main className="site-main post-98 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-98" data-elementor-id="98" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -374,7 +374,7 @@ export default function HomePage() {
 <div className="elementor-element elementor-element-2c32e641 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="2c32e641" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#berline">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#berline">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -415,7 +415,7 @@ export default function HomePage() {
 <div className="elementor-element elementor-element-75922c2c elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="75922c2c" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#business">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#business">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -456,7 +456,7 @@ export default function HomePage() {
 <div className="elementor-element elementor-element-26e4ba67 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="26e4ba67" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#luxe">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#luxe">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -497,7 +497,7 @@ export default function HomePage() {
 <div className="elementor-element elementor-element-d258320 elementor-align-left elementor-widget__width-auto elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="d258320" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte#minivan">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/flotte/#minivan">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-icon">
 <i aria-hidden="true" className="jki jki-angle-right-solid"></i> </span>
@@ -587,133 +587,6 @@ export default function HomePage() {
 </div>
 </div>
 </section>
-<section className="elementor-section elementor-top-section elementor-element elementor-element-77fce6c elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="77fce6c">
-<div className="elementor-container elementor-column-gap-no">
-<div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-74e245d7" data-e-type="column" data-element_type="column" data-id="74e245d7">
-<div className="elementor-widget-wrap elementor-element-populated">
-<div className="elementor-element elementor-element-51764022 elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="51764022" data-widget_type="heading.default">
-<div className="elementor-widget-container">
-<h2 className="elementor-heading-title elementor-size-default">Bringing Countless Smiles through Our Taxi Rides</h2> </div>
-</div>
-<div className="elementor-element elementor-element-2daa0a6d elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="2daa0a6d" data-widget_type="text-editor.default">
-<div className="elementor-widget-container">
-									Fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt unde omnis iste								</div>
-</div>
-<section className="elementor-section elementor-inner-section elementor-element elementor-element-58e10fd9 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="58e10fd9">
-<div className="elementor-container elementor-column-gap-no">
-<div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6e7e043c" data-e-type="column" data-element_type="column" data-id="6e7e043c">
-<div className="elementor-widget-wrap elementor-element-populated">
-<div className="elementor-element elementor-element-6c28514f elementor-widget elementor-widget-jkit_fun_fact" data-e-type="widget" data-element_type="widget" data-id="6c28514f" data-widget_type="jkit_fun_fact.default">
-<div className="elementor-widget-container">
-<div className="jeg-elementor-kit jkit-fun-fact align-center hover-from-left elementor-animation- jeg_module_98_18_6aae20c7e0647"><div className="fun-fact-inner">
-<div className="content">
-<div className="number-wrapper"><span className="prefix"></span>
-<span className="number" data-animation-duration="3500" data-value="97">97</span>
-<span className="suffix"></span><sup className="super">%</sup></div>
-<h3 className="title">Satisfaction Rate</h3>
-</div>
-</div></div> </div>
-</div>
-</div>
-</div>
-<div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-cb54002" data-e-type="column" data-element_type="column" data-id="cb54002">
-<div className="elementor-widget-wrap elementor-element-populated">
-<div className="elementor-element elementor-element-473bf27 elementor-widget elementor-widget-jkit_fun_fact" data-e-type="widget" data-element_type="widget" data-id="473bf27" data-widget_type="jkit_fun_fact.default">
-<div className="elementor-widget-container">
-<div className="jeg-elementor-kit jkit-fun-fact align-center hover-from-left elementor-animation- jeg_module_98_19_6aae20c7e09c3"><div className="fun-fact-inner">
-<div className="content">
-<div className="number-wrapper"><span className="prefix"></span>
-<span className="number" data-animation-duration="3500" data-value="24">24</span>
-<span className="suffix"></span><sup className="super">+</sup></div>
-<h3 className="title">Years of Experience</h3>
-</div>
-</div></div> </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-<div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-154b2ab4" data-e-type="column" data-element_type="column" data-id="154b2ab4">
-<div className="elementor-widget-wrap elementor-element-populated">
-<section className="elementor-section elementor-inner-section elementor-element elementor-element-a670c89 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="a670c89">
-<div className="elementor-container elementor-column-gap-no">
-<div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-419e1754" data-e-type="column" data-element_type="column" data-id="419e1754">
-<div className="elementor-widget-wrap elementor-element-populated">
-<div className="elementor-element elementor-element-3a92d32c elementor-widget__width-auto elementor-widget elementor-widget-jkit_testimonials" data-e-type="widget" data-element_type="widget" data-id="3a92d32c" data-widget_type="jkit_testimonials.default">
-<div className="elementor-widget-container">
-<div className="jeg-elementor-kit jkit-testimonials arrow-bottom-middle style-3 quote-override jeg_module_98_20_6aae20c7e263e" data-id="jeg_module_98_20_6aae20c7e263e" data-settings='{"autoplay":true,"autoplay_speed":4500,"autoplay_hover_pause":false,"show_navigation":false,"navigation_left":"&lt;span&gt;&lt;svg aria-hidden=\"true\" className=\"e-font-icon-svg e-fas-angle-left\" viewBox=\"0 0 256 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"&gt;&lt;path d=\"M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z\"&gt;&lt;\/path&gt;&lt;\/svg&gt;&lt;\/span&gt;","navigation_right":"&lt;span&gt;&lt;svg aria-hidden=\"true\" className=\"e-font-icon-svg e-fas-angle-right\" viewBox=\"0 0 256 512\" xmlns=\"http:\/\/www.w3.org\/2000\/svg\"&gt;&lt;path d=\"M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z\"&gt;&lt;\/path&gt;&lt;\/svg&gt;&lt;\/span&gt;","show_dots":false,"arrow_position":"bottom","responsive":{"desktop":{"items":1,"margin":40,"breakpoint":1025},"tablet":{"items":1,"margin":10,"breakpoint":768},"mobile":{"items":1,"margin":10,"breakpoint":0}}}'><div className="testimonials-list">
-<div className="testimonials-track"><div className="testimonial-item elementor-repeater-item-13e60a4">
-<div className="testimonial-box hover-from-left">
-<div className="icon-content"></div><div className="comment-bio">
-<div className="bio-details"><div className="profile-image"></div></div>
-</div>
-<ul className="rating-stars"><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-half-alt-solid"></i></li></ul><div className="comment-content"><p>"The driver was punctual, and the ride was smooth. What stood out was their attention to detail and willingness to accommodate my specific needs."</p></div>
-<span className="profile-info">
-<strong className="profile-name">— Michael Ruel</strong>
-<p className="profile-des"></p>
-</span>
-</div>
-</div><div className="testimonial-item elementor-repeater-item-00694b1">
-<div className="testimonial-box hover-from-left">
-<div className="icon-content"></div><div className="comment-bio">
-<div className="bio-details"><div className="profile-image"></div></div>
-</div>
-<ul className="rating-stars"><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li></ul><div className="comment-content"><p>"The driver was professional and friendly, and the vehicle was clean and comfortable. It's clear that they prioritize customer satisfaction."</p></div>
-<span className="profile-info">
-<strong className="profile-name">— Lisa Mich</strong>
-<p className="profile-des"></p>
-</span>
-</div>
-</div><div className="testimonial-item elementor-repeater-item-90d7950">
-<div className="testimonial-box hover-from-left">
-<div className="icon-content"></div><div className="comment-bio">
-<div className="bio-details"><div className="profile-image"></div></div>
-</div>
-<ul className="rating-stars"><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li></ul><div className="comment-content"><p>"I've experienced Cabsy friendly approach on multiple occasions. Cabsy have become my go-to choice for all my transportation needs."</p></div>
-<span className="profile-info">
-<strong className="profile-name">— Daniel Khan</strong>
-<p className="profile-des"></p>
-</span>
-</div>
-</div><div className="testimonial-item elementor-repeater-item-c0b17aa">
-<div className="testimonial-box hover-from-left">
-<div className="icon-content"></div><div className="comment-bio">
-<div className="bio-details"><div className="profile-image"></div></div>
-</div>
-<ul className="rating-stars"><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-half-alt-solid"></i></li></ul><div className="comment-content"><p>"Cabsy service is nice, with friendly drivers and well-maintained vehicles. They truly go the extra mile to ensure every ride is comfortable and enjoyable." </p></div>
-<span className="profile-info">
-<strong className="profile-name">— Jessica Lou</strong>
-<p className="profile-des"></p>
-</span>
-</div>
-</div><div className="testimonial-item elementor-repeater-item-3d49b0d">
-<div className="testimonial-box hover-from-left">
-<div className="icon-content"></div><div className="comment-bio">
-<div className="bio-details"><div className="profile-image"></div></div>
-</div>
-<ul className="rating-stars"><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-solid"></i></li><li><i aria-hidden="true" className="jki jki-star-half-alt-solid"></i></li></ul><div className="comment-content"><p>"Cabsy commitment to excellence is evident, prioritize customer satisfaction, making them the best choice for reliable and enjoyable rides."</p></div>
-<span className="profile-info">
-<strong className="profile-name">— Sarah Harvey</strong>
-<p className="profile-des"></p>
-</span>
-</div>
-</div></div>
-</div></div> </div>
-</div>
-</div>
-</div>
-<div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7281ae95" data-e-type="column" data-element_type="column" data-id="7281ae95">
-<div className="elementor-widget-wrap elementor-element-populated">
-</div>
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
-</section>
 <section className="elementor-section elementor-top-section elementor-element elementor-element-f15224e elementor-reverse-tablet elementor-reverse-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="f15224e">
 <div className="elementor-container elementor-column-gap-no">
 <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5ca6b1c" data-e-type="column" data-element_type="column" data-id="5ca6b1c">
@@ -768,7 +641,7 @@ export default function HomePage() {
 </div>
 </div>
 </main>
-      <Footer lang="fr" currentPath="/" />
+      <Footer lang="fr" page="" />
     </div>
   );
 }

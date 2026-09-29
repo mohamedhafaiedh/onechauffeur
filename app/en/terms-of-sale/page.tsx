@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function EnglishCgvPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="en" currentPath="/en/cgv/" />
+      <Header lang="en" page="cgv" />
       <main className="site-main post-118 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-118" data-elementor-id="118" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -66,7 +66,7 @@ export default function EnglishCgvPage() {
 </div>
 </div>
 </main>
-      <Footer lang="en" currentPath="/en/cgv/" />
+      <Footer lang="en" page="cgv" />
     </div>
   );
 }

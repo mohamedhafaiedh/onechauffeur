@@ -12,7 +12,7 @@ import { CheckCircle2, Phone, Mail, ArrowLeft } from "lucide-react";
 export default function MerciPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white flex flex-col justify-between">
-      <Header lang="fr" currentPath="/merci/" />
+      <Header lang="fr" page="merci" />
 
       <main className="flex-1 flex items-center justify-center px-4 py-20 relative overflow-hidden">
         {/* Ambient gold glow */}
@@ -61,7 +61,7 @@ export default function MerciPage() {
         </div>
       </main>
 
-      <Footer lang="fr" currentPath="/merci/" />
+      <Footer lang="fr" page="merci" />
     </div>
   );
 }

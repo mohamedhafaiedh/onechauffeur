@@ -11,7 +11,7 @@ import ReservationForm from "@/components/ReservationForm";
 export default function ReservationPage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="fr" currentPath="/reservation/" />
+      <Header lang="fr" page="reservation" />
       <main className="site-main post-116 page type-page status-publish hentry" id="content">
         <div className="page-content">
           <div className="elementor elementor-116" data-elementor-id="116" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -46,7 +46,7 @@ export default function ReservationPage() {
           </div>
         </div>
       </main>
-      <Footer lang="fr" currentPath="/reservation/" />
+      <Footer lang="fr" page="reservation" />
     </div>
   );
 }

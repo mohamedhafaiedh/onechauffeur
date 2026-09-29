@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 export default function EnglishFlottePage() {
   return (
     <div className="onechauffeur-container min-h-screen bg-[#0b0d17] text-white">
-      <Header lang="en" currentPath="/en/flotte/" />
+      <Header lang="en" page="flotte" />
       <main className="site-main post-110 page type-page status-publish hentry" id="content">
 <div className="page-content">
 <div className="elementor elementor-110" data-elementor-id="110" data-elementor-post-type="page" data-elementor-type="wp-page">
@@ -359,7 +359,7 @@ export default function EnglishFlottePage() {
 <div className="elementor-element elementor-element-1347e8ae elementor-align-center btndec elementor-widget elementor-widget-global elementor-global-582 elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="1347e8ae" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/en/reservation/">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/en/booking/">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-text">Get quote &amp; book</span>
 </span>
@@ -414,7 +414,7 @@ export default function EnglishFlottePage() {
 <div className="elementor-element elementor-element-dce0415 elementor-align-center btndec elementor-widget elementor-widget-global elementor-global-582 elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="dce0415" data-widget_type="button.default">
 <div className="elementor-widget-container">
 <div className="elementor-button-wrapper">
-<a className="elementor-button elementor-button-link elementor-size-sm" href="/en/reservation/">
+<a className="elementor-button elementor-button-link elementor-size-sm" href="/en/booking/">
 <span className="elementor-button-content-wrapper">
 <span className="elementor-button-text">Get quote &amp; book</span>
 </span>
@@ -437,7 +437,7 @@ export default function EnglishFlottePage() {
 </div>
 </div>
 </main>
-      <Footer lang="en" currentPath="/en/flotte/" />
+      <Footer lang="en" page="flotte" />
     </div>
   );
 }

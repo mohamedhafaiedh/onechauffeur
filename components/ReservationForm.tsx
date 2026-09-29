@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import { pagePath } from "@/lib/seo";
 import {
   MapPin,
   Navigation,
@@ -92,7 +93,7 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         { value: "Van (Mercedes Classe V - 7 pax)", label: "Van (Mercedes Classe V - 7 pax)" }
       ];
 
-  const targetRedirectUrl = redirectUrl || (isEn ? "/en/merci" : "/merci");
+  const targetRedirectUrl = redirectUrl || pagePath("merci", lang);
 
   const [fieldValues, setFieldValues] = useState<{ [key: string]: string }>({
     [fields.pickup]: "",

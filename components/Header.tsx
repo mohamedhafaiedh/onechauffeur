@@ -2,13 +2,15 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { pagePath, type Lang, type PageKey } from "@/lib/seo";
 
 interface HeaderProps {
-  lang: "fr" | "en";
-  currentPath: string;
+  lang: Lang;
+  page: PageKey;
 }
 
-export default function Header({ lang, currentPath }: HeaderProps) {
+export default function Header({ lang, page }: HeaderProps) {
   useEffect(() => {
     // Mobile menu toggle
     const hamburger = document.querySelectorAll(".jkit-hamburger-menu");
@@ -55,35 +57,12 @@ export default function Header({ lang, currentPath }: HeaderProps) {
 
   const isEn = lang === "en";
 
-  // Calculate opposite language target URL
-  let targetLangUrl = "/";
-  if (isEn) {
-    if (currentPath === "/en/" || currentPath === "/en") {
-      targetLangUrl = "/";
-    } else {
-      targetLangUrl = currentPath.replace(/^\/en\/?/, "/");
-      if (!targetLangUrl.endsWith("/") && !targetLangUrl.includes("#")) {
-        targetLangUrl += "/";
-      }
-    }
-  } else {
-    if (currentPath === "/" || currentPath === "") {
-      targetLangUrl = "/en/";
-    } else {
-      const clean = currentPath.replace(/^\//, "");
-      targetLangUrl = `/en/${clean}`;
-      if (!targetLangUrl.endsWith("/") && !targetLangUrl.includes("#")) {
-        targetLangUrl += "/";
-      }
-    }
-  }
-
   // Links
-  const homeHref = isEn ? "/en/" : "/";
-  const servicesHref = isEn ? "/en/services/" : "/services/";
-  const flotteHref = isEn ? "/en/flotte/" : "/flotte/";
-  const contactHref = isEn ? "/en/contact/" : "/contact/";
-  const reservationHref = isEn ? "/en/reservation/" : "/reservation/";
+  const homeHref = pagePath("", lang);
+  const servicesHref = pagePath("services", lang);
+  const flotteHref = pagePath("flotte", lang);
+  const contactHref = pagePath("contact", lang);
+  const reservationHref = pagePath("reservation", lang);
 
   // Labels
   const skipText = isEn ? "Skip to content" : "Aller au contenu";
@@ -94,11 +73,11 @@ export default function Header({ lang, currentPath }: HeaderProps) {
   const reservationBtnText = isEn ? "Book my driver" : "Je réserve mon chauffeur";
   const reservationMenuText = isEn ? "Booking" : "Réservation";
 
-  const isHomeActive = currentPath === "/" || currentPath === "/en/" || currentPath === "/en";
-  const isServicesActive = currentPath.includes("/services");
-  const isFlotteActive = currentPath.includes("/flotte");
-  const isContactActive = currentPath.includes("/contact");
-  const isReservationActive = currentPath.includes("/reservation");
+  const isHomeActive = page === "";
+  const isServicesActive = page === "services";
+  const isFlotteActive = page === "flotte";
+  const isContactActive = page === "contact";
+  const isReservationActive = page === "reservation";
 
   return (
     <>
@@ -245,73 +224,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                   <div className="elementor-shortcode">
                     <div className="trp_language_switcher_shortcode">
                       <div className="trp-language-switcher trp-language-switcher-container" data-no-translation="">
-                        {isEn ? (
-                          <>
-                            <div className="trp-ls-shortcode-current-language">
-                              <a
-                                className="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
-                                href="#"
-                                title="English"
-                              >
-                                <img
-                                  alt="en_US"
-                                  className="trp-flag-image"
-                                  height="12"
-                                  src="/images/drapeau-en.png"
-                                  title="English"
-                                  width="18"
-                                />{" "}
-                                EN
-                              </a>
-                            </div>
-                            <div className="trp-ls-shortcode-language">
-                              <Link href={targetLangUrl} title="French">
-                                <img
-                                  alt="fr_FR"
-                                  className="trp-flag-image"
-                                  height="12"
-                                  src="/images/drapeau-fr.png"
-                                  title="French"
-                                  width="18"
-                                />{" "}
-                                FR
-                              </Link>
-                            </div>
-                          </>
-                        ) : (
-                          <>
-                            <div className="trp-ls-shortcode-current-language">
-                              <a
-                                className="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
-                                href="#"
-                                title="French"
-                              >
-                                <img
-                                  alt="fr_FR"
-                                  className="trp-flag-image"
-                                  height="12"
-                                  src="/images/drapeau-fr.png"
-                                  title="French"
-                                  width="18"
-                                />{" "}
-                                FR
-                              </a>
-                            </div>
-                            <div className="trp-ls-shortcode-language">
-                              <Link href={targetLangUrl} title="English">
-                                <img
-                                  alt="en_US"
-                                  className="trp-flag-image"
-                                  height="12"
-                                  src="/images/drapeau-en.png"
-                                  title="English"
-                                  width="18"
-                                />{" "}
-                                EN
-                              </Link>
-                            </div>
-                          </>
-                        )}
+                        <LanguageSwitcher lang={lang} page={page} />
                       </div>
                     </div>
                   </div>
@@ -392,73 +305,7 @@ export default function Header({ lang, currentPath }: HeaderProps) {
                     <div className="elementor-shortcode">
                       <div className="trp_language_switcher_shortcode">
                         <div className="trp-language-switcher trp-language-switcher-container" data-no-translation="">
-                          {isEn ? (
-                            <>
-                              <div className="trp-ls-shortcode-current-language">
-                                <a
-                                  className="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
-                                  href="#"
-                                  title="English"
-                                >
-                                  <img
-                                    alt="en_US"
-                                    className="trp-flag-image"
-                                    height="12"
-                                    src="/images/drapeau-en.png"
-                                    title="English"
-                                    width="18"
-                                  />{" "}
-                                  EN
-                                </a>
-                              </div>
-                              <div className="trp-ls-shortcode-language">
-                                <Link href={targetLangUrl} title="French">
-                                  <img
-                                    alt="fr_FR"
-                                    className="trp-flag-image"
-                                    height="12"
-                                    src="/images/drapeau-fr.png"
-                                    title="French"
-                                    width="18"
-                                  />{" "}
-                                  FR
-                                </Link>
-                              </div>
-                            </>
-                          ) : (
-                            <>
-                              <div className="trp-ls-shortcode-current-language">
-                                <a
-                                  className="trp-ls-shortcode-disabled-language trp-ls-disabled-language"
-                                  href="#"
-                                  title="French"
-                                >
-                                  <img
-                                    alt="fr_FR"
-                                    className="trp-flag-image"
-                                    height="12"
-                                    src="/images/drapeau-fr.png"
-                                    title="French"
-                                    width="18"
-                                  />{" "}
-                                  FR
-                                </a>
-                              </div>
-                              <div className="trp-ls-shortcode-language">
-                                <Link href={targetLangUrl} title="English">
-                                  <img
-                                    alt="en_US"
-                                    className="trp-flag-image"
-                                    height="12"
-                                    src="/images/drapeau-en.png"
-                                    title="English"
-                                    width="18"
-                                  />{" "}
-                                  EN
-                                </Link>
-                              </div>
-                            </>
-                          )}
+                          <LanguageSwitcher lang={lang} page={page} />
                         </div>
                       </div>
                     </div>
