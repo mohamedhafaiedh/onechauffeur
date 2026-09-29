@@ -222,11 +222,7 @@ export default function Header({ lang, page }: HeaderProps) {
               >
                 <div className="elementor-widget-container">
                   <div className="elementor-shortcode">
-                    <div className="trp_language_switcher_shortcode">
-                      <div className="trp-language-switcher trp-language-switcher-container" data-no-translation="">
-                        <LanguageSwitcher lang={lang} page={page} />
-                      </div>
-                    </div>
+                    <LanguageSwitcher lang={lang} page={page} />
                   </div>
                 </div>
               </div>
@@ -303,11 +299,7 @@ export default function Header({ lang, page }: HeaderProps) {
                 >
                   <div className="elementor-widget-container">
                     <div className="elementor-shortcode">
-                      <div className="trp_language_switcher_shortcode">
-                        <div className="trp-language-switcher trp-language-switcher-container" data-no-translation="">
-                          <LanguageSwitcher lang={lang} page={page} />
-                        </div>
-                      </div>
+                      <LanguageSwitcher lang={lang} page={page} />
                     </div>
                   </div>
                 </div>

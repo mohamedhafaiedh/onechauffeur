@@ -11760,6 +11760,14 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
   width: 100% !important;
 }
 
+/* La rangée desktop porte elementor-hidden-tablet/mobile, mais le display:flex ci-dessus
+   l'emportait : elle s'affichait au-dessus du header mobile. */
+@media (max-width: 1024px) {
+  .elementor-element-df26d30.elementor-hidden-tablet {
+    display: none !important;
+  }
+}
+
 /* Menu navigation: 35% */
 .elementor-element-d09ef3c {
   width: 35% !important;
@@ -12213,7 +12221,8 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
     margin: 0 auto !important;
   }
 
-  /* Colonne 3 : Sélecteur de Langue (Largeur exacte : 149.99px, dont 129.99px + 20px marge droite) */
+  /* Colonne 3 : Sélecteur de Langue (colonne de 149.99px conservée pour garder le logo centré ;
+     le sélecteur, dimensionné sur son contenu, est calé à droite contre le bouton) */
   .header-col-lang,
   .elementor-81 .elementor-element.elementor-element-fc0ddae,
   .elementor-element-fc0ddae {
@@ -12224,13 +12233,13 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
     padding: 0 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: flex-end !important;
     box-sizing: border-box !important;
   }
   .header-col-lang > .elementor-widget-container,
   .elementor-element-fc0ddae > .elementor-widget-container {
-    width: 129.99px !important;
-    margin: 0 20px 0 0 !important;
+    width: auto !important;
+    margin: 0 !important;
     padding: 0 !important;
   }
   .header-col-lang .trp-language-switcher,

@@ -1,0 +1,163 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  font-family: "Poppins", sans-serif;
+}
+
+.root .trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 40px;
+  padding: 0 10px;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: #1e1e1e;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+/* Neutralise les états :focus / :hover des boutons du thème (fond et texte roses) */
+.root .trigger:focus {
+  color: #1e1e1e;
+  background-color: transparent;
+}
+
+.root .trigger:hover,
+.root.open .trigger {
+  color: #1e1e1e;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.root .trigger:focus-visible,
+.root .item:focus-visible {
+  outline: 2px solid #e5a93c;
+  outline-offset: 2px;
+}
+
+.root .globe,
+.root .chevron,
+.root .check {
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.root .globe {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.5;
+}
+
+.root .code {
+  letter-spacing: 0.02em;
+}
+
+.root .chevron {
+  width: 10px;
+  height: 10px;
+  stroke-width: 1.6;
+  transition: transform 0.15s ease;
+}
+
+.root.open .chevron {
+  transform: rotate(180deg);
+}
+
+.root .menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  z-index: 10000;
+  min-width: 150px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+}
+
+.root.up .menu {
+  top: auto;
+  bottom: calc(100% + 6px);
+  transform: translateY(4px);
+}
+
+.root.open .menu {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+}
+
+@media (hover: hover) {
+  .root:hover .menu {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+}
+
+/* Pont invisible entre le bouton et le menu pour que le survol ne se coupe pas */
+.root .menu::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -8px;
+  height: 8px;
+}
+
+.root.up .menu::before {
+  top: auto;
+  bottom: -8px;
+}
+
+.root .menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.root .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 9px 10px;
+  border-radius: 5px;
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 0.15s ease;
+}
+
+.root .item:hover {
+  background-color: #f5f5f5;
+  color: #1e1e1e;
+}
+
+.root .current {
+  font-weight: 600;
+}
+
+.root .check {
+  width: 14px;
+  height: 14px;
+  stroke-width: 1.8;
+  color: #e5a93c;
+}
