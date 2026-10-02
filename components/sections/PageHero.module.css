@@ -1,13 +1,123 @@
 .hero {
-  padding-block: 60px;
-  background: var(--color-black);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 64px 72px;
+  background:
+    radial-gradient(70% 140% at 100% 0%, rgba(235, 187, 96, 0.16), transparent 60%),
+    radial-gradient(50% 120% at 0% 100%, rgba(255, 255, 255, 0.06), transparent 70%),
+    var(--color-black);
+  color: var(--color-white);
+}
+
+/* Deux anneaux dorés très discrets, comme le « O » du logo */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(235, 187, 96, 0.22);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::before {
+  inset-inline-end: -140px;
+  top: -300px;
+  width: 560px;
+  aspect-ratio: 1;
+}
+
+.hero::after {
+  inset-inline-end: -40px;
+  top: -170px;
+  width: 340px;
+  aspect-ratio: 1;
+  border-color: rgba(235, 187, 96, 0.14);
+}
+
+.inner {
+  text-align: center;
+}
+
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.crumbs li + li::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-inline-end: 10px;
+  border-radius: 50%;
+  background: var(--color-gold);
+  vertical-align: middle;
+}
+
+.crumbs a {
+  transition: color 0.2s ease;
+}
+
+.crumbs a:hover {
+  color: var(--color-white);
+}
+
+.crumbs [aria-current] {
+  color: var(--color-white);
 }
 
 .hero h1 {
   max-width: 860px;
-  margin-inline: auto;
+  margin: 18px auto 0;
   color: var(--color-white);
   font-size: var(--h1-page);
   line-height: 1.1;
-  text-align: center;
+  text-wrap: balance;
+}
+
+/* Trait doré sous le titre */
+.hero h1::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 26px auto 0;
+  border-radius: 2px;
+  background: var(--color-gold);
+}
+
+.subtitle {
+  max-width: 40em;
+  margin: 22px auto 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-block: 44px 52px;
+  }
+
+  .hero::before {
+    inset-inline-end: -260px;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
 }

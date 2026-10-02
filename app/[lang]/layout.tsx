@@ -10,6 +10,9 @@ export function generateStaticParams() {
 
 export const metadata: Metadata = {
   icons: SITE_ICONS,
+  // Safari iOS ne transforme pas les numéros et e-mails en liens (mentions légales : texte simple) ;
+  // les vrais boutons d'appel du site restent des liens tel:
+  formatDetection: { telephone: false, email: false, address: false },
 };
 
 export default async function LangLayout({

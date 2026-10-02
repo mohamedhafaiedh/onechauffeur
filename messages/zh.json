@@ -8,7 +8,9 @@
   },
   "common": {
     "phone": "電話",
-    "backHome": "返回首頁"
+    "backHome": "返回首頁",
+    "privacyNote": "您的資料僅用於處理您的請求。",
+    "privacyLink": "個人資料"
   },
   "meta": {
     "home": {
@@ -39,10 +41,6 @@
       "title": "法律聲明 – One Chauffeur",
       "description": "One Chauffeur SASU 法律聲明：公司登記、註冊地址、發行負責人及網站託管資訊。"
     },
-    "privacyPolicy": {
-      "title": "隱私權政策 – One Chauffeur",
-      "description": "One Chauffeur 依據歐盟一般資料保護規則（GDPR）制定之隱私權與個人資料保護政策。"
-    },
     "thankYou": {
       "title": "感謝您的來信 – One Chauffeur",
       "description": "確認您已向巴黎私人司機服務 One Chauffeur 送出預訂或聯絡需求。"
@@ -53,13 +51,13 @@
     "bookMyDriver": "預訂我的司機",
     "openMenu": "開啟選單",
     "closeMenu": "關閉選單",
-    "menu": "主選單"
+    "menu": "主選單",
+    "breadcrumb": "導覽路徑"
   },
   "footer": {
     "quickLinks": "快速連結",
     "legal": "法律資訊",
     "termsOfSale": "一般銷售條款",
-    "privacyPolicy": "隱私權政策",
     "legalNotice": "法律聲明",
     "tagline": "您在巴黎及法蘭西島的私人司機，提供各類接送（機場、火車站或市區）、商務出行、長途旅程、按小時包車及觀光旅遊服務。",
     "copyright": "© 版權所有 · One Chauffeur"

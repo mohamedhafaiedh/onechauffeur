@@ -10,33 +10,41 @@
   object-fit: cover;
 }
 
+/* Voile plus sombre côté texte, plus léger côté voiture */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--color-overlay);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.66) 0%, rgba(0, 0, 0, 0.42) 55%, rgba(0, 0, 0, 0.22) 100%);
+}
+
+[dir="rtl"] .hero::before {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.66) 0%, rgba(0, 0, 0, 0.42) 55%, rgba(0, 0, 0, 0.22) 100%);
 }
 
 .content {
   position: relative;
-  max-width: 570px;
+  max-width: 600px;
 }
 
 .content h1 {
   color: var(--color-white);
   font-size: var(--h1-hero);
-  line-height: 1.15;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .content p {
-  margin-top: 40px;
-  color: var(--color-white);
+  max-width: 520px;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 18px;
+  line-height: 1.65;
 }
 
 .cta {
-  margin-top: 45px;
-  padding-block: 18px;
+  margin-top: 40px;
 }
 
 .cta:hover {
@@ -48,6 +56,14 @@
 
 @media (max-width: 767px) {
   .hero {
-    padding-block: 140px 70px;
+    padding-block: 120px 64px;
+  }
+
+  .hero::before {
+    background: rgba(0, 0, 0, 0.55);
+  }
+
+  .content p {
+    font-size: 16.5px;
   }
 }

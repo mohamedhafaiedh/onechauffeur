@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-import { DEFAULT_LANG, LANGS, LEGACY_EN_REDIRECTS } from "./lib/seo";
+import { DEFAULT_LANG, LANGS, LEGACY_EN_REDIRECTS, PRIVACY_REDIRECTS } from "./lib/seo";
 
 // Préfixes réservés aux autres langues (ex. « en ») : tout le reste est servi en langue par défaut
 const OTHER_LANGS = LANGS.filter((lang) => lang !== DEFAULT_LANG).join("|");
@@ -94,6 +94,7 @@ const nextConfig: NextConfig = {
         destination: "/merci/",
         permanent: true,
       },
+      ...PRIVACY_REDIRECTS.map((r) => ({ ...r, permanent: true })),
       ...LEGACY_EN_REDIRECTS.map((r) => ({ ...r, permanent: true })),
       // la langue par défaut n'a pas de préfixe public : /fr/flotte/ → /flotte/
       { source: `/${DEFAULT_LANG}`, destination: "/", permanent: true },

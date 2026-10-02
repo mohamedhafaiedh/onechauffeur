@@ -1,7 +1,7 @@
 import React from "react";
 import "@/app/globals.css";
 import JsonLd from "@/components/JsonLd";
-import { poppins, syne, tajawal } from "@/lib/fonts";
+import { inter, manrope, tajawal } from "@/lib/fonts";
 import { LOCALES, type Lang } from "@/lib/seo";
 
 export default function BaseLayout({
@@ -17,7 +17,7 @@ export default function BaseLayout({
     <html
       lang={localeInfo.code}
       dir={localeInfo.dir}
-      className={`${poppins.variable} ${syne.variable} ${tajawal.variable}`}
+      className={`${manrope.variable} ${inter.variable} ${tajawal.variable}`}
       // scroll-behavior: smooth (globals.css) : Next.js le suspend pendant les changements de page,
       // sinon la nouvelle page s'ouvre défilée sous le header
       data-scroll-behavior="smooth"

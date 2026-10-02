@@ -8,7 +8,9 @@
   },
   "common": {
     "phone": "Teléfono",
-    "backHome": "Volver al inicio"
+    "backHome": "Volver al inicio",
+    "privacyNote": "Sus datos solo se utilizan para tramitar su solicitud.",
+    "privacyLink": "Datos personales"
   },
   "meta": {
     "home": {
@@ -39,10 +41,6 @@
       "title": "Aviso legal – One Chauffeur",
       "description": "Aviso legal de One Chauffeur SASU: registro de la empresa, domicilio social, director de la publicación y alojamiento del sitio."
     },
-    "privacyPolicy": {
-      "title": "Política de privacidad – One Chauffeur",
-      "description": "Política de privacidad y protección de los datos personales de One Chauffeur, conforme al RGPD."
-    },
     "thankYou": {
       "title": "Gracias por su solicitud – One Chauffeur",
       "description": "Confirmación de su solicitud de reserva o de contacto con el servicio de chófer privado One Chauffeur en París."
@@ -53,13 +51,13 @@
     "bookMyDriver": "Reservar mi chófer",
     "openMenu": "Abrir el menú",
     "closeMenu": "Cerrar el menú",
-    "menu": "Menú principal"
+    "menu": "Menú principal",
+    "breadcrumb": "Ruta de navegación"
   },
   "footer": {
     "quickLinks": "Enlaces rápidos",
     "legal": "Legal",
     "termsOfSale": "Condiciones generales de venta",
-    "privacyPolicy": "Política de privacidad",
     "legalNotice": "Aviso legal",
     "tagline": "Su chófer privado en París e Île-de-France para todos sus traslados (aeropuertos, estaciones de tren o dentro de la ciudad), viajes de negocios, trayectos de larga distancia, servicios por horas y visitas turísticas.",
     "copyright": "© Todos los derechos reservados · One Chauffeur"

@@ -8,7 +8,9 @@
   },
   "common": {
     "phone": "Téléphone",
-    "backHome": "Retour à l'accueil"
+    "backHome": "Retour à l'accueil",
+    "privacyNote": "Vos données servent uniquement à traiter votre demande.",
+    "privacyLink": "Données personnelles"
   },
   "meta": {
     "home": {
@@ -39,10 +41,6 @@
       "title": "Mentions Légales – One Chauffeur",
       "description": "Consultez les mentions légales de One Chauffeur : informations sur l'éditeur SASU, le siège social, le directeur de publication et l'hébergement web."
     },
-    "privacyPolicy": {
-      "title": "Politique de confidentialité – One Chauffeur",
-      "description": "Politique de confidentialité et protection des données personnelles de la société One Chauffeur conformément au RGPD pour tous ses clients et utilisateurs."
-    },
     "thankYou": {
       "title": "Merci pour votre demande – One Chauffeur",
       "description": "Confirmation de votre demande de réservation ou de contact auprès de votre service de chauffeur privé One Chauffeur."
@@ -53,13 +51,13 @@
     "bookMyDriver": "Je réserve mon chauffeur",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "menu": "Menu principal"
+    "menu": "Menu principal",
+    "breadcrumb": "Fil d’Ariane"
   },
   "footer": {
     "quickLinks": "Liens rapides",
     "legal": "Légal",
     "termsOfSale": "Conditions générales de vente",
-    "privacyPolicy": "Politique de confidentialité",
     "legalNotice": "Mentions légales",
     "tagline": "Votre chauffeur privé à Paris et en Île-de-France pour tous vos transferts (aéroports, gares ou en ville), déplacements professionnels, trajets longues distances, mises à disposition, visites touristiques.",
     "copyright": "© Tous droits réservés · One Chauffeur"

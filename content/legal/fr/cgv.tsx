@@ -2,7 +2,6 @@
 export default function TermsOfSaleContent() {
   return (
     <>
-      <h1>Conditions générales de vente</h1>
 <p>La Société One Chauffeur effectue, auprès des particuliers et professionnels, des prestations de transport au moyen de véhicules de tourisme avec chauffeur (VTC), exclusivement sur réservation et à un prix préalablement défini. Pour cela, elle met à disposition des utilisateurs, via son site www.onechauffeur.fr un outil de réservation en ligne. Son activité a été autorisée par le ministère des Transports par la délivrance de la licence .</p>
 <h2>Article 1 : Objet</h2>
 <p>Les présentes conditions générales ont pour objet de définir les conditions applicables aux contrats de prestation de transport conclus entre One Chauffeur et ses clients. Toute commande effectuée auprès de la société One Chauffeur entraîne l’acceptation des conditions de vente ci-après qui font partie intégrante du contrat de transport signé entre One Chauffeur et son client. One Chauffeur est libre de modifier à tout moment ces conditions générales de vente, quel qu’en soit la cause ou le motif.</p>

@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/check-i18n.mjs",
+    "prebuild": "node scripts/check-i18n.mjs && node scripts/check-legal.mjs",
     "build": "next build",
     "i18n:check": "node scripts/check-i18n.mjs",
+    "legal:check": "node scripts/check-legal.mjs",
     "start": "next start",
     "lint": "eslint"
   },

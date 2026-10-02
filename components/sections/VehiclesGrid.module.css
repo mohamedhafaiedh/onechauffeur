@@ -7,22 +7,34 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  padding-block: 40px 20px;
-  padding-inline-start: 40px;
-  border-radius: var(--radius-md);
+  /* Sous-grille : titres, caractéristiques, photos et liens alignés d'une carte à l'autre,
+     même quand un nom de véhicule passe sur deux lignes */
+  display: grid;
+  grid-row: span 4;
+  grid-template-rows: subgrid;
+  row-gap: 0;
+  padding-block: 32px 24px;
+  padding-inline-start: 28px;
+  border-radius: var(--radius-lg);
   background: var(--color-surface);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+.card:hover {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
 }
 
 .card h3 {
   padding-inline-end: 20px;
-  font-size: var(--h3-lg);
+  font-size: var(--h3);
   line-height: 1.2;
 }
 
 .specs {
-  margin-top: 16px;
+  margin-top: 14px;
+  color: var(--color-text-soft);
+  font-size: 15px;
   list-style: none;
 }
 
@@ -32,20 +44,35 @@
   gap: 8px;
 }
 
+.specs svg {
+  flex: none;
+  color: var(--color-gold-text);
+}
+
 .card img {
+  align-self: center;
   width: 100%;
   aspect-ratio: 225 / 174;
-  margin-top: 15px;
+  margin-top: 12px;
   object-fit: contain;
+  transition: transform 0.6s var(--ease);
+}
+
+.card:hover img {
+  transform: translateX(6px);
+}
+
+[dir="rtl"] .card:hover img {
+  transform: translateX(-6px);
 }
 
 .details {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  align-self: flex-start;
-  margin-top: auto;
-  padding-top: 20px;
+  align-self: end;
+  justify-self: start;
+  padding-top: 16px;
   color: var(--color-black);
   font-family: var(--font-heading);
   font-weight: 500;
@@ -57,6 +84,13 @@
 
 .details:hover {
   color: var(--color-gold-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover,
+  .card:hover img {
+    transform: none;
+  }
 }
 
 @media (max-width: 1024px) {

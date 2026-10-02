@@ -1,6 +1,7 @@
 import React from "react";
 import { getMessages } from "@/lib/i18n";
 import { SITE_URL, pagePath, type Lang } from "@/lib/seo";
+import { COMPANY, LEGAL_NAME_WITH_FORM, PHONE_HREF } from "@/lib/site";
 
 interface JsonLdProps {
   lang?: Lang;
@@ -11,15 +12,15 @@ export default function JsonLd({ lang = "fr" }: JsonLdProps) {
     "@context": "https://schema.org",
     "@type": "LimousineService",
     "@id": `${SITE_URL}/#localbusiness`,
-    name: "One Chauffeur",
-    legalName: "One Chauffeur SASU",
+    name: COMPANY.tradeName,
+    legalName: LEGAL_NAME_WITH_FORM || undefined,
     alternateName: "One Chauffeur Paris",
     url: `${SITE_URL}${pagePath("", lang)}`,
     logo: `${SITE_URL}/images/favicon-one-chauffeur.png`,
     image: `${SITE_URL}/images/favicon-one-chauffeur.png`,
     description: getMessages(lang).jsonLd.description,
-    telephone: "+33667520677",
-    email: "contact@onechauffeur.fr",
+    telephone: PHONE_HREF.replace("tel:", ""),
+    email: COMPANY.email,
     priceRange: "$$$",
     currenciesAccepted: "EUR",
     paymentAccepted: "Cash, Credit Card",

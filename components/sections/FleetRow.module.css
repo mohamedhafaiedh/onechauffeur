@@ -20,7 +20,13 @@
 }
 
 .text > p {
+  max-width: var(--measure);
   margin-top: 20px;
+  font-size: 17px;
+}
+
+.features li {
+  color: var(--color-ink);
 }
 
 .features {
@@ -45,8 +51,8 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-gold);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-text);
 }
 
 .image {

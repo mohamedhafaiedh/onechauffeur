@@ -1,17 +1,19 @@
-import { Poppins, Syne, Tajawal } from "next/font/google";
+import { Inter, Manrope, Tajawal } from "next/font/google";
 
 // Polices auto-hébergées par next/font (téléchargées au build, aucune requête vers Google
 // côté visiteur). Le CSS les utilise via des variables (voir app/globals.css).
-export const poppins = Poppins({
+// Titres en Manrope, texte en Inter : très lisibles, y compris en petite taille.
+export const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  weight: ["500", "600", "700"],
+  variable: "--font-manrope",
   display: "swap",
 });
 
-export const syne = Syne({
+export const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-syne",
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
   display: "swap",
 });
 

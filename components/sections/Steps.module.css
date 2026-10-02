@@ -3,7 +3,7 @@
 }
 
 .box {
-  padding: 100px 20px;
+  padding: 88px 24px;
   border-radius: var(--radius-xl);
   background: var(--color-surface);
 }
@@ -27,22 +27,35 @@
 
 .list li {
   display: grid;
-  grid-template-columns: 196px minmax(0, 1fr);
+  grid-template-columns: 120px minmax(0, 1fr);
   align-items: center;
 }
 
-.list img {
-  width: 64px;
-  height: 64px;
+/* Pictogramme dans une pastille blanche, comme les icônes des autres sections */
+.badge {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: var(--color-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.badge img {
+  width: 42px;
+  height: 42px;
 }
 
 .list h3 {
-  font-size: var(--h3-lg);
-  line-height: 1.2;
+  font-size: var(--h3);
+  line-height: 1.25;
 }
 
 .list p {
-  margin-top: 15px;
+  max-width: var(--measure);
+  margin-top: 8px;
+  color: var(--color-text-soft);
 }
 
 .ctaRow {
@@ -51,7 +64,7 @@
 
 @media (max-width: 1024px) {
   .list li {
-    grid-template-columns: 132px minmax(0, 1fr);
+    grid-template-columns: 112px minmax(0, 1fr);
   }
 }
 
@@ -60,10 +73,24 @@
     padding-block: 60px;
   }
 
+  .list {
+    margin-top: 48px;
+  }
+
   .list li {
     grid-template-columns: 1fr;
     justify-items: center;
-    gap: 16px;
+    gap: 14px;
     text-align: center;
+  }
+
+  .badge {
+    width: 72px;
+    height: 72px;
+  }
+
+  .badge img {
+    width: 36px;
+    height: 36px;
   }
 }

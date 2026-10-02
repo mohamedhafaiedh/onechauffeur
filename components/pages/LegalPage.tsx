@@ -1,15 +1,98 @@
 import type { ReactNode } from "react";
+import { Building2, Cookie, Copyright, Server, ShieldCheck, type LucideIcon } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/sections/PageHero";
+import type { LegalBlock, LegalContent, LegalIcon } from "@/content/legal/types";
 import type { Lang, PageKey } from "@/lib/seo";
 import styles from "./LegalPage.module.css";
 
-// Gabarit commun des pages juridiques ; le texte lui-même vient de content/legal/<langue>/.
-export default function LegalPage({ lang, page, children }: { lang: Lang; page: PageKey; children: ReactNode }) {
+const ICONS: Record<LegalIcon, LucideIcon> = {
+  building: Building2,
+  server: Server,
+  copyright: Copyright,
+  shieldCheck: ShieldCheck,
+  cookie: Cookie,
+};
+
+function Block({ block }: { block: LegalBlock }) {
+  switch (block.type) {
+    case "p":
+      return <p>{block.text}</p>;
+    case "h3":
+      return <h3>{block.text}</h3>;
+    case "ul":
+      return (
+        <ul>
+          {block.items.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      );
+    case "facts": {
+      // On ne publie que les informations renseignées
+      const rows = block.rows.filter(([, value]) => value.trim() !== "");
+      if (!rows.length) return null;
+      return (
+        <dl className={styles.facts}>
+          {rows.map(([label, value]) => (
+            <div key={label}>
+              <dt>{label}</dt>
+              {/* bdi : numéros, montants et adresses restent dans le bon ordre en arabe */}
+              <dd>
+                <bdi dir="ltr">{value}</bdi>
+              </dd>
+            </div>
+          ))}
+        </dl>
+      );
+    }
+  }
+}
+
+/* Mentions légales, modèle commun à tous les sites : introduction LCEN, puis une rubrique par thème,
+   chacune précédée de sa pastille d'icône, le texte aligné sous le titre. Aucun lien dans le contenu. */
+export function LegalNoticePage({ lang, content: t }: { lang: Lang; content: LegalContent }) {
+  return (
+    <>
+      <Header lang={lang} page="mentions-legales" />
+      <main id="content">
+        <PageHero lang={lang} title={t.title} subtitle={t.subtitle} />
+        <article className={`container ${styles.notice}`}>
+          <p className={styles.intro}>{t.intro}</p>
+          {t.sections.map((section) => {
+            const Icon = ICONS[section.icon];
+            return (
+              <section key={section.id} id={section.id} className={styles.section}>
+                <div className={styles.head}>
+                  <span className={styles.icon} aria-hidden="true">
+                    <Icon size={20} strokeWidth={1.5} />
+                  </span>
+                  <h2>{section.title}</h2>
+                </div>
+                <div className={styles.body}>
+                  {section.blocks.map((block, i) => (
+                    <Block key={i} block={block} />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+        </article>
+      </main>
+      <Footer lang={lang} page="mentions-legales" />
+    </>
+  );
+}
+
+// Conditions générales de vente : texte long en colonne de lecture ; le texte vient de content/legal/<langue>/cgv.tsx.
+export function TermsPage({ lang, title, children }: { lang: Lang; title: string; children: ReactNode }) {
+  const page: PageKey = "cgv";
   return (
     <>
       <Header lang={lang} page={page} />
-      <main id="content" className={styles.page}>
+      <main id="content">
+        <PageHero lang={lang} title={title} />
         <div className="container">
           <article className={styles.prose}>{children}</article>
         </div>

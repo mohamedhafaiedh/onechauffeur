@@ -1,53 +1,82 @@
+/* En-tête adaptatif (voir HeaderBar.tsx). Trois dispositions, choisies par mesure :
+   data-mode="full" | "book" | "compact". Avant la mesure (rendu serveur), des points de
+   rupture approchants donnent la même disposition pour éviter un saut à l'affichage. */
+
 .header {
   position: relative;
   z-index: 100;
   background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
 }
 
-/* Ordinateur : menu | logo centré | langue + bouton */
-.inner {
+.bar {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-template-areas: "nav brand actions";
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas: "brand actions";
   align-items: center;
-  gap: 20px;
-  min-height: 88px;
-}
-
-.nav {
-  grid-area: nav;
-}
-
-.nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  margin-inline-start: -15px;
-  list-style: none;
-}
-
-.nav a {
-  display: inline-block;
-  padding: 12px 15px;
-  color: var(--color-ink);
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 1.8;
-  transition: color 0.2s ease;
-}
-
-.nav a:hover,
-.nav a.active {
-  color: var(--color-gold-text);
+  column-gap: 24px;
+  min-height: 84px;
 }
 
 .brand {
   grid-area: brand;
   display: block;
+  justify-self: start;
 }
 
+/* Taille du logo indépendante de la disposition (la mesure s'appuie dessus) */
 .logo {
-  width: 280px;
+  width: clamp(150px, 20vw, 260px);
   height: auto;
+}
+
+.nav {
+  grid-area: nav;
+  display: none;
+}
+
+.nav ul {
+  display: flex;
+  margin-inline-start: -14px;
+  list-style: none;
+  white-space: nowrap;
+}
+
+.nav a,
+.nav span {
+  position: relative;
+  display: inline-block;
+  padding: 10px 14px;
+  color: var(--color-ink);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+  transition: color 0.25s ease;
+}
+
+/* Soulignement doré qui se dessine au survol et sous la page active */
+.nav a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 14px;
+  bottom: 6px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s var(--ease);
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--color-black);
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .actions {
@@ -55,67 +84,384 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  column-gap: 14px;
+}
+
+.lang {
+  display: flex;
 }
 
 .cta {
-  display: inline-flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  min-width: 245px;
   height: 48px;
-  padding-inline: 20px;
-  border-radius: var(--radius-sm);
+  padding-inline: 24px;
+  border-radius: var(--radius-btn);
   background: var(--color-black);
   color: var(--color-white);
-  font-size: 14px;
+  font-size: 14.5px;
   font-weight: 600;
   white-space: nowrap;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 .cta:hover {
-  background: var(--color-gold-strong);
+  background: var(--color-gold);
   color: var(--color-black);
 }
 
+/* --- Burger (deux traits) qui devient une croix dans le menu ---------------- */
+
 .burger {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.burger:hover {
+  border-color: var(--color-ink);
+}
+
+.burger span {
+  position: absolute;
+  inset-inline: 14px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--color-ink);
+  transition: transform 0.35s var(--ease), top 0.35s var(--ease);
+}
+
+.burger span:first-child {
+  top: 18px;
+}
+
+.burger span:last-child {
+  top: 26px;
+}
+
+.isClose span:first-child,
+.isClose span:last-child {
+  top: 21.5px;
+}
+
+.isClose span:first-child {
+  transform: rotate(45deg);
+}
+
+.isClose span:last-child {
+  transform: rotate(-45deg);
+}
+
+@starting-style {
+  .dialog[open] .isClose span:first-child {
+    top: 18px;
+    transform: none;
+  }
+
+  .dialog[open] .isClose span:last-child {
+    top: 26px;
+    transform: none;
+  }
+}
+
+/* --- Dispositions ----------------------------------------------------------- */
+
+/* book : le bouton de réservation reste visible à côté du burger */
+.header[data-mode="book"] .cta {
+  display: inline-flex;
+}
+
+/* full : menu | logo centré | langue + bouton */
+.header[data-mode="full"] .bar {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas: "nav brand actions";
+}
+
+.header[data-mode="full"] .brand {
+  justify-self: center;
+}
+
+.header[data-mode="full"] .nav {
+  display: block;
+}
+
+.header[data-mode="full"] .cta {
+  display: inline-flex;
+}
+
+.header[data-mode="full"] .burger {
   display: none;
 }
 
-/* Tablette et mobile : logo | langue + menu */
-@media (max-width: 1024px) {
-  .inner {
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "brand actions";
-    min-height: 60px;
-    padding-inline: 10px;
-  }
-
-  .nav,
-  .cta {
-    display: none;
-  }
-
-  .logo {
-    width: 240px;
-  }
-
-  .actions {
-    gap: 20px;
-  }
-
-  .burger {
-    display: block;
+/* Avant la mesure : mêmes règles par points de rupture approchants */
+@media (min-width: 640px) {
+  .header:not([data-mode]) .cta {
+    display: inline-flex;
   }
 }
 
-@media (max-width: 767px) {
-  .inner {
-    min-height: 66px;
+@media (min-width: 1200px) {
+  .header:not([data-mode]) .bar {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    grid-template-areas: "nav brand actions";
   }
 
-  .logo {
-    width: 156px;
+  .header:not([data-mode]) .brand {
+    justify-self: center;
   }
+
+  .header:not([data-mode]) .nav {
+    display: block;
+  }
+
+  .header:not([data-mode]) .burger {
+    display: none;
+  }
+}
+
+/* Copie de mesure : hors écran, sans effet sur la mise en page */
+.measure {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  display: flex;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.measure .nav,
+.measure .cta,
+.measure .burger {
+  display: inline-flex;
+  flex: none;
+}
+
+@media (max-width: 767px) {
+  .bar {
+    column-gap: 12px;
+    min-height: 68px;
+  }
+
+  .actions {
+    column-gap: 8px;
+  }
+
+  .burger {
+    width: 42px;
+    height: 42px;
+  }
+
+  .burger span {
+    inset-inline: 12px;
+  }
+
+  .burger span:first-child {
+    top: 16px;
+  }
+
+  .burger span:last-child {
+    top: 24px;
+  }
+
+  .isClose span:first-child,
+  .isClose span:last-child {
+    top: 19.5px;
+  }
+
+  @starting-style {
+    .dialog[open] .isClose span:first-child {
+      top: 16px;
+    }
+
+    .dialog[open] .isClose span:last-child {
+      top: 24px;
+    }
+  }
+}
+
+/* --- Menu plein écran (<dialog> modal) -------------------------------------- */
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--color-white);
+  color: var(--color-ink);
+  opacity: 0;
+  transition:
+    opacity 0.35s var(--ease),
+    overlay 0.35s allow-discrete,
+    display 0.35s allow-discrete;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+@starting-style {
+  .dialog[open] {
+    opacity: 0;
+  }
+}
+
+.dialog::backdrop {
+  background: transparent;
+}
+
+.dialog .bar {
+  flex: none;
+  border-bottom: 1px solid var(--color-border);
+}
+
+:global(html.menu-open),
+:global(html.menu-open) body {
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialog,
+  .burger span {
+    transition: none;
+  }
+}
+
+.menu {
+  flex: 1;
+  min-height: 0;
+  padding-block: 12px max(28px, env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding-block: 18px;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-ink);
+  font-family: var(--font-heading);
+  font-size: clamp(24px, 6vw, 30px);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  transition: color 0.25s ease, padding-inline-start 0.35s var(--ease);
+}
+
+.menu li a svg {
+  margin-inline-start: auto;
+  color: var(--color-gold-strong);
+  transition: transform 0.35s var(--ease);
+}
+
+/* Soulignement doré qui se dessine sous l'élément survolé */
+.menu li a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 1px;
+  background: var(--color-gold-strong);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.45s var(--ease);
+}
+
+[dir="rtl"] .menu li a::after {
+  transform-origin: right;
+}
+
+.menu li a:hover,
+.menu li a:focus-visible {
+  padding-inline-start: 10px;
+  color: var(--color-black);
+}
+
+.menu li a:hover::after,
+.menu li a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.menu li a:hover svg,
+.menu li a:focus-visible svg {
+  transform: translateX(4px);
+}
+
+[dir="rtl"] .menu li a:hover svg,
+[dir="rtl"] .menu li a:focus-visible svg {
+  transform: scaleX(-1) translateX(4px);
+}
+
+.menu li a.active {
+  color: var(--color-gold-text);
+}
+
+.menuActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  padding-top: 28px;
+}
+
+.menuCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 54px;
+  padding-inline: 24px;
+  border-radius: var(--radius-btn);
+  background: var(--color-black);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.menuCta:hover {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.menuPhone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-ink);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.menuPhone svg {
+  color: var(--color-gold-strong);
+}
+
+.menuPhone:hover {
+  color: var(--color-gold-text);
 }

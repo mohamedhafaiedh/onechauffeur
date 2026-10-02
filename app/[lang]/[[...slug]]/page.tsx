@@ -6,8 +6,9 @@ import FleetPage from "@/components/pages/FleetPage";
 import BookingPage from "@/components/pages/BookingPage";
 import ContactPage from "@/components/pages/ContactPage";
 import ThankYouPage from "@/components/pages/ThankYouPage";
-import LegalPage from "@/components/pages/LegalPage";
-import { LEGAL_CONTENT, type LegalPageKey } from "@/content/legal";
+import { LegalNoticePage, TermsPage } from "@/components/pages/LegalPage";
+import { LEGAL_NOTICE, TERMS_CONTENT } from "@/content/legal";
+import { getMessages } from "@/lib/i18n";
 import { PAGE_KEYS, createPageMetadata, hasPage, isLang, pageFromSlug, slugOf, type Lang, type PageKey } from "@/lib/seo";
 
 // Route unique de toutes les pages, dans toutes les langues. Le français est servi à la racine
@@ -54,13 +55,18 @@ export default async function Page({ params }: { params: Params }) {
       return <ContactPage lang={lang} />;
     case "merci":
       return <ThankYouPage lang={lang} />;
-    default: {
-      const Content = LEGAL_CONTENT[lang]?.[page as LegalPageKey];
+    case "mentions-legales": {
+      const content = LEGAL_NOTICE[lang];
+      if (!content) notFound();
+      return <LegalNoticePage lang={lang} content={content} />;
+    }
+    case "cgv": {
+      const Content = TERMS_CONTENT[lang];
       if (!Content) notFound();
       return (
-        <LegalPage lang={lang} page={page}>
+        <TermsPage lang={lang} title={getMessages(lang).footer.termsOfSale}>
           <Content />
-        </LegalPage>
+        </TermsPage>
       );
     }
   }

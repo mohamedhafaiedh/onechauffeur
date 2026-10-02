@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
 import f from "./Form.module.css";
@@ -62,6 +63,7 @@ const VEHICLE_VALUES = [
 export default function ReservationForm({ lang = "fr", redirectUrl }: ReservationFormProps) {
   const router = useRouter();
   const t = getMessages(lang).bookingForm;
+  const common = getMessages(lang).common;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -486,6 +488,10 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
               <span>{t.submit}</span>
             )}
           </button>
+          <p className={f.privacy}>
+            {common.privacyNote}{" "}
+            <Link href={`${pagePath("mentions-legales", lang)}#confidentialite`}>{common.privacyLink}</Link>
+          </p>
         </div>
       </div>
     </form>

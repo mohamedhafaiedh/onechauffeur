@@ -6,6 +6,7 @@
 }
 
 .text {
+  max-width: var(--measure);
   margin-top: 20px;
 }
 
@@ -22,7 +23,9 @@
 .points li {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 14px;
+  color: var(--color-ink);
+  font-weight: 500;
 }
 
 .check {
@@ -34,8 +37,8 @@
   height: 24px;
   margin-top: 2px;
   border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-gold);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-text);
 }
 
 .image {

@@ -3,6 +3,7 @@ import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang, type PageKey } from "@/lib/seo";
+import { COMPANY, PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from "@/lib/site";
 import styles from "./Footer.module.css";
 
 export default function Footer({ lang, page }: { lang: Lang; page: PageKey }) {
@@ -15,7 +16,6 @@ export default function Footer({ lang, page }: { lang: Lang; page: PageKey }) {
   ];
   const legalLinks: [PageKey, string][] = [
     ["cgv", t.termsOfSale],
-    ["politique-de-confidentialite", t.privacyPolicy],
     ["mentions-legales", t.legalNotice],
   ];
 
@@ -56,16 +56,16 @@ export default function Footer({ lang, page }: { lang: Lang; page: PageKey }) {
             <h2>{common.phone}</h2>
             <ul>
               <li>
-                <a href="tel:+33667520677" dir="ltr">
-                  +33 (0)6 67 52 06 77
+                <a href={PHONE_HREF} dir="ltr">
+                  {PHONE_DISPLAY}
                 </a>
               </li>
             </ul>
             <h2 className={styles.second}>WhatsApp</h2>
             <ul>
               <li>
-                <a href="https://wa.me/33667520677" target="_blank" rel="noopener noreferrer" dir="ltr">
-                  +33 (0)6 67 52 06 77
+                <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" dir="ltr">
+                  {COMPANY.whatsapp}
                 </a>
               </li>
             </ul>
@@ -76,7 +76,7 @@ export default function Footer({ lang, page }: { lang: Lang; page: PageKey }) {
           <p>
             {t.copyright}
             <br />
-            31 boulevard Troussel – 78700 Conflans-Sainte-Honorine
+            {COMPANY.registeredOffice}
           </p>
           <LanguageSwitcher lang={lang} page={page} placement="up" />
         </div>

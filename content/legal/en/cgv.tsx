@@ -2,7 +2,6 @@
 export default function TermsOfSaleContent() {
   return (
     <>
-      <h1>Terms of Sale</h1>
 <p>The One Chauffeur Company provides transport services to individuals and professionals using chauffeur-driven passenger vehicles (VTC), exclusively by reservation and at a pre-defined price. To do this, it provides users with an online reservation tool via its website www.onechauffeur.fr. Its activity was authorized by the Ministry of Transport under the license .</p>
 <h2>Article 1 : Object</h2>
 <p>The purpose of these general conditions is to define the conditions applicable to transport service contracts concluded between One Chauffeur and its customers. Any order placed with the company One Chauffeur entails acceptance of the following conditions of sale which form an integral part of the transport contract signed between One Chauffeur and its customer. One Chauffeur is free to modify these general conditions of sale at any time, whatever the cause or reason.</p>

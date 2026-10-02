@@ -8,7 +8,9 @@
   },
   "common": {
     "phone": "Telefono",
-    "backHome": "Torna alla home"
+    "backHome": "Torna alla home",
+    "privacyNote": "I tuoi dati sono utilizzati solo per gestire la tua richiesta.",
+    "privacyLink": "Dati personali"
   },
   "meta": {
     "home": {
@@ -39,10 +41,6 @@
       "title": "Note legali – One Chauffeur",
       "description": "Note legali di One Chauffeur SASU: registrazione della società, sede legale, direttore della pubblicazione e hosting del sito."
     },
-    "privacyPolicy": {
-      "title": "Informativa sulla privacy – One Chauffeur",
-      "description": "Informativa sulla privacy e sulla protezione dei dati personali di One Chauffeur, conforme al GDPR."
-    },
     "thankYou": {
       "title": "Grazie per la tua richiesta – One Chauffeur",
       "description": "Conferma della tua richiesta di prenotazione o di contatto con il servizio di autista privato One Chauffeur a Parigi."
@@ -53,13 +51,13 @@
     "bookMyDriver": "Prenota il mio autista",
     "openMenu": "Apri il menu",
     "closeMenu": "Chiudi il menu",
-    "menu": "Menu principale"
+    "menu": "Menu principale",
+    "breadcrumb": "Percorso di navigazione"
   },
   "footer": {
     "quickLinks": "Link rapidi",
     "legal": "Informazioni legali",
     "termsOfSale": "Condizioni generali di vendita",
-    "privacyPolicy": "Informativa sulla privacy",
     "legalNotice": "Note legali",
     "tagline": "Il tuo autista privato a Parigi e in Île-de-France per tutti i tuoi transfer (aeroporti, stazioni o in città), viaggi di lavoro, tragitti a lunga distanza, servizi a ore e visite turistiche.",
     "copyright": "© Tutti i diritti riservati · One Chauffeur"

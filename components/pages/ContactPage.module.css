@@ -19,8 +19,8 @@
   width: 53px;
   height: 53px;
   border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-gold);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-text);
 }
 
 .channels h2 {
@@ -31,14 +31,17 @@
 
 .channels a {
   display: inline-block;
-  margin-top: 12px;
-  color: #237a4c;
+  margin-top: 10px;
+  color: var(--color-ink);
+  font-weight: 500;
   text-decoration: underline;
-  text-underline-offset: 3px;
+  text-decoration-color: var(--color-gold);
+  text-underline-offset: 4px;
+  transition: color 0.2s ease;
 }
 
 .channels a:hover {
-  color: #336;
+  color: var(--color-gold-text);
 }
 
 .card {

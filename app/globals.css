@@ -13,49 +13,56 @@
   --color-gold-dark: #b3822b;
   /* Or pour du texte : contraste 4,9:1 sur blanc (WCAG AA) ; l'or clair reste pour fonds et icônes */
   --color-gold-text: #94681a;
+  /* Fond très clair des pastilles d'icônes (jamais de pastille pleine couleur) */
+  --color-gold-soft: rgba(235, 187, 96, 0.16);
   --color-black: #000;
   --color-ink: #1e1e1e;
-  --color-text: #555d55;
-  --color-text-soft: #666;
+  /* Texte courant plus foncé qu'avant (#555d55) pour la lisibilité : contraste 9,6:1 */
+  --color-text: #40463f;
+  --color-text-soft: #5a5f5a;
   --color-muted: rgba(0, 0, 0, 0.6);
   --color-surface: #f5f5f5;
   --color-white: #fff;
-  --color-border: rgba(85, 93, 85, 0.16);
+  --color-border: rgba(30, 30, 30, 0.1);
+  --color-border-strong: rgba(30, 30, 30, 0.2);
   --color-divider: rgba(10, 69, 36, 0.15);
   --color-overlay: rgba(0, 0, 0, 0.45);
 
   /* Polices (next/font, voir lib/fonts.ts) */
-  --font-body: var(--font-poppins), system-ui, sans-serif;
-  --font-heading: var(--font-syne), system-ui, sans-serif;
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-manrope), system-ui, sans-serif;
 
   /* Mise en page */
   --site-width: 1140px;
   --gutter: 20px;
   --section-space: 100px;
-  --radius-sm: 4px;
-  --radius-btn: 6px;
-  --radius-md: 15px;
-  --radius-lg: 20px;
+  /* Arrondis : un seul jeu pour tout le site (champs et boutons / cartes et photos / grands blocs) */
+  --radius-sm: 8px;
+  --radius-btn: 8px;
+  --radius-md: 16px;
+  --radius-lg: 16px;
   --radius-xl: 24px;
 
   /* Typographie */
   --text-base: 16px;
   --leading-base: 1.7;
-  --h1-hero: 56px;
-  --h1-page: 58px;
-  --h2: 44px;
-  --h3-lg: 28px;
-  --h3: 24px;
-  --h3-sm: 22px;
+  --h1-hero: 58px;
+  --h1-page: 48px;
+  --h2: 40px;
+  --h3-lg: 26px;
+  --h3: 22px;
+  --h3-sm: 20px;
+  /* Longueur de ligne confortable pour les paragraphes */
+  --measure: 62ch;
 
-  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Arabe : la police arabe passe en premier (sinon la police de secours de Poppins, Arial,
-   afficherait l'arabe) ; titres en gras plutôt qu'en Syne, qui n'a pas de glyphes arabes */
+/* Arabe : la police arabe passe en premier (sinon la police de secours, Arial, afficherait l'arabe) ;
+   titres en gras, Manrope n'ayant pas de glyphes arabes */
 html[lang="ar"] {
-  --font-body: var(--font-arabic), var(--font-poppins), sans-serif;
-  --font-heading: var(--font-arabic), var(--font-syne), sans-serif;
+  --font-body: var(--font-arabic), var(--font-inter), sans-serif;
+  --font-heading: var(--font-arabic), var(--font-manrope), sans-serif;
 }
 
 html[lang="ar"] h1,
@@ -65,31 +72,40 @@ html[lang="ar"] h3 {
   line-height: 1.35;
 }
 
-/* Chinois traditionnel : le latin reste en Poppins/Syne, les idéogrammes en police système
+/* Chinois traditionnel : le latin reste en Inter/Manrope, les idéogrammes en police système
    (aucun téléchargement : les polices CJK pèsent plusieurs mégaoctets) */
 html[lang="zh-Hant"] {
   --font-cjk: "PingFang TC", "Heiti TC", "Microsoft JhengHei", "Noto Sans CJK TC", "Noto Sans TC", sans-serif;
-  --font-body: var(--font-poppins), var(--font-cjk);
-  --font-heading: var(--font-syne), var(--font-cjk);
+  --font-body: var(--font-inter), var(--font-cjk);
+  --font-heading: var(--font-manrope), var(--font-cjk);
+}
+
+/* Lettres latines serrées des titres : sans effet utile sur l'arabe et le chinois */
+html[lang="ar"] :is(h1, h2, h3, h4),
+html[lang="zh-Hant"] :is(h1, h2, h3, h4) {
+  letter-spacing: 0;
 }
 
 @media (max-width: 1024px) {
   :root {
     --section-space: 80px;
-    --h2: 41px;
-    --h3-lg: 26px;
-    --h3: 22px;
-    --text-base: 15px;
+    --h1-hero: 50px;
+    --h1-page: 42px;
+    --h2: 36px;
+    --h3-lg: 24px;
+    --h3: 21px;
   }
 }
 
 @media (max-width: 767px) {
   :root {
-    --section-space: 60px;
-    --h1-hero: 40px;
-    --h1-page: 36px;
-    --h2: 32px;
-    --h3-lg: 24px;
+    --section-space: 64px;
+    --h1-hero: 38px;
+    --h1-page: 32px;
+    --h2: 29px;
+    --h3-lg: 22px;
+    --h3: 20px;
+    --h3-sm: 19px;
   }
 }
 
@@ -174,12 +190,24 @@ h3,
 h4 {
   color: var(--color-black);
   font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+h3,
+h4 {
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 h2 {
   font-size: var(--h2);
-  line-height: 1.1;
+  line-height: 1.15;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 /* Paragraphes longs : les URL et mots très longs passent à la ligne */
@@ -207,7 +235,9 @@ li {
 
 .section-intro {
   max-width: 600px;
-  margin: 20px auto 0;
+  margin: 18px auto 0;
+  color: var(--color-text-soft);
+  font-size: 17px;
   text-align: center;
 }
 
@@ -218,15 +248,21 @@ li {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 20px 26px;
+  min-height: 54px;
+  padding: 16px 28px;
   border: 1px solid transparent;
   border-radius: var(--radius-btn);
-  font-family: var(--font-heading);
-  font-size: 17px;
-  font-weight: 500;
-  line-height: 1;
+  font-family: var(--font-body);
+  font-size: 15.5px;
+  font-weight: 600;
+  line-height: 1.2;
   text-align: center;
-  transition: background-color 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease);
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease), border-color 0.3s var(--ease),
+    transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
 }
 
 .btn-gold {
@@ -240,6 +276,7 @@ li {
   background: var(--color-black);
   border-color: var(--color-black);
   color: var(--color-white);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
 }
 
 .btn-center {
@@ -247,9 +284,9 @@ li {
   justify-content: center;
 }
 
-@media (max-width: 767px) {
-  .btn {
-    font-size: 16px;
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover {
+    transform: none;
   }
 }
 

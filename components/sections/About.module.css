@@ -13,6 +13,7 @@
 }
 
 .text p {
+  max-width: var(--measure);
   margin-top: 15px;
 }
 

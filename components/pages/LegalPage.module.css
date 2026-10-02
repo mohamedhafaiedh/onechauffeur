@@ -1,28 +1,147 @@
-.page {
-  padding-block: 70px var(--section-space);
+/* --- Mentions légales : modèle commun (intro, rubriques à pastille) ---------- */
+
+.notice {
+  max-width: calc(820px + 2 * var(--gutter));
+  padding-block: 72px var(--section-space);
 }
 
-/* Textes juridiques : titre pleine largeur, texte en colonne de lecture confortable (≈ 80 caractères) */
-.prose > :not(h1) {
+/* Introduction en italique, séparée de la suite par un filet */
+.intro {
+  margin-bottom: 56px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+  font-style: italic;
+}
+
+.section {
+  scroll-margin-top: 24px;
+}
+
+.section + .section {
+  margin-top: 56px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+/* Pastille : fond doré très clair, pictogramme doré (jamais de pastille pleine couleur) */
+.icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: var(--color-gold-soft);
+  color: var(--color-gold-text);
+}
+
+.head h2 {
+  font-size: var(--h3-lg);
+  line-height: 1.2;
+}
+
+/* Le texte s'aligne sous le titre, pas sous la pastille */
+.body {
+  padding-inline-start: 62px;
+}
+
+.body > * + * {
+  margin-top: 16px;
+}
+
+.body > h3 {
+  margin-top: 32px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.body ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+.body li {
+  position: relative;
+  padding-inline-start: 24px;
+}
+
+.body li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 2px;
+  top: 0.8em;
+  width: 10px;
+  height: 1px;
+  background: var(--color-gold-strong);
+}
+
+.facts {
+  border-top: 1px solid var(--color-border);
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 1fr);
+  gap: 24px;
+  padding-block: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.facts dt {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .notice {
+    padding-top: 48px;
+  }
+
+  .body {
+    padding-inline-start: 0;
+  }
+
+  .facts div {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+
+/* --- CGV : texte long en colonne de lecture (≈ 80 caractères) ---------------- */
+
+.prose {
   max-width: 820px;
   margin-inline: auto;
-}
-
-.prose h1 {
-  margin-bottom: 50px;
-  font-size: var(--h1-page);
-  line-height: 1.1;
-  text-align: center;
+  padding-block: 64px var(--section-space);
 }
 
 .prose h2 {
-  margin-block: 45px 15px;
-  font-size: var(--h3-lg);
+  margin-block: 48px 14px;
+  font-size: var(--h3);
   line-height: 1.25;
 }
 
-.prose p {
-  margin-bottom: 15px;
+.prose h2:first-child {
+  margin-top: 0;
+}
+
+.prose p,
+.prose ul {
+  margin-bottom: 14px;
+}
+
+.prose ul {
+  padding-inline-start: 20px;
 }
 
 .prose a {

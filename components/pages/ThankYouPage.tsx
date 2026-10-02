@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang } from "@/lib/seo";
+import { PHONE_DISPLAY, PHONE_HREF, WHATSAPP_HREF } from "@/lib/site";
 import styles from "./StatusPage.module.css";
 
 export default function ThankYouPage({ lang }: { lang: Lang }) {
@@ -25,11 +26,11 @@ export default function ThankYouPage({ lang }: { lang: Lang }) {
           <div className={styles.urgent}>
             <p className={styles.urgentLabel}>{t.urgent}</p>
             <div className={styles.links}>
-              <a href="tel:+33667520677">
+              <a href={PHONE_HREF} dir="ltr">
                 <Phone size={16} aria-hidden="true" />
-                +33 (0)6 67 52 06 77
+                {PHONE_DISPLAY}
               </a>
-              <a href="https://wa.me/33667520677" target="_blank" rel="noopener noreferrer">
+              <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer">
                 <MessageCircle size={16} aria-hidden="true" />
                 WhatsApp
               </a>

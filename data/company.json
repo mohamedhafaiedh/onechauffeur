@@ -1,0 +1,24 @@
+{
+  "tradeName": "One Chauffeur",
+  "legalName": "One Chauffeur",
+  "legalForm": "SASU",
+  "shareCapital": "100 €",
+  "registeredOffice": "31 boulevard Troussel, 78700 Conflans-Sainte-Honorine",
+  "siren": "982 023 616",
+  "vatNumber": "",
+  "phone": "+33 6 67 52 06 77",
+  "whatsapp": "+33 6 67 52 06 77",
+  "email": "contact@onechauffeur.fr",
+  "publicationDirector": "Rafii Mili",
+  "host": {
+    "name": "Netlify, Inc.",
+    "website": "www.netlify.com",
+    "phone": ""
+  },
+  "creator": {
+    "name": "",
+    "website": "",
+    "phone": "",
+    "email": ""
+  }
+}

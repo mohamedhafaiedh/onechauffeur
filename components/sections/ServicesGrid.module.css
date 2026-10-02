@@ -1,33 +1,36 @@
 .services {
-  padding-block: 120px 100px;
+  padding-block: var(--section-space);
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 40px 45px;
-  margin-top: 60px;
+  gap: 24px;
+  margin-top: 56px;
   list-style: none;
 }
 
 .card {
-  padding: 40px;
+  padding: 36px 32px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  transition: background-color 0.4s ease, border-color 0.4s ease, border-radius 0.4s ease;
+  background: var(--color-white);
+  transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
 
-/* Survol : la carte passe en noir, textes blancs, pastille dorée */
+/* Survol : la carte passe en noir et se soulève légèrement, pastille dorée pleine */
 .card:hover {
-  border-color: #0b996f;
-  border-radius: var(--radius-xl);
+  border-color: var(--color-black);
   background: var(--color-black);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px);
 }
 
 .card h3,
 .card p,
 .icon {
-  transition: color 0.4s ease, background-color 0.4s ease;
+  transition: color 0.4s var(--ease), background-color 0.4s var(--ease);
 }
 
 .card:hover h3,
@@ -37,39 +40,36 @@
 
 .card:hover .icon {
   background: var(--color-gold);
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: var(--color-surface);
-  color: var(--color-gold);
+  background: var(--color-gold-soft);
+  color: var(--color-gold-text);
 }
 
 .card h3 {
   margin-top: 22px;
   font-size: var(--h3);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .card p {
-  margin-top: 12px;
+  margin-top: 10px;
+  color: var(--color-text-soft);
 }
 
 .ctaRow {
-  margin-top: 60px;
+  margin-top: 56px;
 }
 
 @media (max-width: 1024px) {
-  .services {
-    padding-block: var(--section-space);
-  }
-
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
@@ -79,9 +79,21 @@
 @media (max-width: 767px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 40px;
   }
 
   .card {
-    border-radius: 18px;
+    padding: 28px 24px;
+  }
+
+  .ctaRow {
+    margin-top: 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
   }
 }

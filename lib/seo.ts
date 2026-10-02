@@ -33,7 +33,6 @@ export const SITE_ROUTES = [
   "contact",
   "cgv",
   "mentions-legales",
-  "politique-de-confidentialite",
 ] as const;
 
 export type RouteSlug = (typeof SITE_ROUTES)[number];
@@ -48,7 +47,6 @@ const EN_SLUGS: Record<PageKey, string> = {
   contact: "contact",
   cgv: "terms-of-sale",
   "mentions-legales": "legal-notice",
-  "politique-de-confidentialite": "privacy-policy",
   merci: "thank-you",
 };
 
@@ -62,7 +60,6 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
     contact: "contact",
     cgv: "cgv",
     "mentions-legales": "mentions-legales",
-    "politique-de-confidentialite": "politique-de-confidentialite",
     merci: "merci",
   },
   en: EN_SLUGS,
@@ -74,7 +71,6 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
     contact: "contacto",
     cgv: "condiciones-de-venta",
     "mentions-legales": "aviso-legal",
-    "politique-de-confidentialite": "politica-de-privacidad",
     merci: "gracias",
   },
   it: {
@@ -85,7 +81,6 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
     contact: "contatti",
     cgv: "condizioni-di-vendita",
     "mentions-legales": "note-legali",
-    "politique-de-confidentialite": "informativa-privacy",
     merci: "grazie",
   },
   // arabe et chinois : URL en lettres latines (mêmes slugs que l'anglais)
@@ -95,7 +90,7 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
 
 // Textes juridiques : publiés en français et en anglais seulement ;
 // les autres langues renvoient vers la version anglaise.
-const LEGAL_PAGES: PageKey[] = ["cgv", "mentions-legales", "politique-de-confidentialite"];
+const LEGAL_PAGES: PageKey[] = ["cgv", "mentions-legales"];
 const LEGAL_LANGS: Lang[] = ["fr", "en"];
 const LEGAL_FALLBACK: Lang = "en";
 
@@ -132,6 +127,13 @@ export const LEGACY_EN_REDIRECTS = PAGE_KEYS.filter((page) => page && SLUGS.en[p
   destination: pagePath(page, "en"),
 }));
 
+/** Ancienne politique de confidentialité, fusionnée dans les mentions légales (rubrique #confidentialite) */
+export const PRIVACY_REDIRECTS = [
+  { source: "/politique-de-confidentialite", destination: `${pagePath("mentions-legales", "fr")}#confidentialite` },
+  { source: "/en/privacy-policy", destination: `${pagePath("mentions-legales", "en")}#confidentialite` },
+  { source: "/en/politique-de-confidentialite", destination: `${pagePath("mentions-legales", "en")}#confidentialite` },
+];
+
 export function buildAlternates(page: PageKey, lang: Lang) {
   return {
     canonical: `${SITE_URL}${pagePath(page, lang)}`,
@@ -159,7 +161,6 @@ const META_KEYS = {
   contact: "contact",
   cgv: "termsOfSale",
   "mentions-legales": "legalNotice",
-  "politique-de-confidentialite": "privacyPolicy",
   merci: "thankYou",
 } as const satisfies Record<PageKey, keyof Messages["meta"]>;
 

@@ -8,7 +8,7 @@ import { getMessages } from "@/lib/i18n";
 import type { Lang } from "@/lib/seo";
 
 export default function FleetPage({ lang }: { lang: Lang }) {
-  const { fleet: t, shared: s } = getMessages(lang);
+  const { fleet: t, shared: s, nav } = getMessages(lang);
   const features = (passengers: string, bags: string) => [
     { icon: Users, label: passengers },
     { icon: Wifi, label: t.wiFi },
@@ -27,7 +27,7 @@ export default function FleetPage({ lang }: { lang: Lang }) {
     <>
       <Header lang={lang} page="flotte" />
       <main id="content">
-        <PageHero title={t.ourFleet} />
+        <PageHero lang={lang} title={t.ourFleet} crumb={nav.fleet} />
         {rows.map((row, i) => (
           <FleetRow key={row.id} {...row} reverse={i % 2 === 1} preload={i === 0} />
         ))}

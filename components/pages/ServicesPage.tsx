@@ -6,13 +6,13 @@ import { getMessages } from "@/lib/i18n";
 import type { Lang } from "@/lib/seo";
 
 export default function ServicesPage({ lang }: { lang: Lang }) {
-  const { services: t } = getMessages(lang);
+  const { services: t, nav } = getMessages(lang);
 
   return (
     <>
       <Header lang={lang} page="services" />
       <main id="content">
-        <PageHero title={t.ourPrivateDriverServices} />
+        <PageHero lang={lang} title={t.ourPrivateDriverServices} crumb={nav.services} />
         <ServicesBlock lang={lang} />
         <VehiclesBlock lang={lang} />
         <StepsBlock lang={lang} />

@@ -1,10 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import MobileMenu from "@/components/MobileMenu";
+import HeaderBar from "@/components/HeaderBar";
 import { getMessages } from "@/lib/i18n";
 import { pagePath, type Lang, type PageKey } from "@/lib/seo";
-import styles from "./Header.module.css";
+import { PHONE_DISPLAY, PHONE_HREF } from "@/lib/site";
 
 interface HeaderProps {
   lang: Lang;
@@ -13,71 +10,31 @@ interface HeaderProps {
   highlight?: boolean;
 }
 
+// Prépare les textes côté serveur ; la mise en page adaptative et le menu sont dans HeaderBar (client).
 export default function Header({ lang, page, highlight = true }: HeaderProps) {
   const { header: t, nav: labels } = getMessages(lang);
-  const nav: { page: PageKey; label: string }[] = [
-    { page: "", label: labels.home },
-    { page: "services", label: labels.services },
-    { page: "flotte", label: labels.fleet },
-    { page: "contact", label: labels.contact },
-  ];
   const isActive = (p: PageKey) => highlight && p === page;
+  const nav = (["", "services", "flotte", "contact"] as const).map((p) => ({
+    href: pagePath(p, lang),
+    label: { "": labels.home, services: labels.services, flotte: labels.fleet, contact: labels.contact }[p],
+    active: isActive(p),
+  }));
 
   return (
     <>
       <a className="skip-link" href="#content">
         {t.skipToContent}
       </a>
-      <header className={styles.header}>
-        <div className={`container ${styles.inner}`}>
-          <nav className={styles.nav} aria-label={t.menu}>
-            <ul>
-              {nav.map((item) => (
-                <li key={item.page}>
-                  <Link
-                    href={pagePath(item.page, lang)}
-                    aria-current={isActive(item.page) ? "page" : undefined}
-                    className={isActive(item.page) ? styles.active : undefined}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-
-          <Link href={pagePath("", lang)} className={styles.brand} aria-label={labels.home}>
-            <Image
-              className={styles.logo}
-              src="/images/logo-one-chauffeur.webp"
-              alt="One Chauffeur"
-              width={1000}
-              height={140}
-              sizes="(max-width: 767px) 156px, (max-width: 1024px) 240px, 280px"
-              loading="eager"
-            />
-          </Link>
-
-          <div className={styles.actions}>
-            <LanguageSwitcher lang={lang} page={page} />
-            <Link href={pagePath("reservation", lang)} className={styles.cta}>
-              {t.bookMyDriver}
-            </Link>
-            <div className={styles.burger}>
-              <MobileMenu
-                items={[
-                  ...nav.map((item) => ({ href: pagePath(item.page, lang), label: item.label, active: isActive(item.page) })),
-                  { href: pagePath("reservation", lang), label: labels.booking, active: isActive("reservation") },
-                ]}
-                homeHref={pagePath("", lang)}
-                cta={{ href: pagePath("reservation", lang), label: t.bookMyDriver }}
-                phone={{ href: "tel:+33667520677", label: "+33 6 67 52 06 77" }}
-                labels={{ open: t.openMenu, close: t.closeMenu, home: labels.home, menu: t.menu }}
-              />
-            </div>
-          </div>
-        </div>
-      </header>
+      <HeaderBar
+        lang={lang}
+        page={page}
+        nav={nav}
+        menuItems={[...nav, { href: pagePath("reservation", lang), label: labels.booking, active: isActive("reservation") }]}
+        homeHref={pagePath("", lang)}
+        cta={{ href: pagePath("reservation", lang), label: t.bookMyDriver }}
+        phone={{ href: PHONE_HREF, label: PHONE_DISPLAY }}
+        labels={{ open: t.openMenu, close: t.closeMenu, home: labels.home, menu: t.menu }}
+      />
     </>
   );
 }

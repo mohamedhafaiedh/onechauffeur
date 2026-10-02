@@ -8,7 +8,9 @@
   },
   "common": {
     "phone": "Phone",
-    "backHome": "Return to Homepage"
+    "backHome": "Return to Homepage",
+    "privacyNote": "Your data is only used to process your request.",
+    "privacyLink": "Personal data"
   },
   "meta": {
     "home": {
@@ -39,10 +41,6 @@
       "title": "Legal Notices – One Chauffeur",
       "description": "Legal notices and corporate details of One Chauffeur SASU: company registration, registered headquarters, publication manager, and hosting information."
     },
-    "privacyPolicy": {
-      "title": "Privacy Policy – One Chauffeur",
-      "description": "Privacy policy and personal data protection principles applied by One Chauffeur for its private driver clients in Paris in accordance with GDPR."
-    },
     "thankYou": {
       "title": "Thank You for Your Request – One Chauffeur",
       "description": "Confirmation of your booking or inquiry submission with One Chauffeur private driver service in Paris."
@@ -53,13 +51,13 @@
     "bookMyDriver": "Book my driver",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "menu": "Main menu"
+    "menu": "Main menu",
+    "breadcrumb": "Breadcrumb"
   },
   "footer": {
     "quickLinks": "Quick Links",
     "legal": "Legal",
     "termsOfSale": "Terms of Sale",
-    "privacyPolicy": "Privacy Policy",
     "legalNotice": "Legal Notice",
     "tagline": "Your private driver in Paris and the Île-de-France region for all your transfers (airports, train stations, or within the city), business trips, long-distance journeys, hourly disposal and city tours.",
     "copyright": "© All rights reserved · One Chauffeur"

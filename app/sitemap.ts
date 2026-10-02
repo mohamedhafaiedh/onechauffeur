@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     return SITE_ROUTES.filter((route) => hasPage(route, lang)).map((route) => {
       const isHome = route === "";
-      const isLegal = ["mentions-legales", "politique-de-confidentialite", "cgv"].includes(route);
+      const isLegal = ["mentions-legales", "cgv"].includes(route);
 
       return {
         url: `${SITE_URL}${pagePath(route, lang)}`,

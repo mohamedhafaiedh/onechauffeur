@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
 import f from "./Form.module.css";
@@ -45,6 +46,7 @@ const SUBJECT_VALUES = ["Information", "Devis", "Réservation"];
 export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormProps) {
   const router = useRouter();
   const t = getMessages(lang).contactForm;
+  const common = getMessages(lang).common;
   const formName = FORM_NAME;
   const fields = FIELDS;
   const emailSubject = `Nouvelle demande de contact - One Chauffeur${lang === DEFAULT_LANG ? "" : ` (${lang.toUpperCase()})`}`;
@@ -344,6 +346,10 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
               <span>{t.submit}</span>
             )}
           </button>
+          <p className={f.privacy}>
+            {common.privacyNote}{" "}
+            <Link href={`${pagePath("mentions-legales", lang)}#confidentialite`}>{common.privacyLink}</Link>
+          </p>
         </div>
       </div>
     </form>

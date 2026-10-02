@@ -29,7 +29,9 @@ export default function Steps({
           <ol className={styles.list}>
             {steps.map((step) => (
               <li key={step.title}>
-                <Image src={step.icon} alt="" width={64} height={64} />
+                <span className={styles.badge}>
+                  <Image src={step.icon} alt="" width={64} height={64} />
+                </span>
                 <div>
                   <h3>{step.title}</h3>
                   {step.text && <p>{step.text}</p>}
