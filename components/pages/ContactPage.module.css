@@ -1,14 +1,15 @@
-.grid {
+/* Même largeur que le formulaire de la page réservation (760 px, marges comprises) */
+div.grid {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: 40px;
-  align-items: center;
+  gap: 20px;
+  max-width: 760px;
 }
 
-/* Téléphone et WhatsApp : deux blocs compacts cliquables, centrés verticalement à côté du formulaire */
+/* Téléphone et WhatsApp : deux blocs compacts cliquables côte à côte, au-dessus du formulaire */
 .channels {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   list-style: none;
 }
 
@@ -115,17 +116,6 @@
 @media (prefers-reduced-motion: reduce) {
   .channel:hover {
     transform: none;
-  }
-}
-
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Tablette : les deux blocs côte à côte au-dessus du formulaire */
-  .channels {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
