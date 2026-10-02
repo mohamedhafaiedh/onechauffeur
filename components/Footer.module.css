@@ -1,5 +1,6 @@
 .footer {
-  padding-block: 100px 30px;
+  /* espace en bas pour la bulle WhatsApp flottante */
+  padding-block: 100px 96px;
   background: var(--color-surface);
 }
 
@@ -73,7 +74,7 @@
 
 @media (max-width: 767px) {
   .footer {
-    padding-block: 50px;
+    padding-block: 50px 96px;
   }
 
   .grid {

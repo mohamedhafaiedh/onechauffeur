@@ -76,7 +76,8 @@ export default function Footer({ lang, page }: { lang: Lang; page: PageKey }) {
           <p>
             {t.copyright}
             <br />
-            {COMPANY.registeredOffice}
+            {/* adresse française : reste dans l'ordre de lecture latin, même en arabe */}
+            <bdi dir="ltr">{COMPANY.registeredOffice}</bdi>
           </p>
           <LanguageSwitcher lang={lang} page={page} placement="up" />
         </div>

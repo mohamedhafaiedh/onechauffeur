@@ -1,6 +1,7 @@
 import React from "react";
 import "@/app/globals.css";
 import JsonLd from "@/components/JsonLd";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { inter, manrope, tajawal } from "@/lib/fonts";
 import { LOCALES, type Lang } from "@/lib/seo";
 
@@ -27,6 +28,7 @@ export default function BaseLayout({
         {/* Données structurées : Next.js recommande de les placer dans le body */}
         <JsonLd lang={lang} />
         {children}
+        <WhatsAppButton lang={lang} />
       </body>
     </html>
   );
