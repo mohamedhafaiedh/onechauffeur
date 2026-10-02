@@ -212,5 +212,8 @@
     "title": "找不到頁面",
     "message": "您要找的頁面不存在或已移動。以下是一些實用連結，方便您繼續瀏覽。",
     "metaTitle": "找不到頁面 – One Chauffeur"
+  },
+  "legal": {
+    "englishOnly": "本文件僅提供英文版本。"
   }
 }

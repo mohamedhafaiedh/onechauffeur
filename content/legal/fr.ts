@@ -6,7 +6,6 @@ import type { LegalBlock, LegalContent } from "./types";
 // La politique de confidentialité est la rubrique « Données personnelles » (#confidentialite).
 // Une valeur vide n'est pas affichée ; les champs obligatoires manquants sont signalés au build.
 const legal: LegalContent = {
-  title: "Mentions légales",
   intro:
     "Conformément aux articles 6-III et 19 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique (LCEN), nous portons à la connaissance des utilisateurs et visiteurs du site les informations suivantes.",
   sections: [

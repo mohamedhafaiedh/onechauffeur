@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { DEFAULT_LANG, LANGS, SITE_URL, SITE_ROUTES, buildAlternates, hasPage, pagePath } from "@/lib/seo";
+import { DEFAULT_LANG, LANGS, SITE_URL, SITE_ROUTES, buildAlternates, isTranslated, pagePath } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return LANGS.flatMap((lang) => {
     const priorityFactor = lang === DEFAULT_LANG ? 1.0 : 0.9;
 
-    return SITE_ROUTES.filter((route) => hasPage(route, lang)).map((route) => {
+    return SITE_ROUTES.filter((route) => isTranslated(route, lang)).map((route) => {
       const isHome = route === "";
       const isLegal = ["mentions-legales", "cgv"].includes(route);
 

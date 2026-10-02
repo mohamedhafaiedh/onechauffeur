@@ -5,6 +5,33 @@
   padding-block: 72px var(--section-space);
 }
 
+/* Texte juridique en anglais dans une page arabe ou chinoise : polices latines du site */
+.notice[lang="en"],
+.prose[lang="en"] {
+  --font-body: var(--font-inter), system-ui, sans-serif;
+  --font-heading: var(--font-manrope), system-ui, sans-serif;
+  font-family: var(--font-body);
+}
+
+/* Avertissement « texte disponible en anglais seulement » (langues sans traduction juridique) */
+.notice__lang {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+  padding: 14px 18px;
+  border-radius: var(--radius-sm);
+  background: var(--color-gold-soft);
+  color: var(--color-ink);
+  font-size: 15px;
+  font-style: normal;
+}
+
+.notice__lang svg {
+  flex: none;
+  color: var(--color-gold-text);
+}
+
 /* Introduction en italique, séparée de la suite par un filet */
 .intro {
   margin-bottom: 56px;
@@ -158,4 +185,13 @@
 .prose b,
 .prose strong {
   color: var(--color-ink);
+}
+
+/* L'avertissement reste dans la police de la langue du visiteur */
+.notice__lang:lang(ar) {
+  font-family: var(--font-arabic), sans-serif;
+}
+
+.prose .notice__lang {
+  margin-bottom: 36px;
 }

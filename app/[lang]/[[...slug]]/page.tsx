@@ -9,7 +9,7 @@ import ThankYouPage from "@/components/pages/ThankYouPage";
 import { LegalNoticePage, TermsPage } from "@/components/pages/LegalPage";
 import { LEGAL_NOTICE, TERMS_CONTENT } from "@/content/legal";
 import { getMessages } from "@/lib/i18n";
-import { PAGE_KEYS, createPageMetadata, hasPage, isLang, pageFromSlug, slugOf, type Lang, type PageKey } from "@/lib/seo";
+import { PAGE_KEYS, createPageMetadata, isLang, legalTextLang, pageFromSlug, slugOf, type Lang, type PageKey } from "@/lib/seo";
 
 // Route unique de toutes les pages, dans toutes les langues. Le français est servi à la racine
 // grâce à une réécriture interne (next.config.ts) : /flotte/ → /fr/flotte/, invisible pour le visiteur.
@@ -21,7 +21,7 @@ type Params = Promise<{ lang: string; slug?: string[] }>;
 
 export function generateStaticParams({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang;
-  return PAGE_KEYS.filter((page) => hasPage(page, lang)).map((page) => {
+  return PAGE_KEYS.map((page) => {
     const slug = slugOf(page, lang);
     return { slug: slug ? [slug] : [] };
   });
@@ -55,16 +55,18 @@ export default async function Page({ params }: { params: Params }) {
       return <ContactPage lang={lang} />;
     case "merci":
       return <ThankYouPage lang={lang} />;
+    // Textes juridiques : rédigés en français et en anglais ; dans les autres langues,
+    // la page reste dans la langue du visiteur et seul le texte juridique est en anglais
     case "mentions-legales": {
-      const content = LEGAL_NOTICE[lang];
+      const content = LEGAL_NOTICE[legalTextLang(lang)];
       if (!content) notFound();
-      return <LegalNoticePage lang={lang} content={content} />;
+      return <LegalNoticePage lang={lang} textLang={legalTextLang(lang)} content={content} />;
     }
     case "cgv": {
-      const Content = TERMS_CONTENT[lang];
+      const Content = TERMS_CONTENT[legalTextLang(lang)];
       if (!Content) notFound();
       return (
-        <TermsPage lang={lang} title={getMessages(lang).footer.termsOfSale}>
+        <TermsPage lang={lang} textLang={legalTextLang(lang)} title={getMessages(lang).footer.termsOfSale}>
           <Content />
         </TermsPage>
       );

@@ -212,5 +212,8 @@
     "title": "Page not found",
     "message": "The page you are looking for does not exist or has been moved. Here are a few useful links to continue your visit.",
     "metaTitle": "Page not found – One Chauffeur"
+  },
+  "legal": {
+    "englishOnly": "This document is only available in English."
   }
 }

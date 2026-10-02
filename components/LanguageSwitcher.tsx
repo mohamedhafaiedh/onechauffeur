@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { getMessages } from "@/lib/i18n";
-import { LOCALES, hasPage, pagePath, type Lang, type PageKey } from "@/lib/seo";
+import { LOCALES, pagePath, type Lang, type PageKey } from "@/lib/seo";
 import styles from "./LanguageSwitcher.module.css";
 
 const LANGS = Object.keys(LOCALES) as Lang[];
@@ -66,8 +66,7 @@ export default function LanguageSwitcher({
       <ul id={menuId} className={styles.menu}>
         {LANGS.map((l) => {
           const current = l === lang;
-          // page absente dans cette langue (textes juridiques) → accueil de la langue choisie
-          const href = hasPage(page, l) ? pagePath(page, l) : pagePath("", l);
+          const href = pagePath(page, l);
           return (
             <li key={l}>
               <Link

@@ -6,8 +6,8 @@ import legalFr from "./fr";
 import legalEn from "./en";
 import type { LegalContent } from "./types";
 
-// Textes juridiques, en français et en anglais seulement
-// (les autres langues renvoient vers la version anglaise, voir hasPage dans lib/seo.ts).
+// Textes juridiques, en français et en anglais seulement : les autres langues affichent
+// le texte anglais dans leur propre page (voir legalTextLang dans lib/seo.ts).
 
 // CGV : document long, un composant par langue
 export const TERMS_CONTENT: Partial<Record<Lang, ComponentType>> = { fr: CgvFr, en: CgvEn };

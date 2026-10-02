@@ -88,32 +88,35 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
   zh: EN_SLUGS,
 };
 
-// Textes juridiques : publiés en français et en anglais seulement ;
-// les autres langues renvoient vers la version anglaise.
+// Textes juridiques : rédigés en français et en anglais seulement. Dans les autres langues, la page existe
+// (menu, bandeau, footer et sens de lecture de la langue) mais le texte juridique est affiché en anglais.
 const LEGAL_PAGES: PageKey[] = ["cgv", "mentions-legales"];
 const LEGAL_LANGS: Lang[] = ["fr", "en"];
 const LEGAL_FALLBACK: Lang = "en";
 
-/** La page existe-t-elle dans cette langue ? */
-export function hasPage(page: PageKey, lang: Lang): boolean {
+/** Le contenu de la page est-il rédigé dans cette langue ? (faux : texte juridique affiché en anglais) */
+export function isTranslated(page: PageKey, lang: Lang): boolean {
   return !LEGAL_PAGES.includes(page) || LEGAL_LANGS.includes(lang);
+}
+
+/** Langue du texte juridique affiché dans une langue du site */
+export function legalTextLang(lang: Lang): Lang {
+  return LEGAL_LANGS.includes(lang) ? lang : LEGAL_FALLBACK;
 }
 
 function langPrefix(lang: Lang): string {
   return lang === DEFAULT_LANG ? "" : `/${lang}`;
 }
 
-/** Chemin relatif d'une page dans une langue : pagePath("flotte", "en") → "/en/fleet/".
- *  Page absente dans cette langue (textes juridiques) → version anglaise. */
+/** Chemin relatif d'une page dans une langue : pagePath("flotte", "en") → "/en/fleet/" */
 export function pagePath(page: PageKey, lang: Lang): string {
-  if (!hasPage(page, lang)) lang = LEGAL_FALLBACK;
   const slug = SLUGS[lang][page];
   return `${langPrefix(lang)}/${slug ? `${slug}/` : ""}`;
 }
 
 /** Page correspondant à un slug dans une langue (undefined si inconnu) */
 export function pageFromSlug(lang: Lang, slug: string): PageKey | undefined {
-  return PAGE_KEYS.find((page) => hasPage(page, lang) && SLUGS[lang][page] === slug);
+  return PAGE_KEYS.find((page) => SLUGS[lang][page] === slug);
 }
 
 /** Slug d'une page dans une langue, pour la route app/[lang]/[[...slug]] */
@@ -134,12 +137,14 @@ export const PRIVACY_REDIRECTS = [
   { source: "/en/politique-de-confidentialite", destination: `${pagePath("mentions-legales", "en")}#confidentialite` },
 ];
 
+// Texte juridique non traduit : la page canonique est la version anglaise (même texte),
+// et seules les versions réellement rédigées figurent dans les hreflang et le sitemap.
 export function buildAlternates(page: PageKey, lang: Lang) {
   return {
-    canonical: `${SITE_URL}${pagePath(page, lang)}`,
+    canonical: `${SITE_URL}${pagePath(page, isTranslated(page, lang) ? lang : legalTextLang(lang))}`,
     languages: {
       ...Object.fromEntries(
-        LANGS.filter((l) => hasPage(page, l)).map((l) => [LOCALES[l].code, `${SITE_URL}${pagePath(page, l)}`])
+        LANGS.filter((l) => isTranslated(page, l)).map((l) => [LOCALES[l].code, `${SITE_URL}${pagePath(page, l)}`])
       ),
       "x-default": `${SITE_URL}${pagePath(page, DEFAULT_LANG)}`,
     },
@@ -182,7 +187,7 @@ export function createPageMetadata(
       url: `${SITE_URL}${pagePath(slug, lang)}`,
       siteName: "One Chauffeur",
       locale: LOCALES[lang].ogLocale,
-      alternateLocale: LANGS.filter((l) => l !== lang && hasPage(slug, l)).map((l) => LOCALES[l].ogLocale),
+      alternateLocale: LANGS.filter((l) => l !== lang && isTranslated(slug, l)).map((l) => LOCALES[l].ogLocale),
       type: "website",
       images: [
         {

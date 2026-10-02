@@ -212,5 +212,8 @@
     "title": "Pagina non trovata",
     "message": "La pagina che cerchi non esiste o è stata spostata. Ecco alcuni link utili per continuare la visita.",
     "metaTitle": "Pagina non trovata – One Chauffeur"
+  },
+  "legal": {
+    "englishOnly": "Questo documento è disponibile solo in inglese."
   }
 }

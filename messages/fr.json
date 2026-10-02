@@ -212,5 +212,8 @@
     "title": "Page introuvable",
     "message": "La page que vous cherchez n'existe pas ou a été déplacée. Voici quelques liens utiles pour poursuivre votre visite.",
     "metaTitle": "Page introuvable – One Chauffeur"
+  },
+  "legal": {
+    "englishOnly": "Ce document n’est disponible qu’en anglais."
   }
 }
