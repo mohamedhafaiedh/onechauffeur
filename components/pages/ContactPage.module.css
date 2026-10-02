@@ -8,7 +8,8 @@ div.grid {
 /* Téléphone et WhatsApp : deux blocs compacts cliquables côte à côte, au-dessus du formulaire */
 .channels {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* côte à côte tant que chaque bloc garde le numéro sur une ligne, sinon l'un sous l'autre */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
   gap: 20px;
   list-style: none;
 }
@@ -66,6 +67,7 @@ div.grid {
   color: var(--color-ink);
   font-size: 16.5px;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .arrow {
@@ -121,7 +123,6 @@ div.grid {
 
 @media (max-width: 560px) {
   .channels {
-    grid-template-columns: 1fr;
     gap: 14px;
   }
 
@@ -137,5 +138,31 @@ div.grid {
 
   .card {
     padding: 30px 20px;
+  }
+}
+
+/* Petits téléphones (≤ 380 px) : bloc plus compact pour garder le numéro sur une ligne */
+@media (max-width: 380px) {
+  .channel {
+    gap: 12px;
+    padding: 18px 16px;
+    padding-inline-end: 44px;
+  }
+
+  .icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .channelTitle {
+    font-size: 17px;
+  }
+
+  .number {
+    font-size: 15.5px;
+  }
+
+  .arrow {
+    inset-inline-end: 16px;
   }
 }
