@@ -18,7 +18,6 @@ export interface LegalSection {
 
 export interface LegalContent {
   title: string;
-  subtitle: string;
   intro: string;
   sections: LegalSection[];
 }

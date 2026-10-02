@@ -57,7 +57,7 @@ export function LegalNoticePage({ lang, content: t }: { lang: Lang; content: Leg
     <>
       <Header lang={lang} page="mentions-legales" />
       <main id="content">
-        <PageHero lang={lang} title={t.title} subtitle={t.subtitle} />
+        <PageHero lang={lang} title={t.title} />
         <article className={`container ${styles.notice}`}>
           <p className={styles.intro}>{t.intro}</p>
           {t.sections.map((section) => {

@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { ArrowUpRight, Phone } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -26,10 +26,16 @@ export default function ContactPage({ lang }: { lang: Lang }) {
             <ul className={styles.channels}>
               {channels.map((c) => (
                 <li key={c.title}>
-                  <span className={styles.icon}>{c.icon}</span>
-                  <h2>{c.title}</h2>
-                  <a href={c.href} dir="ltr" {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
-                    {PHONE_DISPLAY}
+                  {/* Tout le bloc est cliquable */}
+                  <a href={c.href} className={styles.channel} {...(c.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                    <span className={styles.icon}>{c.icon}</span>
+                    <span className={styles.channelText}>
+                      <span className={styles.channelTitle}>{c.title}</span>
+                      <span className={styles.number} dir="ltr">
+                        {PHONE_DISPLAY}
+                      </span>
+                    </span>
+                    <ArrowUpRight className={`${styles.arrow} flip-rtl`} size={22} strokeWidth={1.5} aria-hidden="true" />
                   </a>
                 </li>
               ))}

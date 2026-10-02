@@ -47,17 +47,17 @@
   gap: 10px;
   list-style: none;
   color: rgba(255, 255, 255, 0.62);
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 500;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .crumbs li + li::before {
   content: "";
   display: inline-block;
-  width: 5px;
-  height: 5px;
+  width: 4px;
+  height: 4px;
   margin-inline-end: 10px;
   border-radius: 50%;
   background: var(--color-gold);
@@ -96,14 +96,6 @@
   background: var(--color-gold);
 }
 
-.subtitle {
-  max-width: 40em;
-  margin: 22px auto 0;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 17px;
-  line-height: 1.6;
-}
-
 @media (max-width: 767px) {
   .hero {
     padding-block: 44px 52px;
@@ -115,9 +107,5 @@
 
   .hero::after {
     display: none;
-  }
-
-  .subtitle {
-    font-size: 16px;
   }
 }

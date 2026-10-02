@@ -16,6 +16,39 @@
   padding: 32px 28px;
   border-radius: var(--radius-lg);
   background: var(--color-white);
+  transition: background-color 0.4s var(--ease), transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+
+/* Survol : la carte passe en noir et se soulève, pastille dorée pleine (comme les services) */
+.grid li:hover {
+  background: var(--color-black);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px);
+}
+
+.grid h3,
+.grid p,
+.icon {
+  transition: color 0.4s var(--ease), background-color 0.4s var(--ease);
+}
+
+.grid li:hover h3 {
+  color: var(--color-white);
+}
+
+.grid li:hover p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.grid li:hover .icon {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid li:hover {
+    transform: none;
+  }
 }
 
 .icon {

@@ -9,13 +9,11 @@ export default function PageHero({
   lang,
   title,
   crumb,
-  subtitle,
 }: {
   lang: Lang;
   title: string;
   /** libellé court de la page dans le fil d'Ariane (par défaut : le titre) */
   crumb?: string;
-  subtitle?: string;
 }) {
   const { nav, header } = getMessages(lang);
 
@@ -31,7 +29,6 @@ export default function PageHero({
           </ol>
         </nav>
         <h1>{title}</h1>
-        {subtitle && <p className={styles.subtitle}>{subtitle}</p>}
       </div>
     </section>
   );

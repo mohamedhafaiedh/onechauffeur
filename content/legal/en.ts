@@ -4,7 +4,6 @@ import type { LegalBlock, LegalContent } from "./types";
 // Traduction anglaise de fr.ts (le français fait foi) : mêmes rubriques, mêmes ancres.
 const legal: LegalContent = {
   title: "Legal notice",
-  subtitle: "Information about the website publisher, its host and the protection of your personal data.",
   intro:
     "In accordance with articles 6-III and 19 of French law no. 2004-575 of 21 June 2004 on confidence in the digital economy (LCEN), we provide users and visitors of this website with the following information.",
   sections: [

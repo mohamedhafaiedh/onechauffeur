@@ -1,71 +1,149 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 80px;
-  align-items: center;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 40px;
+  align-items: stretch;
 }
 
+/* Téléphone et WhatsApp : deux grands blocs qui occupent toute la hauteur à côté du formulaire */
 .channels {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 40px;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 20px;
   list-style: none;
+}
+
+.channel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  height: 100%;
+  padding: 36px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-white);
+  transition: background-color 0.4s var(--ease), border-color 0.4s var(--ease), transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
+}
+
+/* Survol : bloc inversé en noir, comme les cartes de services et de valeurs */
+.channel:hover {
+  border-color: var(--color-black);
+  background: var(--color-black);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
+  transform: translateY(-4px);
 }
 
 .icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 53px;
-  height: 53px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: var(--color-gold-soft);
   color: var(--color-gold-text);
 }
 
-.channels h2 {
-  margin-top: 22px;
-  font-size: var(--h3-sm);
+.channelText {
+  display: grid;
+  gap: 6px;
+}
+
+.channelTitle {
+  color: var(--color-black);
+  font-family: var(--font-heading);
+  font-size: var(--h3);
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
-.channels a {
-  display: inline-block;
-  margin-top: 10px;
+.number {
+  justify-self: start;
   color: var(--color-ink);
+  font-size: 18px;
   font-weight: 500;
-  text-decoration: underline;
-  text-decoration-color: var(--color-gold);
-  text-underline-offset: 4px;
-  transition: color 0.2s ease;
 }
 
-.channels a:hover {
-  color: var(--color-gold-text);
+.arrow {
+  position: absolute;
+  top: 36px;
+  inset-inline-end: 36px;
+  color: var(--color-gold-strong);
+  transition: transform 0.4s var(--ease);
+}
+
+.icon,
+.channelTitle,
+.number {
+  transition: color 0.4s var(--ease), background-color 0.4s var(--ease);
+}
+
+.channel:hover .icon {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+.channel:hover .channelTitle,
+.channel:hover .number {
+  color: var(--color-white);
+}
+
+.channel:hover .arrow {
+  transform: translate(3px, -3px);
+}
+
+[dir="rtl"] .channel:hover .arrow {
+  transform: scaleX(-1) translate(3px, -3px);
 }
 
 .card {
-  padding: 50px;
+  padding: 48px;
   border-radius: var(--radius-lg);
   background: var(--color-surface);
 }
 
 .card h2 {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
   font-size: var(--h3-lg);
   line-height: 1.2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .channel:hover {
+    transform: none;
+  }
 }
 
 @media (max-width: 1024px) {
   .grid {
     grid-template-columns: 1fr;
-    gap: 50px;
+  }
+
+  /* Tablette : les deux blocs côte à côte au-dessus du formulaire */
+  .channels {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
   }
 }
 
 @media (max-width: 560px) {
   .channels {
     grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .channel {
+    gap: 24px;
+    padding: 26px 24px;
+  }
+
+  .arrow {
+    top: 26px;
+    inset-inline-end: 24px;
   }
 
   .card {
