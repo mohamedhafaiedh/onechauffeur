@@ -2,8 +2,10 @@
    data-mode="full" | "book" | "compact". Avant la mesure (rendu serveur), des points de
    rupture approchants donnent la même disposition pour éviter un saut à l'affichage. */
 
+/* Collant en haut de l'écran : le burger reste à la même place que la croix du menu, même après défilement */
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 100;
   background: var(--color-white);
   border-bottom: 1px solid var(--color-border);
@@ -329,7 +331,8 @@
 
 .dialog .bar {
   flex: none;
-  border-bottom: 1px solid var(--color-border);
+  /* filet tracé sous la barre (et non dans sa hauteur) : la croix tombe au pixel près sur le burger */
+  box-shadow: 0 1px 0 var(--color-border);
 }
 
 :global(html.menu-open),

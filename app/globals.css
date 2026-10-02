@@ -56,6 +56,9 @@
   --measure: 62ch;
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Hauteur de l'en-tête collant (barre + filet), voir components/Header.module.css */
+  --header-h: 85px;
 }
 
 /* Arabe : la police arabe passe en premier (sinon la police de secours, Arial, afficherait l'arabe) ;
@@ -100,6 +103,7 @@ html[lang="zh-Hant"] :is(h1, h2, h3, h4) {
 @media (max-width: 767px) {
   :root {
     --section-space: 64px;
+    --header-h: 69px;
     --h1-hero: 38px;
     --h1-page: 32px;
     --h2: 29px;
@@ -120,6 +124,8 @@ html[lang="zh-Hant"] :is(h1, h2, h3, h4) {
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* ancres (#confidentialite, #berline…) : le titre ne passe pas sous l'en-tête collant */
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -40,10 +40,6 @@
   font-style: italic;
 }
 
-.section {
-  scroll-margin-top: 24px;
-}
-
 .section + .section {
   margin-top: 56px;
 }
