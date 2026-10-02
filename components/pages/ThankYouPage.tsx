@@ -7,7 +7,7 @@ import { pagePath, type Lang } from "@/lib/seo";
 import styles from "./StatusPage.module.css";
 
 export default function ThankYouPage({ lang }: { lang: Lang }) {
-  const { thankYou: t } = getMessages(lang);
+  const { thankYou: t, common } = getMessages(lang);
 
   return (
     <div>
@@ -38,7 +38,7 @@ export default function ThankYouPage({ lang }: { lang: Lang }) {
 
           <Link href={pagePath("", lang)} className={styles.back}>
             <ArrowLeft size={18} aria-hidden="true" />
-            {t.backHome}
+            {common.backHome}
           </Link>
         </div>
       </main>

@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "services": "الخدمات",
+    "fleet": "الأسطول",
+    "contact": "اتصل بنا",
+    "booking": "الحجز"
+  },
+  "common": {
+    "phone": "الهاتف",
+    "backHome": "العودة إلى الصفحة الرئيسية"
+  },
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – سائق خاص في باريس وإيل دو فرانس",
+      "description": "تقدم One Chauffeur خدمة سائق خاص راقية في باريس وإيل دو فرانس: التوصيل من المطارات وإليها (شارل ديغول، أورلي)، ومحطات القطار، ورحلات العمل، وخدمة متاحة على مدار الساعة."
+    },
+    "services": {
+      "title": "الخدمات – One Chauffeur",
+      "description": "اكتشفوا خدمات السائق الخاص في باريس: التوصيل إلى مطاري شارل ديغول وأورلي، ومحطات القطار، ورحلات العمل، وسيارة مع سائق بالساعة."
+    },
+    "fleet": {
+      "title": "الأسطول – One Chauffeur",
+      "description": "اكتشفوا أسطول سيارات One Chauffeur الفاخرة: سيارات سيدان وحافلات صغيرة من مرسيدس الفئة E والفئة S والفئة V وتسلا مع سائق خاص في باريس."
+    },
+    "booking": {
+      "title": "الحجز – One Chauffeur",
+      "description": "احجزوا سائقكم الخاص في باريس وإيل دو فرانس عبر الإنترنت مع One Chauffeur. أسعار واضحة وتأكيد سريع وخدمة راقية."
+    },
+    "contact": {
+      "title": "اتصل بنا – One Chauffeur",
+      "description": "تواصلوا مع One Chauffeur في باريس على مدار الساعة: اتصلوا بنا على الرقم ‎+33 6 67 52 06 77 أو أرسلوا طلب الحجز أو عرض السعر أو التوصيل العاجل."
+    },
+    "termsOfSale": {
+      "title": "الشروط العامة للبيع – One Chauffeur",
+      "description": "الشروط العامة لبيع خدمات النقل بسائق خاص التي تقدمها One Chauffeur في باريس وإيل دو فرانس."
+    },
+    "legalNotice": {
+      "title": "الإشعار القانوني – One Chauffeur",
+      "description": "الإشعار القانوني لشركة One Chauffeur SASU: التسجيل التجاري، والمقر الرئيسي، ومدير النشر، واستضافة الموقع."
+    },
+    "privacyPolicy": {
+      "title": "سياسة الخصوصية – One Chauffeur",
+      "description": "سياسة الخصوصية وحماية البيانات الشخصية لدى One Chauffeur وفقًا للائحة العامة لحماية البيانات."
+    },
+    "thankYou": {
+      "title": "شكرًا على طلبكم – One Chauffeur",
+      "description": "تأكيد إرسال طلب الحجز أو التواصل إلى خدمة السائق الخاص One Chauffeur في باريس."
+    }
+  },
+  "header": {
+    "skipToContent": "الانتقال إلى المحتوى",
+    "bookMyDriver": "احجز سائقي",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "menu": "القائمة الرئيسية"
+  },
+  "footer": {
+    "quickLinks": "روابط سريعة",
+    "legal": "معلومات قانونية",
+    "termsOfSale": "الشروط العامة للبيع",
+    "privacyPolicy": "سياسة الخصوصية",
+    "legalNotice": "الإشعار القانوني",
+    "tagline": "سائقكم الخاص في باريس وإيل دو فرانس لجميع تنقلاتكم (المطارات ومحطات القطار وداخل المدينة)، ورحلات العمل، والمسافات الطويلة، والخدمة بالساعة، والجولات السياحية.",
+    "copyright": "© جميع الحقوق محفوظة · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "اختر اللغة"
+  },
+  "shared": {
+    "getQuoteBook": "اطلب عرض سعر واحجز",
+    "ourServices": "خدماتنا",
+    "transfers": "خدمات التوصيل",
+    "airportTransfersTrainStation": "التوصيل من المطارات ومحطات القطار والمتنزهات الترفيهية وإليها، وغير ذلك.",
+    "carHourlyDisposal": "سيارة مع سائق بالساعة",
+    "aVehicleWithDriver": "سيارة مع سائق، للمدة التي تريدونها",
+    "cityTours": "جولات سياحية",
+    "packagesToHelpYou": "باقات لاكتشاف مدينة باريس",
+    "businessTrips": "رحلات العمل",
+    "forYourTransportNeeds": "لتنقلاتكم وتنقلات فريق عملكم",
+    "longDistances": "المسافات الطويلة",
+    "forLongDistanceJourneys": "للرحلات الطويلة داخل فرنسا وإلى الدول المجاورة",
+    "privateEvents": "المناسبات الخاصة",
+    "aServiceAdaptedTo": "خدمة مصممة لمناسباتكم الخاصة والشخصية والمهنية",
+    "chooseTheCarYou": "اختاروا السيارة التي تناسبكم",
+    "aLargeFleetOf": "أسطول واسع من السيارات يجمع بين الراحة والخصوصية",
+    "sedan": "سيدان",
+    "upTo3Passengers": "حتى 3 ركاب",
+    "upTo3Bags": "حتى 3 حقائب",
+    "details": "التفاصيل",
+    "businessSedan": "سيدان بزنس",
+    "luxurySedan": "سيدان فاخرة",
+    "minivan": "حافلة صغيرة",
+    "upTo7Passengers": "حتى 7 ركاب",
+    "upTo7Bags": "حتى 7 حقائب",
+    "simpleStepsToBook": "خطوات بسيطة لحجز سائقكم",
+    "toBookYourCar": "حجز سيارتكم مع سائق أسهل مما تتصورون",
+    "n1ContactUs": "1. تواصلوا معنا",
+    "emailTelephoneContactForm": "البريد الإلكتروني أو الهاتف أو نموذج التواصل أو نموذج الحجز عبر الإنترنت",
+    "n2ConfirmYourBooking": "2. أكّدوا الحجز",
+    "tellUsAboutYour": "أخبرونا باحتياجاتكم وسنقترح عليكم الخدمة الأنسب لكم",
+    "n3YourDriverWill": "3. سائقكم في الموعد المحدد",
+    "aboutOneChauffeur": "عن One Chauffeur",
+    "byOfferingATailor": "من خلال خدمة مصممة حسب الطلب، تسعى One Chauffeur إلى تجاوز توقعات عملائها. السائقون الخاصون، المختارون بعناية لاحترافيتهم وتكتمهم، هم سفراء الأناقة وجودة الخدمة.",
+    "theVehiclesWeProvide": "تعكس السيارات التي نضعها في خدمتكم حرص One Chauffeur الدائم على الراحة والأناقة، إذ نوفر لعملائنا وسيلة نقل تجمع بين الرقي وسهولة الاستخدام. ومهما كانت الحاجة، تلتزم الشركة بصنع تجربة سفر لا تُنسى، قوامها روح الخدمة والعناية الشخصية."
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "سائقكم الخاص في باريس",
+    "withOneChauffeurYou": "مع One Chauffeur، تستفيدون من خدمة سائق خاص راقية ومصممة حسب الطلب، تتكيف مع جميع احتياجاتكم.",
+    "ourValues": "قيمنا",
+    "professionalismDiscretion": "الاحترافية والتكتم",
+    "youAreDrivenBy": "يقودكم سائقون ذوو خبرة، مهذبون ومتكتمون",
+    "comfortRespectForThe": "الراحة واحترام البيئة",
+    "ourVehiclesAreSelected": "نختار سياراتنا لراحتها وأناقتها واحترامها للبيئة",
+    "availabilityAndEfficiency": "التوفر والكفاءة",
+    "weAreAvailable24": "نحن متاحون على مدار الساعة طوال أيام الأسبوع، ونعالج طلبات عروض الأسعار في وقت قياسي",
+    "punctuality": "الالتزام بالمواعيد",
+    "punctualityIsANon": "الالتزام بالمواعيد قيمة لا نقاش فيها. سيكون كل سائق حاضرًا قبل موعد الانطلاق بوقت كافٍ",
+    "anEnjoyableTransportExperience": "تجربة تنقل ممتعة",
+    "atOneChauffeurWe": "في One Chauffeur، نضمن لكم تجربة قوامها الراحة والطمأنينة. يوفر أسطولنا، الذي نجدده باستمرار، أقصى درجات الراحة. ويقدم سائقونا المحترفون، المختارون بعناية، خدمة لبقة ومخصصة مع ضمان الالتزام بالمواعيد. اختاروا التميز في الخدمة والراحة التامة وراحة البال طوال رحلتكم مع One Chauffeur.",
+    "freeCancellationUpTo": "إلغاء مجاني حتى 24 ساعة قبل الانطلاق",
+    "flexibleAndTailorMade": "خدمة مرنة ومصممة حسب الطلب",
+    "onlineOrOnBoard": "الدفع عبر الإنترنت أو داخل السيارة",
+    "pricesFixedInAdvance": "أسعار محددة مسبقًا"
+  },
+  "services": {
+    "ourPrivateDriverServices": "خدمات السائق الخاص"
+  },
+  "fleet": {
+    "ourFleet": "أسطول سياراتنا",
+    "aStylishSedanCombining": "سيارة سيدان أنيقة تجمع بين الراحة والفخامة",
+    "childSeats": "مقاعد أطفال",
+    "wiFi": "واي فاي",
+    "refreshments": "مشروبات",
+    "moreComfortMoreElegance": "راحة أكبر وأناقة أكثر",
+    "toGetIntoThe": "لدخول عالم الفخامة، لا شيء يضاهي مرسيدس الفئة S",
+    "theFamousMercedesV": "مرسيدس الفئة V الشهيرة، للسفر في مجموعة أو مع الكثير من الأمتعة"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "احجزوا سائقكم الخاص عبر الإنترنت"
+  },
+  "contact": {
+    "whatsapp": "واتساب",
+    "leaveAMessageHere": "اتركوا لنا رسالة"
+  },
+  "thankYou": {
+    "title": "شكرًا على طلبكم",
+    "message": "تم إرسال رسالتكم إلى فريقنا بنجاح. سيتولى سائق خاص من One Chauffeur طلبكم ويؤكد لكم التفاصيل في أقرب وقت.",
+    "urgent": "حالة عاجلة أو انطلاق فوري؟"
+  },
+  "contactForm": {
+    "submitError": "حدث خطأ أثناء إرسال رسالتكم. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.",
+    "formLabel": "نموذج التواصل",
+    "nameLabel": "الاسم *",
+    "namePlaceholder": "اسمكم",
+    "name": "الاسم",
+    "emailLabel": "البريد الإلكتروني *",
+    "emailPlaceholder": "بريدكم الإلكتروني",
+    "email": "البريد الإلكتروني",
+    "phoneLabel": "الهاتف *",
+    "phonePlaceholder": "مثال: ‎+971 50 123 4567",
+    "phone": "الهاتف",
+    "subjectLabel": "موضوع الطلب *",
+    "subject": "موضوع الطلب",
+    "subjectPlaceholder": "— اختاروا موضوعًا —",
+    "messageLabel": "الرسالة *",
+    "messagePlaceholder": "اكتبوا رسالتكم هنا...",
+    "message": "الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "submit": "إرسال الرسالة",
+    "subjectOptions": [
+      "طلب معلومات",
+      "طلب عرض سعر",
+      "حجز"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "حدث خطأ أثناء إرسال حجزكم. يرجى المحاولة مرة أخرى أو الاتصال بنا مباشرة.",
+    "formLabel": "عرض سعر وحجز عبر الإنترنت",
+    "pickupLocationLabel": "مكان الانطلاق *",
+    "pickupPlaceholder": "مثال: مطار شارل ديغول المبنى 2E، فندق ريتز...",
+    "pickupLocation": "مكان الانطلاق",
+    "dropoffDestinationLabel": "الوجهة *",
+    "dropoffPlaceholder": "مثال: محطة غار دو ليون، برج إيفل، فرساي...",
+    "dropoffDestination": "الوجهة",
+    "pickupDateLabel": "تاريخ الانطلاق *",
+    "pickupDate": "تاريخ الانطلاق",
+    "pickupTimeLabel": "ساعة الانطلاق *",
+    "pickupTime": "ساعة الانطلاق",
+    "vehicleCategoryLabel": "فئة السيارة *",
+    "vehicleCategory": "فئة السيارة",
+    "vehiclePlaceholder": "— اختاروا فئة السيارة —",
+    "emailAddressLabel": "البريد الإلكتروني *",
+    "emailPlaceholder": "مثال: name@company.com",
+    "emailAddress": "البريد الإلكتروني",
+    "phoneNumberLabel": "رقم الهاتف *",
+    "phonePlaceholder": "مثال: ‎+971 50 123 4567",
+    "phoneNumber": "رقم الهاتف",
+    "message": "تفاصيل أو طلبات خاصة",
+    "messagePlaceholder": "مثال: رقم الرحلة، مقعد طفل، أمتعة كبيرة...",
+    "sending": "جارٍ إرسال حجزكم...",
+    "submit": "اطلب عرض سعر / احجز",
+    "vehicleOptions": [
+      "سيدان (تسلا موديل 3 أو ما يماثلها - 3 ركاب)",
+      "سيدان بزنس (مرسيدس الفئة E - 3 ركاب)",
+      "سيدان فاخرة (مرسيدس الفئة S - 3 ركاب)",
+      "حافلة صغيرة (مرسيدس الفئة V - 7 ركاب)"
+    ]
+  },
+  "jsonLd": {
+    "description": "خدمة سائق خاص راقية في باريس وإيل دو فرانس: التوصيل من مطاري شارل ديغول وأورلي وإليهما، ومحطات القطار، ورحلات العمل، وسيارة مع سائق على مدار الساعة."
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "message": "الصفحة التي تبحثون عنها غير موجودة أو تم نقلها. إليكم بعض الروابط المفيدة لمتابعة زيارتكم.",
+    "metaTitle": "الصفحة غير موجودة – One Chauffeur"
+  }
+}

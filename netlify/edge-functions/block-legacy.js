@@ -1,7 +1,7 @@
 // Bloque les URLs héritées du piratage WordPress avant qu'elles n'atteignent le site
 const JUNK_QUERY = /(^|&)(item|p|cat|attachment_id|author|feed)(\/|=|$)/i;
 
-export default async (request) => {
+export default async function blockLegacy(request) {
   const url = new URL(request.url);
 
   // Sur la page d'accueil, on ne bloque que les URLs du type /?item...
@@ -15,7 +15,7 @@ export default async (request) => {
       "netlify-cdn-cache-control": "public, max-age=31536000",
     },
   });
-};
+}
 
 export const config = {
   cache: "manual",

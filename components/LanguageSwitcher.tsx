@@ -3,7 +3,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import Link from "next/link";
 import { getMessages } from "@/lib/i18n";
-import { LOCALES, pagePath, type Lang, type PageKey } from "@/lib/seo";
+import { LOCALES, hasPage, pagePath, type Lang, type PageKey } from "@/lib/seo";
 import styles from "./LanguageSwitcher.module.css";
 
 const LANGS = Object.keys(LOCALES) as Lang[];
@@ -49,7 +49,8 @@ export default function LanguageSwitcher({
         className={styles.trigger}
         aria-expanded={open}
         aria-controls={menuId}
-        aria-label={`${getMessages(lang).languageSwitcher.chooseLanguage} (${LOCALES[lang].name})`}
+        // le nom accessible commence par le texte visible (« FR »), règle WCAG 2.5.3
+        aria-label={`${lang.toUpperCase()} – ${getMessages(lang).languageSwitcher.chooseLanguage} (${LOCALES[lang].name})`}
         onClick={() => setOpen((v) => !v)}
       >
         <svg className={styles.globe} viewBox="0 0 24 24" aria-hidden="true">
@@ -65,10 +66,12 @@ export default function LanguageSwitcher({
       <ul id={menuId} className={styles.menu}>
         {LANGS.map((l) => {
           const current = l === lang;
+          // page absente dans cette langue (textes juridiques) → accueil de la langue choisie
+          const href = hasPage(page, l) ? pagePath(page, l) : pagePath("", l);
           return (
             <li key={l}>
               <Link
-                href={pagePath(page, l)}
+                href={href}
                 hrefLang={LOCALES[l].code}
                 lang={LOCALES[l].code}
                 aria-current={current ? "page" : undefined}

@@ -4,11 +4,15 @@ import { getMessages, type Messages } from "./i18n";
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://onechauffeur.fr";
 
 // Langues du site. Ajouter une langue : une entrée ici, ses slugs dans SLUGS,
-// messages/<code>.json (+ lib/i18n.ts) et ses textes juridiques dans content/legal/<code>/.
+// messages/<code>.json (+ lib/i18n.ts). La clé (fr, en, zh…) sert de préfixe d'URL ;
 // `code` sert à l'attribut lang et aux hreflang ; `ogLocale` au format Open Graph (langue_TERRITOIRE).
 export const LOCALES = {
   fr: { code: "fr", ogLocale: "fr_FR", dir: "ltr", name: "Français" },
   en: { code: "en", ogLocale: "en_US", dir: "ltr", name: "English" },
+  es: { code: "es", ogLocale: "es_ES", dir: "ltr", name: "Español" },
+  it: { code: "it", ogLocale: "it_IT", dir: "ltr", name: "Italiano" },
+  ar: { code: "ar", ogLocale: "ar_AR", dir: "rtl", name: "العربية" },
+  zh: { code: "zh-Hant", ogLocale: "zh_TW", dir: "ltr", name: "繁體中文" },
 } as const;
 
 export type Lang = keyof typeof LOCALES;
@@ -36,6 +40,18 @@ export type RouteSlug = (typeof SITE_ROUTES)[number];
 export type PageKey = RouteSlug | "merci";
 export const PAGE_KEYS: PageKey[] = [...SITE_ROUTES, "merci"];
 
+const EN_SLUGS: Record<PageKey, string> = {
+  "": "",
+  services: "services",
+  flotte: "fleet",
+  reservation: "booking",
+  contact: "contact",
+  cgv: "terms-of-sale",
+  "mentions-legales": "legal-notice",
+  "politique-de-confidentialite": "privacy-policy",
+  merci: "thank-you",
+};
+
 // Slug de chaque page dans chaque langue (les pages sont identifiées par leur slug français)
 const SLUGS: Record<Lang, Record<PageKey, string>> = {
   fr: {
@@ -49,32 +65,60 @@ const SLUGS: Record<Lang, Record<PageKey, string>> = {
     "politique-de-confidentialite": "politique-de-confidentialite",
     merci: "merci",
   },
-  en: {
+  en: EN_SLUGS,
+  es: {
     "": "",
-    services: "services",
-    flotte: "fleet",
-    reservation: "booking",
-    contact: "contact",
-    cgv: "terms-of-sale",
-    "mentions-legales": "legal-notice",
-    "politique-de-confidentialite": "privacy-policy",
-    merci: "thank-you",
+    services: "servicios",
+    flotte: "flota",
+    reservation: "reserva",
+    contact: "contacto",
+    cgv: "condiciones-de-venta",
+    "mentions-legales": "aviso-legal",
+    "politique-de-confidentialite": "politica-de-privacidad",
+    merci: "gracias",
   },
+  it: {
+    "": "",
+    services: "servizi",
+    flotte: "flotta",
+    reservation: "prenotazione",
+    contact: "contatti",
+    cgv: "condizioni-di-vendita",
+    "mentions-legales": "note-legali",
+    "politique-de-confidentialite": "informativa-privacy",
+    merci: "grazie",
+  },
+  // arabe et chinois : URL en lettres latines (mêmes slugs que l'anglais)
+  ar: EN_SLUGS,
+  zh: EN_SLUGS,
 };
 
-export function langPrefix(lang: Lang): string {
+// Textes juridiques : publiés en français et en anglais seulement ;
+// les autres langues renvoient vers la version anglaise.
+const LEGAL_PAGES: PageKey[] = ["cgv", "mentions-legales", "politique-de-confidentialite"];
+const LEGAL_LANGS: Lang[] = ["fr", "en"];
+const LEGAL_FALLBACK: Lang = "en";
+
+/** La page existe-t-elle dans cette langue ? */
+export function hasPage(page: PageKey, lang: Lang): boolean {
+  return !LEGAL_PAGES.includes(page) || LEGAL_LANGS.includes(lang);
+}
+
+function langPrefix(lang: Lang): string {
   return lang === DEFAULT_LANG ? "" : `/${lang}`;
 }
 
-/** Chemin relatif d'une page dans une langue : pagePath("flotte", "en") → "/en/fleet/" */
+/** Chemin relatif d'une page dans une langue : pagePath("flotte", "en") → "/en/fleet/".
+ *  Page absente dans cette langue (textes juridiques) → version anglaise. */
 export function pagePath(page: PageKey, lang: Lang): string {
+  if (!hasPage(page, lang)) lang = LEGAL_FALLBACK;
   const slug = SLUGS[lang][page];
   return `${langPrefix(lang)}/${slug ? `${slug}/` : ""}`;
 }
 
 /** Page correspondant à un slug dans une langue (undefined si inconnu) */
 export function pageFromSlug(lang: Lang, slug: string): PageKey | undefined {
-  return PAGE_KEYS.find((page) => SLUGS[lang][page] === slug);
+  return PAGE_KEYS.find((page) => hasPage(page, lang) && SLUGS[lang][page] === slug);
 }
 
 /** Slug d'une page dans une langue, pour la route app/[lang]/[[...slug]] */
@@ -92,7 +136,9 @@ export function buildAlternates(page: PageKey, lang: Lang) {
   return {
     canonical: `${SITE_URL}${pagePath(page, lang)}`,
     languages: {
-      ...Object.fromEntries(LANGS.map((l) => [LOCALES[l].code, `${SITE_URL}${pagePath(page, l)}`])),
+      ...Object.fromEntries(
+        LANGS.filter((l) => hasPage(page, l)).map((l) => [LOCALES[l].code, `${SITE_URL}${pagePath(page, l)}`])
+      ),
       "x-default": `${SITE_URL}${pagePath(page, DEFAULT_LANG)}`,
     },
   };
@@ -135,17 +181,19 @@ export function createPageMetadata(
       url: `${SITE_URL}${pagePath(slug, lang)}`,
       siteName: "One Chauffeur",
       locale: LOCALES[lang].ogLocale,
-      alternateLocale: LANGS.filter((l) => l !== lang).map((l) => LOCALES[l].ogLocale),
+      alternateLocale: LANGS.filter((l) => l !== lang && hasPage(slug, l)).map((l) => LOCALES[l].ogLocale),
       type: "website",
       images: [
         {
-          url: `${SITE_URL}/images/favicon-one-chauffeur.png`,
-          width: 192,
-          height: 192,
+          url: `${SITE_URL}/images/one-chauffeur-og.jpg`,
+          width: 1200,
+          height: 630,
           alt: "One Chauffeur",
         },
       ],
     },
+    // Grande vignette sur X/Twitter (reprend automatiquement titre, description et image Open Graph)
+    twitter: { card: "summary_large_image" },
     robots: options?.noindex
       ? {
           index: false,

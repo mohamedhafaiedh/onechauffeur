@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "首頁",
+    "services": "服務項目",
+    "fleet": "車隊",
+    "contact": "聯絡我們",
+    "booking": "預訂"
+  },
+  "common": {
+    "phone": "電話",
+    "backHome": "返回首頁"
+  },
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – 巴黎及法蘭西島私人司機服務",
+      "description": "One Chauffeur 在巴黎及法蘭西島提供高端私人司機服務：機場接送（戴高樂、奧利）、火車站接送、商務出行，全天候 24 小時服務。"
+    },
+    "services": {
+      "title": "服務項目 – One Chauffeur",
+      "description": "探索我們在巴黎的私人司機服務：戴高樂與奧利機場接送、火車站接送、商務出行及按小時包車服務。"
+    },
+    "fleet": {
+      "title": "車隊 – One Chauffeur",
+      "description": "探索 One Chauffeur 的高端車隊：賓士 E 級、S 級、V 級豪華轎車與商務車，以及特斯拉，配備巴黎專屬私人司機。"
+    },
+    "booking": {
+      "title": "線上預訂 – One Chauffeur",
+      "description": "透過 One Chauffeur 線上預訂巴黎及法蘭西島的私人司機。價格透明、確認迅速、服務尊貴。"
+    },
+    "contact": {
+      "title": "聯絡我們 – One Chauffeur",
+      "description": "全天候聯絡巴黎的 One Chauffeur：請致電 +33 6 67 52 06 77，或傳送您的預訂、報價或緊急接送需求。"
+    },
+    "termsOfSale": {
+      "title": "一般銷售條款 – One Chauffeur",
+      "description": "One Chauffeur 在巴黎及法蘭西島提供之私人司機接送服務的一般銷售條款。"
+    },
+    "legalNotice": {
+      "title": "法律聲明 – One Chauffeur",
+      "description": "One Chauffeur SASU 法律聲明：公司登記、註冊地址、發行負責人及網站託管資訊。"
+    },
+    "privacyPolicy": {
+      "title": "隱私權政策 – One Chauffeur",
+      "description": "One Chauffeur 依據歐盟一般資料保護規則（GDPR）制定之隱私權與個人資料保護政策。"
+    },
+    "thankYou": {
+      "title": "感謝您的來信 – One Chauffeur",
+      "description": "確認您已向巴黎私人司機服務 One Chauffeur 送出預訂或聯絡需求。"
+    }
+  },
+  "header": {
+    "skipToContent": "跳至主要內容",
+    "bookMyDriver": "預訂我的司機",
+    "openMenu": "開啟選單",
+    "closeMenu": "關閉選單",
+    "menu": "主選單"
+  },
+  "footer": {
+    "quickLinks": "快速連結",
+    "legal": "法律資訊",
+    "termsOfSale": "一般銷售條款",
+    "privacyPolicy": "隱私權政策",
+    "legalNotice": "法律聲明",
+    "tagline": "您在巴黎及法蘭西島的私人司機，提供各類接送（機場、火車站或市區）、商務出行、長途旅程、按小時包車及觀光旅遊服務。",
+    "copyright": "© 版權所有 · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "選擇語言"
+  },
+  "shared": {
+    "getQuoteBook": "索取報價並預訂",
+    "ourServices": "我們的服務",
+    "transfers": "接送服務",
+    "airportTransfersTrainStation": "機場、火車站、主題樂園等地的接送服務。",
+    "carHourlyDisposal": "按小時包車",
+    "aVehicleWithDriver": "專車配司機，時間由您決定",
+    "cityTours": "觀光旅遊",
+    "packagesToHelpYou": "帶您探索巴黎的旅遊套裝行程",
+    "businessTrips": "商務出行",
+    "forYourTransportNeeds": "滿足您與團隊的交通需求",
+    "longDistances": "長途旅程",
+    "forLongDistanceJourneys": "法國境內及鄰近國家的長途旅程",
+    "privateEvents": "私人活動",
+    "aServiceAdaptedTo": "為您的私人、個人或商務活動量身打造的服務",
+    "chooseTheCarYou": "選擇最適合您的車型",
+    "aLargeFleetOf": "兼具舒適與私密性的多元車隊",
+    "sedan": "轎車",
+    "upTo3Passengers": "最多 3 位乘客",
+    "upTo3Bags": "最多 3 件行李",
+    "details": "詳細資訊",
+    "businessSedan": "商務轎車",
+    "luxurySedan": "豪華轎車",
+    "minivan": "商務休旅車",
+    "upTo7Passengers": "最多 7 位乘客",
+    "upTo7Bags": "最多 7 件行李",
+    "simpleStepsToBook": "簡單幾步，預訂您的司機",
+    "toBookYourCar": "預訂專車與司機，再簡單不過",
+    "n1ContactUs": "1. 聯絡我們",
+    "emailTelephoneContactForm": "電子郵件、電話、聯絡表單或線上預訂表單",
+    "n2ConfirmYourBooking": "2. 確認預訂",
+    "tellUsAboutYour": "告訴我們您的需求，我們將為您推薦最合適的服務",
+    "n3YourDriverWill": "3. 司機準時恭候",
+    "aboutOneChauffeur": "關於 One Chauffeur",
+    "byOfferingATailor": "One Chauffeur 以量身訂製的服務，致力於超越客戶的期待。我們的私人司機皆經過嚴格挑選，專業且謹守分寸，是優雅與優質服務的代表。",
+    "theVehiclesWeProvide": "我們提供的車輛體現 One Chauffeur 對舒適與品味的一貫堅持，為客戶帶來兼具精緻與便利的交通方式。無論您有何需求，我們都致力於打造難忘的旅程，以用心的服務與個人化的關懷為您效勞。"
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "您在巴黎的私人司機",
+    "withOneChauffeurYou": "選擇 One Chauffeur，即可享有量身訂製的高品質私人司機服務，滿足您的一切需求。",
+    "ourValues": "我們的價值",
+    "professionalismDiscretion": "專業與謹慎",
+    "youAreDrivenBy": "由經驗豐富、彬彬有禮且謹守分寸的司機為您駕駛",
+    "comfortRespectForThe": "舒適與環保",
+    "ourVehiclesAreSelected": "我們的車輛以舒適、優雅與環保為標準精心挑選",
+    "availabilityAndEfficiency": "隨時待命，高效便捷",
+    "weAreAvailable24": "我們全年無休、24 小時服務，並以最快速度回覆您的報價需求",
+    "punctuality": "準時守約",
+    "punctualityIsANon": "準時是我們絕不妥協的原則。每位司機都會在出發時間前提早抵達",
+    "anEnjoyableTransportExperience": "愉悅的乘車體驗",
+    "atOneChauffeurWe": "在 One Chauffeur，我們為您帶來舒適安心的乘車體驗。定期更新的車隊提供最佳的舒適度；經過精心挑選的專業司機，提供禮貌周到、量身訂製的服務，並保證準時。選擇 One Chauffeur，全程享受卓越服務、極致舒適與安心無憂。",
+    "freeCancellationUpTo": "出發前 24 小時可免費取消",
+    "flexibleAndTailorMade": "彈性且量身訂製的服務",
+    "onlineOrOnBoard": "可線上付款或車上付款",
+    "pricesFixedInAdvance": "事先確定價格"
+  },
+  "services": {
+    "ourPrivateDriverServices": "我們的私人司機服務"
+  },
+  "fleet": {
+    "ourFleet": "我們的車隊",
+    "aStylishSedanCombining": "時尚轎車，兼具舒適與優雅",
+    "childSeats": "兒童安全座椅",
+    "wiFi": "Wi-Fi",
+    "refreshments": "飲品",
+    "moreComfortMoreElegance": "更舒適，更優雅",
+    "toGetIntoThe": "想要體驗奢華，賓士 S 級無可比擬",
+    "theFamousMercedesV": "經典的賓士 V 級，適合團體出行或攜帶大量行李"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "線上預訂您的私人司機"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "leaveAMessageHere": "給我們留言"
+  },
+  "thankYou": {
+    "title": "感謝您的來信",
+    "message": "您的訊息已成功送達我們的團隊。One Chauffeur 的私人司機將處理您的需求，並儘快與您確認細節。",
+    "urgent": "有緊急需求或需要立即出發？"
+  },
+  "contactForm": {
+    "submitError": "傳送訊息時發生錯誤。請再試一次，或直接致電給我們。",
+    "formLabel": "聯絡表單",
+    "nameLabel": "姓名 *",
+    "namePlaceholder": "您的姓名",
+    "name": "姓名",
+    "emailLabel": "電子郵件 *",
+    "emailPlaceholder": "您的電子郵件",
+    "email": "電子郵件",
+    "phoneLabel": "電話 *",
+    "phonePlaceholder": "例如：+886 912 345 678",
+    "phone": "電話",
+    "subjectLabel": "需求主旨 *",
+    "subject": "需求主旨",
+    "subjectPlaceholder": "— 請選擇主旨 —",
+    "messageLabel": "訊息 *",
+    "messagePlaceholder": "請在此輸入您的訊息...",
+    "message": "訊息",
+    "sending": "傳送中...",
+    "submit": "送出訊息",
+    "subjectOptions": [
+      "諮詢資訊",
+      "索取報價",
+      "預訂"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "傳送預訂時發生錯誤。請再試一次，或直接致電給我們。",
+    "formLabel": "線上報價與預訂",
+    "pickupLocationLabel": "上車地點 *",
+    "pickupPlaceholder": "例如：戴高樂機場 2E 航廈、麗池酒店...",
+    "pickupLocation": "上車地點",
+    "dropoffDestinationLabel": "目的地 *",
+    "dropoffPlaceholder": "例如：里昂車站、艾菲爾鐵塔、凡爾賽...",
+    "dropoffDestination": "目的地",
+    "pickupDateLabel": "上車日期 *",
+    "pickupDate": "上車日期",
+    "pickupTimeLabel": "上車時間 *",
+    "pickupTime": "上車時間",
+    "vehicleCategoryLabel": "車型 *",
+    "vehicleCategory": "車型",
+    "vehiclePlaceholder": "— 請選擇車型 —",
+    "emailAddressLabel": "電子郵件 *",
+    "emailPlaceholder": "例如：name@company.com",
+    "emailAddress": "電子郵件",
+    "phoneNumberLabel": "電話號碼 *",
+    "phonePlaceholder": "例如：+886 912 345 678",
+    "phoneNumber": "電話號碼",
+    "message": "補充說明或特殊需求",
+    "messagePlaceholder": "例如：航班號碼、兒童座椅、大型行李...",
+    "sending": "正在傳送您的預訂...",
+    "submit": "索取報價 / 預訂",
+    "vehicleOptions": [
+      "轎車（特斯拉 Model 3 或同級 - 3 位乘客）",
+      "商務轎車（賓士 E 級 - 3 位乘客）",
+      "豪華轎車（賓士 S 級 - 3 位乘客）",
+      "商務休旅車（賓士 V 級 - 7 位乘客）"
+    ]
+  },
+  "jsonLd": {
+    "description": "巴黎及法蘭西島高端私人司機服務：戴高樂與奧利機場接送、火車站接送、商務出行，全天候 24 小時專車服務。"
+  },
+  "notFound": {
+    "title": "找不到頁面",
+    "message": "您要找的頁面不存在或已移動。以下是一些實用連結，方便您繼續瀏覽。",
+    "metaTitle": "找不到頁面 – One Chauffeur"
+  }
+}

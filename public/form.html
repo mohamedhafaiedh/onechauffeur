@@ -9,10 +9,11 @@
        Les noms de champs doivent correspondre à components/ReservationForm.tsx et components/ContactForm.tsx. -->
 
   <!-- Formulaire de réservation -->
-  <form name="reservation" method="POST" data-netlify="true" hidden>
+  <form name="reservation" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="reservation" />
     <input type="hidden" name="subject" value="" />
     <input type="hidden" name="langue" value="" />
+    <input name="bot-field" />
     <input type="text" name="adresse_depart" value="" />
     <input type="text" name="adresse_arrivee" value="" />
     <input type="date" name="date" value="" />
@@ -32,10 +33,11 @@
   </form>
 
   <!-- Formulaire de contact -->
-  <form name="contact" method="POST" data-netlify="true" hidden>
+  <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact" />
     <input type="hidden" name="subject" value="" />
     <input type="hidden" name="langue" value="" />
+    <input name="bot-field" />
     <input type="text" name="nom" value="" />
     <input type="tel" name="telephone" value="" />
     <input type="email" name="email" value="" />

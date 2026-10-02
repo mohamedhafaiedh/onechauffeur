@@ -1,51 +1,25 @@
-import React from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ReservationForm from "@/components/ReservationForm";
+import PageHero from "@/components/sections/PageHero";
 import { getMessages } from "@/lib/i18n";
-import { type Lang } from "@/lib/seo";
+import type { Lang } from "@/lib/seo";
+import styles from "./BookingPage.module.css";
 
 export default function BookingPage({ lang }: { lang: Lang }) {
   const { booking: t } = getMessages(lang);
 
   return (
-    <div>
+    <>
       <Header lang={lang} page="reservation" />
-      <main className="site-main post-116 page type-page status-publish hentry" id="content">
-        <div className="page-content">
-          <div className="elementor elementor-116" data-elementor-id="116" data-elementor-post-type="page" data-elementor-type="wp-page">
-            {/* Hero Header */}
-            <section className="elementor-section elementor-top-section elementor-element elementor-element-1577f911 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="1577f911">
-              <div className="elementor-container elementor-column-gap-default">
-                <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-58df5b4d" data-e-type="column" data-element_type="column" data-id="58df5b4d" data-settings='{"background_background":"classic"}'>
-                  <div className="elementor-widget-wrap elementor-element-populated">
-                    <div className="elementor-background-overlay"></div>
-                    <section className="elementor-section elementor-inner-section elementor-element elementor-element-4711a256 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-e-type="section" data-element_type="section" data-id="4711a256">
-                      <div className="elementor-container elementor-column-gap-no">
-                        <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-35ffe32a" data-e-type="column" data-element_type="column" data-id="35ffe32a">
-                          <div className="elementor-widget-wrap elementor-element-populated">
-                            <div className="elementor-element elementor-element-39676c81 elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="39676c81" data-widget_type="heading.default">
-                              <div className="elementor-widget-container">
-                                <h1 className="elementor-heading-title elementor-size-default">{t.privateDriverOnlineBooking}</h1>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Formulaire de réservation */}
-            <section className="booking-form-section">
-              <ReservationForm lang={lang} />
-            </section>
-          </div>
-        </div>
+      <main id="content">
+        <PageHero title={t.privateDriverOnlineBooking} />
+        {/* Formulaire en colonne étroite et centrée, plus lisible que la pleine largeur */}
+        <section className={styles.form}>
+          <ReservationForm lang={lang} />
+        </section>
       </main>
       <Footer lang={lang} page="reservation" />
-    </div>
+    </>
   );
 }

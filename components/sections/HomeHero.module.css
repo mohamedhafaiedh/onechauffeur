@@ -1,0 +1,53 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  padding-block: 210px 80px;
+  overflow: hidden;
+}
+
+.photo {
+  z-index: -2;
+  object-fit: cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--color-overlay);
+}
+
+.content {
+  position: relative;
+  max-width: 570px;
+}
+
+.content h1 {
+  color: var(--color-white);
+  font-size: var(--h1-hero);
+  line-height: 1.15;
+}
+
+.content p {
+  margin-top: 40px;
+  color: var(--color-white);
+}
+
+.cta {
+  margin-top: 45px;
+  padding-block: 18px;
+}
+
+.cta:hover {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-block: 140px 70px;
+  }
+}

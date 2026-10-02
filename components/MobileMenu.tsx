@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import { MenuLines } from "@/components/icons";
 import styles from "./MobileMenu.module.css";
 
 export interface MobileMenuItem {
@@ -10,7 +12,7 @@ export interface MobileMenuItem {
   active: boolean;
 }
 
-// Menu mobile : bouton « hamburger » (glyphe du thème conservé) + panneau latéral.
+// Menu mobile : bouton « hamburger » + panneau latéral (côté début de ligne, donc à droite en arabe).
 // Fermeture par la croix, Échap, clic sur le fond ou sur un lien ; défilement de la page bloqué.
 export default function MobileMenu({
   items,
@@ -59,13 +61,13 @@ export default function MobileMenu({
       <button
         ref={triggerRef}
         type="button"
-        className="jkit-hamburger-menu"
+        className={styles.trigger}
         aria-label={labels.open}
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen(true)}
       >
-        <i aria-hidden="true" className="jki jki-menu-7-light"></i>
+        <MenuLines className={styles.triggerIcon} />
       </button>
 
       <div className={`${styles.overlay} ${open ? styles.open : ""}`} onClick={close} aria-hidden="true" />
@@ -80,7 +82,7 @@ export default function MobileMenu({
       >
         <div className={styles.top}>
           <Link href={homeHref} aria-label={labels.home} className={styles.logo} onClick={close}>
-            <img alt="One Chauffeur" src="/images/logo-one-chauffeur.webp" width="1000" height="140" />
+            <Image alt="One Chauffeur" src="/images/logo-one-chauffeur.webp" width={1000} height={140} sizes="180px" />
           </Link>
           <button ref={closeRef} type="button" className={styles.close} aria-label={labels.close} onClick={close}>
             <svg viewBox="0 0 24 24" aria-hidden="true">

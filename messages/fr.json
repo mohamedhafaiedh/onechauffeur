@@ -1,4 +1,15 @@
 {
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "fleet": "Flotte",
+    "contact": "Contact",
+    "booking": "Réservation"
+  },
+  "common": {
+    "phone": "Téléphone",
+    "backHome": "Retour à l'accueil"
+  },
   "meta": {
     "home": {
       "title": "One Chauffeur – Votre chauffeur privé à Paris et Île-de-France",
@@ -39,28 +50,17 @@
   },
   "header": {
     "skipToContent": "Aller au contenu",
-    "home": "Accueil",
-    "fleet": "Flotte",
     "bookMyDriver": "Je réserve mon chauffeur",
-    "booking": "Réservation",
-    "services": "Services",
-    "contact": "Contact",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "homeLink": "Accueil",
     "menu": "Menu principal"
   },
   "footer": {
     "quickLinks": "Liens rapides",
-    "fleet": "Flotte",
-    "booking": "Réservation",
     "legal": "Légal",
     "termsOfSale": "Conditions générales de vente",
     "privacyPolicy": "Politique de confidentialité",
     "legalNotice": "Mentions légales",
-    "phone": "Téléphone",
-    "services": "Services",
-    "contact": "Contact",
     "tagline": "Votre chauffeur privé à Paris et en Île-de-France pour tous vos transferts (aéroports, gares ou en ville), déplacements professionnels, trajets longues distances, mises à disposition, visites touristiques.",
     "copyright": "© Tous droits réservés · One Chauffeur"
   },
@@ -140,16 +140,13 @@
     "privateDriverOnlineBooking": "Réservez votre chauffeur privé en ligne"
   },
   "contact": {
-    "contact": "Contact",
-    "phone": "Téléphone",
     "whatsapp": "WhatsApp",
     "leaveAMessageHere": "Nous laisser un message"
   },
   "thankYou": {
     "title": "Merci pour votre demande",
     "message": "Votre message a bien été transmis à notre équipe. Un chauffeur privé One Chauffeur traitera votre demande et vous confirmera les détails dans les plus brefs délais.",
-    "urgent": "Une urgence ou un départ immédiat ?",
-    "backHome": "Retour à l'accueil"
+    "urgent": "Une urgence ou un départ immédiat ?"
   },
   "contactForm": {
     "submitError": "Une erreur est survenue lors de l'envoi de votre message. Veuillez réessayer ou nous contacter par téléphone.",
@@ -216,7 +213,6 @@
   "notFound": {
     "title": "Page introuvable",
     "message": "La page que vous cherchez n'existe pas ou a été déplacée. Voici quelques liens utiles pour poursuivre votre visite.",
-    "backHome": "Retour à l'accueil",
     "metaTitle": "Page introuvable – One Chauffeur"
   }
 }

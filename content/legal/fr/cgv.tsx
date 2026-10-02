@@ -1,17 +1,8 @@
 // Contenu juridique complet en français : document long, un fichier par langue plutôt que des clés de dictionnaire.
 export default function TermsOfSaleContent() {
   return (
-      <main className="site-main post-118 page type-page status-publish hentry" id="content">
-<div className="page-content">
-<div className="elementor elementor-118" data-elementor-id="118" data-elementor-post-type="page" data-elementor-type="wp-page">
-<div className="elementor-element elementor-element-56e8c28 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="56e8c28">
-<div className="e-con-inner">
-<div className="elementor-element elementor-element-d37178d elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="d37178d" data-widget_type="heading.default">
-<div className="elementor-widget-container">
-<h1 className="elementor-heading-title elementor-size-default">Conditions générales de vente</h1> </div>
-</div>
-<div className="elementor-element elementor-element-379c3d6 elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="379c3d6" data-widget_type="text-editor.default">
-<div className="elementor-widget-container">
+    <>
+      <h1>Conditions générales de vente</h1>
 <p>La Société One Chauffeur effectue, auprès des particuliers et professionnels, des prestations de transport au moyen de véhicules de tourisme avec chauffeur (VTC), exclusivement sur réservation et à un prix préalablement défini. Pour cela, elle met à disposition des utilisateurs, via son site www.onechauffeur.fr un outil de réservation en ligne. Son activité a été autorisée par le ministère des Transports par la délivrance de la licence .</p>
 <h2>Article 1 : Objet</h2>
 <p>Les présentes conditions générales ont pour objet de définir les conditions applicables aux contrats de prestation de transport conclus entre One Chauffeur et ses clients. Toute commande effectuée auprès de la société One Chauffeur entraîne l’acceptation des conditions de vente ci-après qui font partie intégrante du contrat de transport signé entre One Chauffeur et son client. One Chauffeur est libre de modifier à tout moment ces conditions générales de vente, quel qu’en soit la cause ou le motif.</p>
@@ -49,12 +40,7 @@ export default function TermsOfSaleContent() {
 <p>One Chauffeur se réserve le droit de refuser la prise en charge, de débarquer un passager qui ne respecterait pas ces obligations et de résilier le compte du client.</p>
 <p>Le passager est seul responsable des objets et bagages dont il a la garde. En cas d’oubli dans le véhicule, la responsabilité de One Chauffeur ne saurait être recherchée.</p>
 <h2>Article 11 : Collecte de données personnelles</h2>
-<p>La société One Chauffeur s’engage à respecter la vie privée de ses clients. Les informations nominatives et autres données communiquées ne seront utilisées dans aucun autre but que l’exécution de la prestation demandée, ainsi que l’amélioration du service fourni et ne seront en aucun cas transmises à des tiers.</p> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+<p>La société One Chauffeur s’engage à respecter la vie privée de ses clients. Les informations nominatives et autres données communiquées ne seront utilisées dans aucun autre but que l’exécution de la prestation demandée, ainsi que l’amélioration du service fourni et ne seront en aucun cas transmises à des tiers.</p>
+    </>
   );
 }

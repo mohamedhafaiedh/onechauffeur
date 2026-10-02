@@ -1,4 +1,15 @@
 {
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "fleet": "Fleet",
+    "contact": "Contact",
+    "booking": "Booking"
+  },
+  "common": {
+    "phone": "Phone",
+    "backHome": "Return to Homepage"
+  },
   "meta": {
     "home": {
       "title": "One Chauffeur – Private Chauffeur Service in Paris",
@@ -39,28 +50,17 @@
   },
   "header": {
     "skipToContent": "Skip to content",
-    "home": "Home",
-    "fleet": "Fleet",
     "bookMyDriver": "Book my driver",
-    "booking": "Booking",
-    "services": "Services",
-    "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "homeLink": "Home",
     "menu": "Main menu"
   },
   "footer": {
     "quickLinks": "Quick Links",
-    "fleet": "Fleet",
-    "booking": "Booking",
     "legal": "Legal",
     "termsOfSale": "Terms of Sale",
     "privacyPolicy": "Privacy Policy",
     "legalNotice": "Legal Notice",
-    "phone": "Phone",
-    "services": "Services",
-    "contact": "Contact",
     "tagline": "Your private driver in Paris and the Île-de-France region for all your transfers (airports, train stations, or within the city), business trips, long-distance journeys, hourly disposal and city tours.",
     "copyright": "© All rights reserved · One Chauffeur"
   },
@@ -140,16 +140,13 @@
     "privateDriverOnlineBooking": "Private driver online booking"
   },
   "contact": {
-    "contact": "Contact",
-    "phone": "Phone",
     "whatsapp": "WhatsApp",
     "leaveAMessageHere": "Leave a message here"
   },
   "thankYou": {
     "title": "Thank You for Your Request",
     "message": "Your booking request has been successfully received. A One Chauffeur private concierge will review your details and confirm your ride shortly.",
-    "urgent": "Immediate inquiry or urgent transfer?",
-    "backHome": "Return to Homepage"
+    "urgent": "Immediate inquiry or urgent transfer?"
   },
   "contactForm": {
     "submitError": "An error occurred while sending your message. Please try again or call us directly.",
@@ -216,7 +213,6 @@
   "notFound": {
     "title": "Page not found",
     "message": "The page you are looking for does not exist or has been moved. Here are a few useful links to continue your visit.",
-    "backHome": "Back to homepage",
     "metaTitle": "Page not found – One Chauffeur"
   }
 }

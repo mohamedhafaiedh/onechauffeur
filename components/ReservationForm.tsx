@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
+import f from "./Form.module.css";
 import { DEFAULT_LANG, pagePath, type Lang } from "@/lib/seo";
 import {
   MapPin,
@@ -161,7 +162,7 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
 
   return (
     <form
-      className="elementor-form"
+      className={f.form}
       method="post"
       name={formName}
       aria-label={t.formLabel}
@@ -169,30 +170,36 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="langue" value={lang} />
+      {/* Piège anti-spam Netlify : invisible pour les visiteurs, rempli seulement par les robots */}
+      <p className={f.honeypot} aria-hidden="true">
+        <label>
+          Ne pas remplir <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <input type="hidden" name="subject" value="" />
       <input type="hidden" name="pageUrl" value={typeof window !== "undefined" ? window.location.href : ""} />
       <input type="hidden" name="timestamp" value="" />
       <input type="hidden" name="source" value="website" />
 
-      <div className="elementor-form-fields-wrapper">
+      <div className={f.fields}>
         {/* Champ 1 : Lieu de départ */}
-        <div className="elementor-field-type-text elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.pickup ? "is-focused" : ""
-            } ${pickupVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.pickup ? f.focused : ""
+            } ${pickupVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <MapPin size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-pickup" className="floating-label">
+            <label htmlFor="res-field-pickup" className={f.label}>
               {t.pickupLocationLabel}
             </label>
             <input
               type="text"
               name={fields.pickup}
               id="res-field-pickup"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.pickupPlaceholder}
               value={pickupVal}
               onChange={handleChange}
@@ -206,23 +213,23 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 2 : Lieu de destination */}
-        <div className="elementor-field-type-text elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.dropoff ? "is-focused" : ""
-            } ${dropoffVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.dropoff ? f.focused : ""
+            } ${dropoffVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Navigation size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-dropoff" className="floating-label">
+            <label htmlFor="res-field-dropoff" className={f.label}>
               {t.dropoffDestinationLabel}
             </label>
             <input
               type="text"
               name={fields.dropoff}
               id="res-field-dropoff"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.dropoffPlaceholder}
               value={dropoffVal}
               onChange={handleChange}
@@ -236,23 +243,23 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 3 : Date */}
-        <div className="elementor-field-type-date elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.date ? "is-focused" : ""
-            } ${dateVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.date ? f.focused : ""
+            } ${dateVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Calendar size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-date" className="floating-label">
+            <label htmlFor="res-field-date" className={f.label}>
               {t.pickupDateLabel}
             </label>
             <input
               type="date"
               name={fields.date}
               id="res-field-date"
-              className="floating-input-control"
+              className={f.input}
               min={todayString}
               value={dateVal}
               onChange={handleChange}
@@ -273,23 +280,23 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 4 : Heure */}
-        <div className="elementor-field-type-time elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.time ? "is-focused" : ""
-            } ${timeVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.time ? f.focused : ""
+            } ${timeVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Clock size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-time" className="floating-label">
+            <label htmlFor="res-field-time" className={f.label}>
               {t.pickupTimeLabel}
             </label>
             <input
               type="time"
               name={fields.time}
               id="res-field-time"
-              className="floating-input-control"
+              className={f.input}
               value={timeVal}
               onChange={handleChange}
               onFocus={() => setFocusedField(fields.time)}
@@ -309,23 +316,23 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 5 : Véhicule */}
-        <div className="elementor-field-type-select elementor-field-group elementor-column elementor-col-100 elementor-field-required">
+        <div className={f.full}>
           <div
-            className={`floating-input-wrapper select-wrapper ${
-              vehicleVal ? "has-value" : ""
-            } ${focusedField === fields.vehicle ? "is-focused" : ""}`}
+            className={`${f.control} ${f.select} ${
+              vehicleVal ? f.filled : ""
+            } ${focusedField === fields.vehicle ? f.focused : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Car size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-vehicle" className="floating-label">
+            <label htmlFor="res-field-vehicle" className={f.label}>
               {t.vehicleCategoryLabel}
             </label>
             <select
               name={fields.vehicle}
               id="res-field-vehicle"
-              className={`floating-input-control floating-select-control ${
-                !vehicleVal ? "is-placeholder" : ""
+              className={`${f.input} ${f.selectInput} ${
+                !vehicleVal ? f.placeholder : ""
               }`}
               value={vehicleVal}
               onChange={handleChange}
@@ -344,30 +351,30 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
                 </option>
               ))}
             </select>
-            <div className="floating-select-caret" aria-hidden="true">
+            <div className={f.caret} aria-hidden="true">
               <ChevronDown size={18} />
             </div>
           </div>
         </div>
 
         {/* Champ 6 : Email */}
-        <div className="elementor-field-type-email elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.email ? "is-focused" : ""
-            } ${emailVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.email ? f.focused : ""
+            } ${emailVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Mail size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-email" className="floating-label">
+            <label htmlFor="res-field-email" className={f.label}>
               {t.emailAddressLabel}
             </label>
             <input
               type="email"
               name={fields.email}
               id="res-field-email"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.emailPlaceholder}
               value={emailVal}
               onChange={handleChange}
@@ -381,23 +388,23 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 7 : Téléphone */}
-        <div className="elementor-field-type-tel elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.phone ? "is-focused" : ""
-            } ${phoneVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.phone ? f.focused : ""
+            } ${phoneVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Phone size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-phone" className="floating-label">
+            <label htmlFor="res-field-phone" className={f.label}>
               {t.phoneNumberLabel}
             </label>
             <input
               type="tel"
               name={fields.phone}
               id="res-field-phone"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.phonePlaceholder}
               value={phoneVal}
               onChange={handleChange}
@@ -412,22 +419,22 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         </div>
 
         {/* Champ 8 : Message / Précisions */}
-        <div className="elementor-field-type-textarea elementor-field-group elementor-column elementor-col-100">
+        <div className={f.full}>
           <div
-            className={`floating-input-wrapper textarea-wrapper ${
-              focusedField === fields.message ? "is-focused" : ""
-            } ${messageVal ? "has-value" : ""}`}
+            className={`${f.control} ${f.textarea} ${
+              focusedField === fields.message ? f.focused : ""
+            } ${messageVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <MessageSquare size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="res-field-message" className="floating-label">
+            <label htmlFor="res-field-message" className={f.label}>
               {t.message}
             </label>
             <textarea
               name={fields.message}
               id="res-field-message"
-              className="floating-input-control floating-textarea"
+              className={`${f.input} ${f.textareaInput}`}
               rows={3}
               placeholder={
                 t.messagePlaceholder
@@ -461,15 +468,15 @@ export default function ReservationForm({ lang = "fr", redirectUrl }: Reservatio
         )}
 
         {/* Bouton de validation */}
-        <div className="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+        <div className={f.submitRow}>
           <button
-            className={`elementor-button elementor-size-sm ${isSubmitting ? "btn-disabled" : ""}`}
+            className={`${f.submit} ${isSubmitting ? f.disabled : ""}`}
             type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>
-                <svg className="btn-spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg className={f.spinner} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.5" strokeOpacity="0.25" fill="none" />
                   <path d="M12 3a9 9 0 0 1 9 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
                 </svg>

@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { getMessages } from "@/lib/i18n";
+import f from "./Form.module.css";
 import { DEFAULT_LANG, pagePath, type Lang } from "@/lib/seo";
 import {
   User,
@@ -124,7 +125,7 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
 
   return (
     <form
-      className="elementor-form"
+      className={f.form}
       method="post"
       name={formName}
       aria-label={t.formLabel}
@@ -132,30 +133,36 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
     >
       <input type="hidden" name="form-name" value={formName} />
       <input type="hidden" name="langue" value={lang} />
+      {/* Piège anti-spam Netlify : invisible pour les visiteurs, rempli seulement par les robots */}
+      <p className={f.honeypot} aria-hidden="true">
+        <label>
+          Ne pas remplir <input name="bot-field" tabIndex={-1} autoComplete="off" />
+        </label>
+      </p>
       <input type="hidden" name="subject" value="" />
       <input type="hidden" name="pageUrl" value={typeof window !== "undefined" ? window.location.href : ""} />
       <input type="hidden" name="timestamp" value="" />
       <input type="hidden" name="source" value="website" />
 
-      <div className="elementor-form-fields-wrapper">
+      <div className={f.fields}>
         {/* Name (Full Width - 100%) */}
-        <div className="elementor-field-type-text elementor-field-group elementor-column elementor-col-100 elementor-field-required">
+        <div className={f.full}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.name ? "is-focused" : ""
-            } ${nameVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.name ? f.focused : ""
+            } ${nameVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <User size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="contact-field-name" className="floating-label">
+            <label htmlFor="contact-field-name" className={f.label}>
               {t.nameLabel}
             </label>
             <input
               type="text"
               name={fields.name}
               id="contact-field-name"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.namePlaceholder}
               value={nameVal}
               onChange={handleChange}
@@ -169,23 +176,23 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
         </div>
 
         {/* Email (50%) */}
-        <div className="elementor-field-type-email elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.email ? "is-focused" : ""
-            } ${emailVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.email ? f.focused : ""
+            } ${emailVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Mail size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="contact-field-email" className="floating-label">
+            <label htmlFor="contact-field-email" className={f.label}>
               {t.emailLabel}
             </label>
             <input
               type="email"
               name={fields.email}
               id="contact-field-email"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.emailPlaceholder}
               value={emailVal}
               onChange={handleChange}
@@ -199,23 +206,23 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
         </div>
 
         {/* Phone (50%) */}
-        <div className="elementor-field-type-tel elementor-field-group elementor-column elementor-col-50 elementor-field-required">
+        <div className={f.half}>
           <div
-            className={`floating-input-wrapper ${
-              focusedField === fields.phone ? "is-focused" : ""
-            } ${phoneVal ? "has-value" : ""}`}
+            className={`${f.control} ${
+              focusedField === fields.phone ? f.focused : ""
+            } ${phoneVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <Phone size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="contact-field-phone" className="floating-label">
+            <label htmlFor="contact-field-phone" className={f.label}>
               {t.phoneLabel}
             </label>
             <input
               type="tel"
               name={fields.phone}
               id="contact-field-phone"
-              className="floating-input-control"
+              className={f.input}
               placeholder={t.phonePlaceholder}
               value={phoneVal}
               onChange={handleChange}
@@ -230,23 +237,23 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
         </div>
 
         {/* Subject (Full Width - 100%) */}
-        <div className="elementor-field-type-select elementor-field-group elementor-column elementor-col-100 elementor-field-required">
+        <div className={f.full}>
           <div
-            className={`floating-input-wrapper select-wrapper ${
-              subjectVal ? "has-value" : ""
-            } ${focusedField === fields.subject ? "is-focused" : ""}`}
+            className={`${f.control} ${f.select} ${
+              subjectVal ? f.filled : ""
+            } ${focusedField === fields.subject ? f.focused : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <HelpCircle size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="contact-field-subject" className="floating-label">
+            <label htmlFor="contact-field-subject" className={f.label}>
               {t.subjectLabel}
             </label>
             <select
               name={fields.subject}
               id="contact-field-subject"
-              className={`floating-input-control floating-select-control ${
-                !subjectVal ? "is-placeholder" : ""
+              className={`${f.input} ${f.selectInput} ${
+                !subjectVal ? f.placeholder : ""
               }`}
               value={subjectVal}
               onChange={handleChange}
@@ -265,29 +272,29 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
                 </option>
               ))}
             </select>
-            <div className="floating-select-caret" aria-hidden="true">
+            <div className={f.caret} aria-hidden="true">
               <ChevronDown size={18} />
             </div>
           </div>
         </div>
 
         {/* Message */}
-        <div className="elementor-field-type-textarea elementor-field-group elementor-column elementor-col-100 elementor-field-required">
+        <div className={f.full}>
           <div
-            className={`floating-input-wrapper textarea-wrapper ${
-              focusedField === fields.message ? "is-focused" : ""
-            } ${messageVal ? "has-value" : ""}`}
+            className={`${f.control} ${f.textarea} ${
+              focusedField === fields.message ? f.focused : ""
+            } ${messageVal ? f.filled : ""}`}
           >
-            <div className="floating-field-icon" aria-hidden="true">
+            <div className={f.icon} aria-hidden="true">
               <MessageSquare size={18} strokeWidth={2} />
             </div>
-            <label htmlFor="contact-field-message" className="floating-label">
+            <label htmlFor="contact-field-message" className={f.label}>
               {t.messageLabel}
             </label>
             <textarea
               name={fields.message}
               id="contact-field-message"
-              className="floating-input-control floating-textarea"
+              className={`${f.input} ${f.textareaInput}`}
               rows={4}
               placeholder={t.messagePlaceholder}
               value={messageVal}
@@ -319,15 +326,15 @@ export default function ContactForm({ lang = "fr", redirectUrl }: ContactFormPro
           </div>
         )}
 
-        <div className="elementor-field-group elementor-column elementor-field-type-submit elementor-col-100 e-form__buttons">
+        <div className={f.submitRow}>
           <button
-            className={`elementor-button elementor-size-sm ${isSubmitting ? "btn-disabled" : ""}`}
+            className={`${f.submit} ${isSubmitting ? f.disabled : ""}`}
             type="submit"
             disabled={isSubmitting}
           >
             {isSubmitting ? (
               <>
-                <svg className="btn-spinner" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <svg className={f.spinner} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2.5" strokeOpacity="0.25" fill="none" />
                   <path d="M12 3a9 9 0 0 1 9 9" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" fill="none" />
                 </svg>

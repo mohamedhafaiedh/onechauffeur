@@ -1,0 +1,87 @@
+.services {
+  padding-block: 120px 100px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px 45px;
+  margin-top: 60px;
+  list-style: none;
+}
+
+.card {
+  padding: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: background-color 0.4s ease, border-color 0.4s ease, border-radius 0.4s ease;
+}
+
+/* Survol : la carte passe en noir, textes blancs, pastille dorée */
+.card:hover {
+  border-color: #0b996f;
+  border-radius: var(--radius-xl);
+  background: var(--color-black);
+}
+
+.card h3,
+.card p,
+.icon {
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+
+.card:hover h3,
+.card:hover p {
+  color: var(--color-white);
+}
+
+.card:hover .icon {
+  background: var(--color-gold);
+  color: var(--color-white);
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-gold);
+}
+
+.card h3 {
+  margin-top: 22px;
+  font-size: var(--h3);
+  line-height: 1.2;
+}
+
+.card p {
+  margin-top: 12px;
+}
+
+.ctaRow {
+  margin-top: 60px;
+}
+
+@media (max-width: 1024px) {
+  .services {
+    padding-block: var(--section-space);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    border-radius: 18px;
+  }
+}

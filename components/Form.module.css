@@ -1,0 +1,257 @@
+/* Formulaires (contact et réservation) : champs à libellé flottant, icône dorée en début de champ */
+
+.form {
+  position: relative;
+  width: 100%;
+}
+
+/* Champ piège anti-spam : hors écran, jamais visible ni atteignable au clavier */
+.honeypot {
+  position: absolute;
+  inset-inline-start: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.full,
+.submitRow {
+  grid-column: 1 / -1;
+}
+
+.half {
+  grid-column: span 1;
+}
+
+@media (max-width: 560px) {
+  .half {
+    grid-column: 1 / -1;
+  }
+}
+
+/* --- Champ ---------------------------------------------------------------- */
+
+.control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  background: var(--color-white);
+}
+
+.icon {
+  position: absolute;
+  inset-inline-start: 14px;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  color: var(--color-gold-strong);
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: color 0.2s ease;
+}
+
+.icon svg,
+.caret svg {
+  fill: none;
+  stroke: currentColor;
+}
+
+.textarea .icon {
+  top: 20px;
+  transform: none;
+}
+
+.input {
+  width: 100%;
+  min-height: 54px;
+  padding: 18px 14px 6px;
+  padding-inline-start: 44px;
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-sm);
+  outline: none;
+  background: var(--color-white);
+  color: #111827;
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--color-gold-strong);
+  box-shadow: 0 0 0 3px rgba(229, 169, 60, 0.22);
+}
+
+/* Le texte d'exemple n'apparaît qu'au focus, quand le libellé est remonté */
+.input::placeholder {
+  color: transparent;
+  transition: color 0.15s ease;
+}
+
+.input:focus::placeholder {
+  color: #9ca3af;
+  font-size: 13.5px;
+}
+
+/* --- Libellé flottant ----------------------------------------------------- */
+
+.label {
+  position: absolute;
+  inset-inline-start: 44px;
+  top: 50%;
+  z-index: 2;
+  color: #6b7280;
+  font-family: var(--font-heading);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  transform: translateY(-50%);
+  pointer-events: none;
+  user-select: none;
+  transition: top 0.18s var(--ease), transform 0.18s var(--ease), font-size 0.18s var(--ease), color 0.18s var(--ease);
+}
+
+.textarea .label {
+  top: 18px;
+  transform: none;
+}
+
+.focused .label,
+.filled .label,
+.select .label {
+  top: 8px;
+  color: var(--color-gold-text);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transform: none;
+}
+
+.select:not(.focused):not(.filled) .label {
+  color: #6b7280;
+}
+
+.focused .icon {
+  color: var(--color-gold-text);
+}
+
+/* --- Date et heure -------------------------------------------------------- */
+
+.input[type="date"],
+.input[type="time"] {
+  color-scheme: light;
+  cursor: pointer;
+}
+
+.input[type="date"]::-webkit-date-and-time-value,
+.input[type="time"]::-webkit-date-and-time-value {
+  min-height: 1.4em;
+  text-align: start;
+}
+
+/* Vide et sans focus : le masque jj/mm/aaaa est caché derrière le libellé */
+.control:not(.filled):not(.focused) .input[type="date"],
+.control:not(.filled):not(.focused) .input[type="time"],
+.control:not(.filled):not(.focused) .input[type="date"]::-webkit-datetime-edit,
+.control:not(.filled):not(.focused) .input[type="time"]::-webkit-datetime-edit {
+  color: transparent;
+}
+
+/* --- Liste déroulante ----------------------------------------------------- */
+
+.selectInput {
+  appearance: none;
+  cursor: pointer;
+  padding-inline-end: 44px;
+}
+
+.selectInput.placeholder {
+  color: #6b7280;
+}
+
+.selectInput option {
+  background: var(--color-white);
+  color: #111827;
+}
+
+.selectInput option[disabled] {
+  color: #9ca3af;
+}
+
+.caret {
+  position: absolute;
+  inset-inline-end: 14px;
+  top: 50%;
+  z-index: 3;
+  display: flex;
+  color: var(--color-gold-strong);
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* --- Zone de texte -------------------------------------------------------- */
+
+.textareaInput {
+  min-height: 100px;
+  padding-top: 24px;
+  resize: vertical;
+}
+
+/* --- Envoi ---------------------------------------------------------------- */
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-gold-strong);
+  color: var(--color-black);
+}
+
+.disabled,
+.submit:disabled {
+  background: #4b5563;
+  color: #9ca3af;
+  cursor: not-allowed;
+  opacity: 0.85;
+}
+
+.spinner {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-inline-end: 0.75rem;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2s;
+  }
+}

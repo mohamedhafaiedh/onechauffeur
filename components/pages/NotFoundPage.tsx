@@ -18,7 +18,7 @@ function langFromPath(pathname: string | null): Lang {
 
 export default function NotFoundPage() {
   const lang = langFromPath(usePathname());
-  const { notFound: t, header: h } = getMessages(lang);
+  const { notFound: t, nav: h, common } = getMessages(lang);
   const links = [
     { href: pagePath("services", lang), label: h.services },
     { href: pagePath("flotte", lang), label: h.fleet },
@@ -29,7 +29,7 @@ export default function NotFoundPage() {
   return (
     <div>
       <title>{t.metaTitle}</title>
-      <Header lang={lang} page="" />
+      <Header lang={lang} page="" highlight={false} />
 
       <main className={styles.main} id="content">
         <div className={styles.card}>
@@ -53,7 +53,7 @@ export default function NotFoundPage() {
 
           <Link href={pagePath("", lang)} className={styles.back}>
             <ArrowLeft size={18} aria-hidden="true" />
-            {t.backHome}
+            {common.backHome}
           </Link>
         </div>
       </main>

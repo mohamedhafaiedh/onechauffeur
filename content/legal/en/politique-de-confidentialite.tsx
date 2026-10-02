@@ -1,17 +1,8 @@
 // Full legal text in English : document long, un fichier par langue plutôt que des clés de dictionnaire.
 export default function PrivacyPolicyContent() {
   return (
-      <main className="site-main post-3 page type-page status-publish hentry" id="content">
-<div className="page-content">
-<div className="elementor elementor-3" data-elementor-id="3" data-elementor-post-type="page" data-elementor-type="wp-page">
-<div className="elementor-element elementor-element-2bb940b e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="2bb940b">
-<div className="e-con-inner">
-<div className="elementor-element elementor-element-16b6bde elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="16b6bde" data-widget_type="heading.default">
-<div className="elementor-widget-container">
-<h1 className="elementor-heading-title elementor-size-default">Privacy Policy</h1> </div>
-</div>
-<div className="elementor-element elementor-element-1d5fc951 elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="1d5fc951" data-widget_type="text-editor.default">
-<div className="elementor-widget-container">
+    <>
+      <h1>Privacy Policy</h1>
 <p>Le « cookie » est un fichier installé sur votre terminal, permettant de stocker des informations relatives à votre navigation sur notre site internet et nos applications dans le but, notamment, d’authentifier les utilisateurs, de mémoriser leurs préférences et paramètres, de déterminer la popularité des contenus, de diffuser des campagnes publicitaires et de mesurer leur efficacité, d’analyser la fréquentation de notre site et de nos applications et plus généralement de comprendre les comportements et intérêts en ligne des personnes qui interagissent avec nos services.</p>
 <p>Les cookies peuvent avoir une durée de vie variable. Les « cookies de session » ne persistent que si votre navigateur est ouvert. Ils sont automatiquement supprimés lorsque vous fermez votre navigateur. D’autres cookies sont des « cookies permanents », ce qui signifie qu’ils continuent d’être actifs une fois que votre navigateur est fermé. Ils peuvent reconnaître, par exemple, votre appareil lorsque vous ouvrez une nouvelle session de navigation.</p>
 <p>Les paragraphes ci-dessous ont pour objectif de vous donner des informations concernant les cookies utilisés par RT Drivers ou ses partenaires lorsque vous utilisez notre site ou nos applications, et de vous proposer une solution pour adapter votre choix.</p>
@@ -29,12 +20,7 @@ export default function PrivacyPolicyContent() {
 <p><strong>Votre choix sur mobile</strong></p>
 <p>Pour spécifier si Safari™ accepte ou non des cookies :<br/>1. Dans l’écran principal, choisissez Réglages &gt; Safari.<br/>2. Touchez Accepter les cookies et choisissez « Jamais », « Des sites visités » ou « Toujours ».</p>
 <p>Pour effacer tous les cookies dans Safari :<br/>1. Dans l’écran principal, choisissez Réglages &gt; Safari.<br/>2. Touchez Effacer les cookies.</p>
-<p>Pour supprimer les cookies sur Androïd :<br/>1. Menu &gt; Paramètres &gt; Effacer tous les cookies</p> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+<p>Pour supprimer les cookies sur Androïd :<br/>1. Menu &gt; Paramètres &gt; Effacer tous les cookies</p>
+    </>
   );
 }

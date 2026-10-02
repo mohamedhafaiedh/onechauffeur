@@ -8,7 +8,7 @@ import ContactPage from "@/components/pages/ContactPage";
 import ThankYouPage from "@/components/pages/ThankYouPage";
 import LegalPage from "@/components/pages/LegalPage";
 import { LEGAL_CONTENT, type LegalPageKey } from "@/content/legal";
-import { PAGE_KEYS, createPageMetadata, isLang, pageFromSlug, slugOf, type Lang, type PageKey } from "@/lib/seo";
+import { PAGE_KEYS, createPageMetadata, hasPage, isLang, pageFromSlug, slugOf, type Lang, type PageKey } from "@/lib/seo";
 
 // Route unique de toutes les pages, dans toutes les langues. Le français est servi à la racine
 // grâce à une réécriture interne (next.config.ts) : /flotte/ → /fr/flotte/, invisible pour le visiteur.
@@ -20,7 +20,7 @@ type Params = Promise<{ lang: string; slug?: string[] }>;
 
 export function generateStaticParams({ params }: { params: { lang: string } }) {
   const lang = params.lang as Lang;
-  return PAGE_KEYS.map((page) => {
+  return PAGE_KEYS.filter((page) => hasPage(page, lang)).map((page) => {
     const slug = slugOf(page, lang);
     return { slug: slug ? [slug] : [] };
   });
@@ -55,7 +55,8 @@ export default async function Page({ params }: { params: Params }) {
     case "merci":
       return <ThankYouPage lang={lang} />;
     default: {
-      const Content = LEGAL_CONTENT[lang][page as LegalPageKey];
+      const Content = LEGAL_CONTENT[lang]?.[page as LegalPageKey];
+      if (!Content) notFound();
       return (
         <LegalPage lang={lang} page={page}>
           <Content />

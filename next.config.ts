@@ -4,8 +4,39 @@ import { DEFAULT_LANG, LANGS, LEGACY_EN_REDIRECTS } from "./lib/seo";
 // Préfixes réservés aux autres langues (ex. « en ») : tout le reste est servi en langue par défaut
 const OTHER_LANGS = LANGS.filter((lang) => lang !== DEFAULT_LANG).join("|");
 
+// En-têtes de sécurité appliqués à toutes les réponses.
+// CSP : tout vient du site lui-même ; 'unsafe-inline' reste nécessaire pour les scripts
+// d'hydratation injectés par Next.js et les styles des polices (next/font).
+const CONTENT_SECURITY_POLICY = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob:",
+  "font-src 'self'",
+  "connect-src 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "object-src 'none'",
+].join("; ");
+
+const SECURITY_HEADERS = [
+  { key: "Content-Security-Policy", value: CONTENT_SECURITY_POLICY },
+  { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "DENY" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
+];
+
 const nextConfig: NextConfig = {
   trailingSlash: true,
+  poweredByHeader: false,
+  // Qualités autorisées pour next/image : 75 par défaut, 60 pour la photo assombrie de l'accueil
+  images: { qualities: [60, 75] },
+  async headers() {
+    return [{ source: "/:path*", headers: SECURITY_HEADERS }];
+  },
   async redirects() {
     return [
       {

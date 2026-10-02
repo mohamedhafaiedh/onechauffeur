@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "fleet": "Flota",
+    "contact": "Contacto",
+    "booking": "Reserva"
+  },
+  "common": {
+    "phone": "Teléfono",
+    "backHome": "Volver al inicio"
+  },
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – Chófer privado en París e Île-de-France",
+      "description": "One Chauffeur ofrece un servicio de chófer privado de alta gama en París e Île-de-France: traslados a aeropuertos (CDG, Orly), estaciones de tren, viajes de negocios y disponibilidad 24/7."
+    },
+    "services": {
+      "title": "Servicios – One Chauffeur",
+      "description": "Descubra nuestros servicios de chófer privado en París: traslados a los aeropuertos CDG y Orly, estaciones de tren, viajes de negocios y vehículo con chófer por horas."
+    },
+    "fleet": {
+      "title": "Flota – One Chauffeur",
+      "description": "Descubra la flota de vehículos de alta gama de One Chauffeur: berlinas y furgonetas de lujo Mercedes Clase E, Clase S, Clase V y Tesla con chófer privado en París."
+    },
+    "booking": {
+      "title": "Reserva – One Chauffeur",
+      "description": "Reserve en línea su chófer privado en París e Île-de-France con One Chauffeur. Precios transparentes, confirmación rápida y un servicio de prestigio."
+    },
+    "contact": {
+      "title": "Contacto – One Chauffeur",
+      "description": "Contacte con One Chauffeur en París las 24 horas: llámenos al +33 6 67 52 06 77 o envíenos su solicitud de reserva, presupuesto o traslado urgente."
+    },
+    "termsOfSale": {
+      "title": "Condiciones generales de venta – One Chauffeur",
+      "description": "Condiciones generales de venta de los servicios de transporte con chófer privado de One Chauffeur en París e Île-de-France."
+    },
+    "legalNotice": {
+      "title": "Aviso legal – One Chauffeur",
+      "description": "Aviso legal de One Chauffeur SASU: registro de la empresa, domicilio social, director de la publicación y alojamiento del sitio."
+    },
+    "privacyPolicy": {
+      "title": "Política de privacidad – One Chauffeur",
+      "description": "Política de privacidad y protección de los datos personales de One Chauffeur, conforme al RGPD."
+    },
+    "thankYou": {
+      "title": "Gracias por su solicitud – One Chauffeur",
+      "description": "Confirmación de su solicitud de reserva o de contacto con el servicio de chófer privado One Chauffeur en París."
+    }
+  },
+  "header": {
+    "skipToContent": "Ir al contenido",
+    "bookMyDriver": "Reservar mi chófer",
+    "openMenu": "Abrir el menú",
+    "closeMenu": "Cerrar el menú",
+    "menu": "Menú principal"
+  },
+  "footer": {
+    "quickLinks": "Enlaces rápidos",
+    "legal": "Legal",
+    "termsOfSale": "Condiciones generales de venta",
+    "privacyPolicy": "Política de privacidad",
+    "legalNotice": "Aviso legal",
+    "tagline": "Su chófer privado en París e Île-de-France para todos sus traslados (aeropuertos, estaciones de tren o dentro de la ciudad), viajes de negocios, trayectos de larga distancia, servicios por horas y visitas turísticas.",
+    "copyright": "© Todos los derechos reservados · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "Elegir idioma"
+  },
+  "shared": {
+    "getQuoteBook": "Pedir presupuesto y reservar",
+    "ourServices": "Nuestros servicios",
+    "transfers": "Traslados",
+    "airportTransfersTrainStation": "Traslados a aeropuertos, estaciones de tren, parques de ocio, etc.",
+    "carHourlyDisposal": "Servicio por horas",
+    "aVehicleWithDriver": "Un vehículo con chófer, durante el tiempo que desee",
+    "cityTours": "Visitas turísticas",
+    "packagesToHelpYou": "Paquetes para descubrir la ciudad de París",
+    "businessTrips": "Viajes de negocios",
+    "forYourTransportNeeds": "Para sus desplazamientos y los de sus colaboradores",
+    "longDistances": "Larga distancia",
+    "forLongDistanceJourneys": "Para trayectos de larga distancia, en Francia y en los países vecinos",
+    "privateEvents": "Eventos privados",
+    "aServiceAdaptedTo": "Un servicio adaptado a sus eventos privados, personales o profesionales",
+    "chooseTheCarYou": "Elija el vehículo que mejor le convenga",
+    "aLargeFleetOf": "Una amplia flota de vehículos que combina confort y discreción",
+    "sedan": "Berlina",
+    "upTo3Passengers": "Hasta 3 pasajeros",
+    "upTo3Bags": "Hasta 3 maletas",
+    "details": "Detalles",
+    "businessSedan": "Berlina Business",
+    "luxurySedan": "Berlina de lujo",
+    "minivan": "Monovolumen",
+    "upTo7Passengers": "Hasta 7 pasajeros",
+    "upTo7Bags": "Hasta 7 maletas",
+    "simpleStepsToBook": "Reservar su chófer en unos sencillos pasos",
+    "toBookYourCar": "Reservar su vehículo con chófer no podría ser más sencillo",
+    "n1ContactUs": "1. Contáctenos",
+    "emailTelephoneContactForm": "Correo electrónico, teléfono, formulario de contacto o formulario de reserva en línea",
+    "n2ConfirmYourBooking": "2. Confirme la reserva",
+    "tellUsAboutYour": "Cuéntenos lo que necesita y le recomendaremos el servicio que mejor se adapte a su situación",
+    "n3YourDriverWill": "3. Su chófer estará allí a la hora prevista",
+    "aboutOneChauffeur": "Sobre One Chauffeur",
+    "byOfferingATailor": "Con un servicio a medida, One Chauffeur se esfuerza por superar las expectativas de sus clientes. Los chóferes privados, cuidadosamente seleccionados por su profesionalidad y discreción, son los embajadores de la elegancia y de la calidad del servicio.",
+    "theVehiclesWeProvide": "Los vehículos puestos a disposición reflejan la constante preocupación de One Chauffeur por el confort y el estilo, y ofrecen a sus clientes un medio de transporte que une sofisticación y comodidad. Sea cual sea la necesidad, la empresa se compromete a crear una experiencia de viaje memorable, marcada por el sentido del servicio y la atención personalizada."
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "Su chófer privado en París",
+    "withOneChauffeurYou": "Con One Chauffeur, disfruta de un servicio de chófer privado a medida y de alta calidad que se adapta a todas sus necesidades.",
+    "ourValues": "Nuestros valores",
+    "professionalismDiscretion": "Profesionalidad y discreción",
+    "youAreDrivenBy": "Le conducen chóferes experimentados, amables y discretos",
+    "comfortRespectForThe": "Confort y respeto por el medio ambiente",
+    "ourVehiclesAreSelected": "Nuestros vehículos se seleccionan por su confort, su elegancia y su respeto por el medio ambiente",
+    "availabilityAndEfficiency": "Disponibilidad y eficacia",
+    "weAreAvailable24": "Estamos disponibles 24/7 y respondemos a sus solicitudes de presupuesto en tiempo récord",
+    "punctuality": "Puntualidad",
+    "punctualityIsANon": "La puntualidad es innegociable. Cada chófer estará presente con antelación a la hora de salida",
+    "anEnjoyableTransportExperience": "Una experiencia de viaje agradable",
+    "atOneChauffeurWe": "En One Chauffeur le garantizamos una experiencia marcada por el confort y la serenidad. Nuestra flota, renovada con regularidad, ofrece un confort óptimo. Nuestros chóferes profesionales, cuidadosamente seleccionados, prestan un servicio cortés y personalizado, con la puntualidad garantizada. Elija la excelencia en el servicio, un confort óptimo y la tranquilidad durante todo su trayecto con One Chauffeur.",
+    "freeCancellationUpTo": "Cancelación gratuita hasta 24 h antes de la salida",
+    "flexibleAndTailorMade": "Servicio flexible y a medida",
+    "onlineOrOnBoard": "Pago en línea o a bordo",
+    "pricesFixedInAdvance": "Precios fijados de antemano"
+  },
+  "services": {
+    "ourPrivateDriverServices": "Nuestros servicios de chófer privado"
+  },
+  "fleet": {
+    "ourFleet": "Nuestra flota de vehículos",
+    "aStylishSedanCombining": "Una berlina elegante que combina confort y estilo",
+    "childSeats": "Sillas infantiles",
+    "wiFi": "Wi-Fi",
+    "refreshments": "Refrescos",
+    "moreComfortMoreElegance": "Más confort, más elegancia",
+    "toGetIntoThe": "Para entrar en el mundo del lujo, nada supera al Mercedes Clase S",
+    "theFamousMercedesV": "El imprescindible Mercedes Clase V, para viajar en grupo o con mucho equipaje"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "Reserve su chófer privado en línea"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "leaveAMessageHere": "Déjenos un mensaje"
+  },
+  "thankYou": {
+    "title": "Gracias por su solicitud",
+    "message": "Su mensaje se ha enviado correctamente a nuestro equipo. Un chófer privado de One Chauffeur atenderá su solicitud y le confirmará los detalles lo antes posible.",
+    "urgent": "¿Una urgencia o una salida inmediata?"
+  },
+  "contactForm": {
+    "submitError": "Se ha producido un error al enviar su mensaje. Inténtelo de nuevo o llámenos directamente.",
+    "formLabel": "Formulario de contacto",
+    "nameLabel": "Nombre *",
+    "namePlaceholder": "Su nombre",
+    "name": "Nombre",
+    "emailLabel": "Correo electrónico *",
+    "emailPlaceholder": "Su correo electrónico",
+    "email": "Correo electrónico",
+    "phoneLabel": "Teléfono *",
+    "phonePlaceholder": "Ej.: +34 612 34 56 78",
+    "phone": "Teléfono",
+    "subjectLabel": "Asunto de la solicitud *",
+    "subject": "Asunto de la solicitud",
+    "subjectPlaceholder": "— Elija un asunto —",
+    "messageLabel": "Mensaje *",
+    "messagePlaceholder": "Escriba aquí su mensaje...",
+    "message": "Mensaje",
+    "sending": "Enviando...",
+    "submit": "Enviar el mensaje",
+    "subjectOptions": [
+      "Solicitud de información",
+      "Solicitud de presupuesto",
+      "Reserva"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "Se ha producido un error al enviar su reserva. Inténtelo de nuevo o llámenos directamente.",
+    "formLabel": "Presupuesto y reserva en línea",
+    "pickupLocationLabel": "Lugar de recogida *",
+    "pickupPlaceholder": "Ej.: aeropuerto CDG terminal 2E, hotel Ritz...",
+    "pickupLocation": "Lugar de recogida",
+    "dropoffDestinationLabel": "Destino *",
+    "dropoffPlaceholder": "Ej.: Gare de Lyon, Torre Eiffel, Versalles...",
+    "dropoffDestination": "Destino",
+    "pickupDateLabel": "Fecha de recogida *",
+    "pickupDate": "Fecha de recogida",
+    "pickupTimeLabel": "Hora de recogida *",
+    "pickupTime": "Hora de recogida",
+    "vehicleCategoryLabel": "Categoría de vehículo *",
+    "vehicleCategory": "Categoría de vehículo",
+    "vehiclePlaceholder": "— Elija una categoría de vehículo —",
+    "emailAddressLabel": "Correo electrónico *",
+    "emailPlaceholder": "Ej.: nombre@empresa.com",
+    "emailAddress": "Correo electrónico",
+    "phoneNumberLabel": "Número de teléfono *",
+    "phonePlaceholder": "Ej.: +34 612 34 56 78",
+    "phoneNumber": "Número de teléfono",
+    "message": "Detalles o peticiones especiales",
+    "messagePlaceholder": "Ej.: número de vuelo, silla para bebé, equipaje voluminoso...",
+    "sending": "Enviando su reserva...",
+    "submit": "Pedir presupuesto / Reservar",
+    "vehicleOptions": [
+      "Berlina (Tesla Model 3 o similar - 3 pax)",
+      "Berlina Business (Mercedes Clase E - 3 pax)",
+      "Berlina de lujo (Mercedes Clase S - 3 pax)",
+      "Furgoneta (Mercedes Clase V - 7 pax)"
+    ]
+  },
+  "jsonLd": {
+    "description": "Servicio de chófer privado VTC de prestigio en París e Île-de-France: traslados a los aeropuertos CDG y Orly, estaciones de tren, viajes de negocios y vehículo con chófer 24/7."
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "message": "La página que busca no existe o ha cambiado de dirección. Aquí tiene algunos enlaces útiles para continuar su visita.",
+    "metaTitle": "Página no encontrada – One Chauffeur"
+  }
+}

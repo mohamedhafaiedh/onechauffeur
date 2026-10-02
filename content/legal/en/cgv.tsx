@@ -1,17 +1,8 @@
 // Full legal text in English : document long, un fichier par langue plutôt que des clés de dictionnaire.
 export default function TermsOfSaleContent() {
   return (
-      <main className="site-main post-118 page type-page status-publish hentry" id="content">
-<div className="page-content">
-<div className="elementor elementor-118" data-elementor-id="118" data-elementor-post-type="page" data-elementor-type="wp-page">
-<div className="elementor-element elementor-element-56e8c28 e-flex e-con-boxed e-con e-parent" data-e-type="container" data-element_type="container" data-id="56e8c28">
-<div className="e-con-inner">
-<div className="elementor-element elementor-element-d37178d elementor-widget elementor-widget-heading" data-e-type="widget" data-element_type="widget" data-id="d37178d" data-widget_type="heading.default">
-<div className="elementor-widget-container">
-<h1 className="elementor-heading-title elementor-size-default">Terms of Sales</h1> </div>
-</div>
-<div className="elementor-element elementor-element-379c3d6 elementor-widget elementor-widget-text-editor" data-e-type="widget" data-element_type="widget" data-id="379c3d6" data-widget_type="text-editor.default">
-<div className="elementor-widget-container">
+    <>
+      <h1>Terms of Sale</h1>
 <p>The One Chauffeur Company provides transport services to individuals and professionals using chauffeur-driven passenger vehicles (VTC), exclusively by reservation and at a pre-defined price. To do this, it provides users with an online reservation tool via its website www.onechauffeur.fr. Its activity was authorized by the Ministry of Transport under the license .</p>
 <h2>Article 1 : Object</h2>
 <p>The purpose of these general conditions is to define the conditions applicable to transport service contracts concluded between One Chauffeur and its customers. Any order placed with the company One Chauffeur entails acceptance of the following conditions of sale which form an integral part of the transport contract signed between One Chauffeur and its customer. One Chauffeur is free to modify these general conditions of sale at any time, whatever the cause or reason.</p>
@@ -49,12 +40,7 @@ export default function TermsOfSaleContent() {
 <p>One Chauffeur reserves the right to refuse pick-up, to disembark a passenger who does not respect these obligations and to terminate the customer’s account.</p>
 <p>The passenger is solely responsible for the objects and baggage in his custody. If forgotten in the vehicle, One Chauffeur cannot be held responsible.</p>
 <h2>Article 11: Collection of personal data</h2>
-<p>The One Chauffeur company is committed to respecting the privacy of its customers. The personal information and other data communicated will not be used for any purpose other than the execution of the requested service, as well as the improvement of the service provided and will under no circumstances be transmitted to third parties.</p> </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</main>
+<p>The One Chauffeur company is committed to respecting the privacy of its customers. The personal information and other data communicated will not be used for any purpose other than the execution of the requested service, as well as the improvement of the service provided and will under no circumstances be transmitted to third parties.</p>
+    </>
   );
 }

@@ -1,0 +1,218 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "fleet": "Flotta",
+    "contact": "Contatti",
+    "booking": "Prenotazione"
+  },
+  "common": {
+    "phone": "Telefono",
+    "backHome": "Torna alla home"
+  },
+  "meta": {
+    "home": {
+      "title": "One Chauffeur – Autista privato a Parigi e in Île-de-France",
+      "description": "One Chauffeur offre un servizio di autista privato di alta gamma a Parigi e in Île-de-France: transfer aeroportuali (CDG, Orly), stazioni ferroviarie, viaggi di lavoro e disponibilità 24/7."
+    },
+    "services": {
+      "title": "Servizi – One Chauffeur",
+      "description": "Scopri i nostri servizi di autista privato a Parigi: transfer per gli aeroporti CDG e Orly, stazioni ferroviarie, viaggi di lavoro e auto con autista a ore."
+    },
+    "fleet": {
+      "title": "Flotta – One Chauffeur",
+      "description": "Scopri la flotta di veicoli di alta gamma di One Chauffeur: berline e van di lusso Mercedes Classe E, Classe S, Classe V e Tesla con autista privato a Parigi."
+    },
+    "booking": {
+      "title": "Prenotazione – One Chauffeur",
+      "description": "Prenota online il tuo autista privato a Parigi e in Île-de-France con One Chauffeur. Prezzi trasparenti, conferma rapida e servizio di prestigio."
+    },
+    "contact": {
+      "title": "Contatti – One Chauffeur",
+      "description": "Contatta One Chauffeur a Parigi 24 ore su 24: chiamaci al +33 6 67 52 06 77 o inviaci la tua richiesta di prenotazione, preventivo o transfer urgente."
+    },
+    "termsOfSale": {
+      "title": "Condizioni generali di vendita – One Chauffeur",
+      "description": "Condizioni generali di vendita dei servizi di trasporto con autista privato di One Chauffeur a Parigi e in Île-de-France."
+    },
+    "legalNotice": {
+      "title": "Note legali – One Chauffeur",
+      "description": "Note legali di One Chauffeur SASU: registrazione della società, sede legale, direttore della pubblicazione e hosting del sito."
+    },
+    "privacyPolicy": {
+      "title": "Informativa sulla privacy – One Chauffeur",
+      "description": "Informativa sulla privacy e sulla protezione dei dati personali di One Chauffeur, conforme al GDPR."
+    },
+    "thankYou": {
+      "title": "Grazie per la tua richiesta – One Chauffeur",
+      "description": "Conferma della tua richiesta di prenotazione o di contatto con il servizio di autista privato One Chauffeur a Parigi."
+    }
+  },
+  "header": {
+    "skipToContent": "Vai al contenuto",
+    "bookMyDriver": "Prenota il mio autista",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "menu": "Menu principale"
+  },
+  "footer": {
+    "quickLinks": "Link rapidi",
+    "legal": "Informazioni legali",
+    "termsOfSale": "Condizioni generali di vendita",
+    "privacyPolicy": "Informativa sulla privacy",
+    "legalNotice": "Note legali",
+    "tagline": "Il tuo autista privato a Parigi e in Île-de-France per tutti i tuoi transfer (aeroporti, stazioni o in città), viaggi di lavoro, tragitti a lunga distanza, servizi a ore e visite turistiche.",
+    "copyright": "© Tutti i diritti riservati · One Chauffeur"
+  },
+  "languageSwitcher": {
+    "chooseLanguage": "Scegli la lingua"
+  },
+  "shared": {
+    "getQuoteBook": "Richiedi un preventivo e prenota",
+    "ourServices": "I nostri servizi",
+    "transfers": "Transfer",
+    "airportTransfersTrainStation": "Transfer per aeroporti, stazioni ferroviarie, parchi divertimento, ecc.",
+    "carHourlyDisposal": "Servizio a ore",
+    "aVehicleWithDriver": "Un'auto con autista, per tutto il tempo che desideri",
+    "cityTours": "Visite turistiche",
+    "packagesToHelpYou": "Pacchetti per scoprire la città di Parigi",
+    "businessTrips": "Viaggi di lavoro",
+    "forYourTransportNeeds": "Per i tuoi spostamenti e quelli dei tuoi collaboratori",
+    "longDistances": "Lunghe distanze",
+    "forLongDistanceJourneys": "Per tragitti a lunga distanza, in Francia e nei paesi vicini",
+    "privateEvents": "Eventi privati",
+    "aServiceAdaptedTo": "Un servizio su misura per i tuoi eventi privati, personali o professionali",
+    "chooseTheCarYou": "Scegli il veicolo più adatto a te",
+    "aLargeFleetOf": "Un'ampia flotta di veicoli che unisce comfort e discrezione",
+    "sedan": "Berlina",
+    "upTo3Passengers": "Fino a 3 passeggeri",
+    "upTo3Bags": "Fino a 3 bagagli",
+    "details": "Dettagli",
+    "businessSedan": "Berlina Business",
+    "luxurySedan": "Berlina di lusso",
+    "minivan": "Monovolume",
+    "upTo7Passengers": "Fino a 7 passeggeri",
+    "upTo7Bags": "Fino a 7 bagagli",
+    "simpleStepsToBook": "Pochi semplici passi per prenotare il tuo autista",
+    "toBookYourCar": "Prenotare la tua auto con autista non potrebbe essere più semplice",
+    "n1ContactUs": "1. Contattaci",
+    "emailTelephoneContactForm": "E-mail, telefono, modulo di contatto o modulo di prenotazione online",
+    "n2ConfirmYourBooking": "2. Conferma la prenotazione",
+    "tellUsAboutYour": "Descrivici le tue esigenze e ti consiglieremo il servizio più adatto alla tua situazione",
+    "n3YourDriverWill": "3. Il tuo autista sarà lì all'orario previsto",
+    "aboutOneChauffeur": "Chi è One Chauffeur",
+    "byOfferingATailor": "Puntando su un servizio su misura, One Chauffeur si impegna a superare le aspettative dei propri clienti. Gli autisti privati, selezionati con cura per la loro professionalità e discrezione, sono gli ambasciatori dell'eleganza e della qualità del servizio.",
+    "theVehiclesWeProvide": "I veicoli messi a disposizione riflettono la costante attenzione di One Chauffeur per il comfort e lo stile, offrendo ai clienti un mezzo di trasporto che unisce raffinatezza e praticità. Qualunque sia l'esigenza, l'azienda si impegna a creare un'esperienza di viaggio memorabile, all'insegna del senso del servizio e dell'attenzione personalizzata."
+  },
+  "home": {
+    "yourChauffeurDrivenCar": "Il tuo autista privato a Parigi",
+    "withOneChauffeurYou": "Con One Chauffeur benefici di un servizio di autista privato su misura e di alta qualità, che si adatta a tutte le tue esigenze.",
+    "ourValues": "I nostri valori",
+    "professionalismDiscretion": "Professionalità e discrezione",
+    "youAreDrivenBy": "Sei accompagnato da autisti esperti, cortesi e discreti",
+    "comfortRespectForThe": "Comfort e rispetto per l'ambiente",
+    "ourVehiclesAreSelected": "I nostri veicoli sono scelti per il loro comfort, la loro eleganza e il rispetto per l'ambiente",
+    "availabilityAndEfficiency": "Disponibilità ed efficienza",
+    "weAreAvailable24": "Siamo disponibili 24 ore su 24, 7 giorni su 7, e rispondiamo alle richieste di preventivo in tempi record",
+    "punctuality": "Puntualità",
+    "punctualityIsANon": "La puntualità non è negoziabile. Ogni autista sarà presente ben prima dell'orario di partenza",
+    "anEnjoyableTransportExperience": "Un'esperienza di viaggio piacevole",
+    "atOneChauffeurWe": "Con One Chauffeur ti garantiamo un'esperienza all'insegna del comfort e della serenità. La nostra flotta, rinnovata regolarmente, offre un comfort ottimale. I nostri autisti professionisti, selezionati con cura, assicurano un servizio cortese e personalizzato, con puntualità garantita. Scegli l'eccellenza del servizio, un comfort ottimale e la massima tranquillità per tutto il tuo tragitto con One Chauffeur.",
+    "freeCancellationUpTo": "Cancellazione gratuita fino a 24 ore prima della partenza",
+    "flexibleAndTailorMade": "Servizio flessibile e su misura",
+    "onlineOrOnBoard": "Pagamento online o a bordo",
+    "pricesFixedInAdvance": "Prezzi fissati in anticipo"
+  },
+  "services": {
+    "ourPrivateDriverServices": "I nostri servizi di autista privato"
+  },
+  "fleet": {
+    "ourFleet": "La nostra flotta di veicoli",
+    "aStylishSedanCombining": "Una berlina elegante, che unisce comfort e stile",
+    "childSeats": "Seggiolini per bambini",
+    "wiFi": "Wi-Fi",
+    "refreshments": "Bevande",
+    "moreComfortMoreElegance": "Più comfort, più eleganza",
+    "toGetIntoThe": "Per entrare nel mondo del lusso, niente batte la Mercedes Classe S",
+    "theFamousMercedesV": "L'immancabile Mercedes Classe V, per viaggiare in gruppo o con molti bagagli"
+  },
+  "booking": {
+    "privateDriverOnlineBooking": "Prenota online il tuo autista privato"
+  },
+  "contact": {
+    "whatsapp": "WhatsApp",
+    "leaveAMessageHere": "Lasciaci un messaggio"
+  },
+  "thankYou": {
+    "title": "Grazie per la tua richiesta",
+    "message": "Il tuo messaggio è stato inviato al nostro team. Un autista privato One Chauffeur prenderà in carico la tua richiesta e ti confermerà i dettagli al più presto.",
+    "urgent": "Un'urgenza o una partenza immediata?"
+  },
+  "contactForm": {
+    "submitError": "Si è verificato un errore durante l'invio del messaggio. Riprova o chiamaci direttamente.",
+    "formLabel": "Modulo di contatto",
+    "nameLabel": "Nome *",
+    "namePlaceholder": "Il tuo nome",
+    "name": "Nome",
+    "emailLabel": "E-mail *",
+    "emailPlaceholder": "La tua e-mail",
+    "email": "E-mail",
+    "phoneLabel": "Telefono *",
+    "phonePlaceholder": "Es.: +39 312 345 6789",
+    "phone": "Telefono",
+    "subjectLabel": "Oggetto della richiesta *",
+    "subject": "Oggetto della richiesta",
+    "subjectPlaceholder": "— Scegli un oggetto —",
+    "messageLabel": "Messaggio *",
+    "messagePlaceholder": "Scrivi qui il tuo messaggio...",
+    "message": "Messaggio",
+    "sending": "Invio in corso...",
+    "submit": "Invia il messaggio",
+    "subjectOptions": [
+      "Richiesta di informazioni",
+      "Richiesta di preventivo",
+      "Prenotazione"
+    ]
+  },
+  "bookingForm": {
+    "submitError": "Si è verificato un errore durante l'invio della prenotazione. Riprova o chiamaci direttamente.",
+    "formLabel": "Preventivo e prenotazione online",
+    "pickupLocationLabel": "Luogo di partenza *",
+    "pickupPlaceholder": "Es.: aeroporto CDG terminal 2E, hotel Ritz...",
+    "pickupLocation": "Luogo di partenza",
+    "dropoffDestinationLabel": "Destinazione *",
+    "dropoffPlaceholder": "Es.: Gare de Lyon, Torre Eiffel, Versailles...",
+    "dropoffDestination": "Destinazione",
+    "pickupDateLabel": "Data di partenza *",
+    "pickupDate": "Data di partenza",
+    "pickupTimeLabel": "Ora di partenza *",
+    "pickupTime": "Ora di partenza",
+    "vehicleCategoryLabel": "Categoria di veicolo *",
+    "vehicleCategory": "Categoria di veicolo",
+    "vehiclePlaceholder": "— Scegli una categoria di veicolo —",
+    "emailAddressLabel": "Indirizzo e-mail *",
+    "emailPlaceholder": "Es.: nome@azienda.it",
+    "emailAddress": "Indirizzo e-mail",
+    "phoneNumberLabel": "Numero di telefono *",
+    "phonePlaceholder": "Es.: +39 312 345 6789",
+    "phoneNumber": "Numero di telefono",
+    "message": "Dettagli o richieste particolari",
+    "messagePlaceholder": "Es.: numero di volo, seggiolino per bambini, bagagli ingombranti...",
+    "sending": "Invio della prenotazione in corso...",
+    "submit": "Richiedi un preventivo / Prenota",
+    "vehicleOptions": [
+      "Berlina (Tesla Model 3 o simile - 3 pax)",
+      "Berlina Business (Mercedes Classe E - 3 pax)",
+      "Berlina di lusso (Mercedes Classe S - 3 pax)",
+      "Van (Mercedes Classe V - 7 pax)"
+    ]
+  },
+  "jsonLd": {
+    "description": "Servizio di autista privato NCC di prestigio a Parigi e in Île-de-France: transfer per gli aeroporti CDG e Orly, stazioni ferroviarie, viaggi di lavoro e auto con autista 24/7."
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "message": "La pagina che cerchi non esiste o è stata spostata. Ecco alcuni link utili per continuare la visita.",
+    "metaTitle": "Pagina non trovata – One Chauffeur"
+  }
+}

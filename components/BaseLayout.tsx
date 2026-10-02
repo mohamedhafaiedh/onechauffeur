@@ -1,7 +1,7 @@
 import React from "react";
 import "@/app/globals.css";
 import JsonLd from "@/components/JsonLd";
-import { poppins, syne } from "@/lib/fonts";
+import { poppins, syne, tajawal } from "@/lib/fonts";
 import { LOCALES, type Lang } from "@/lib/seo";
 
 export default function BaseLayout({
@@ -17,16 +17,15 @@ export default function BaseLayout({
     <html
       lang={localeInfo.code}
       dir={localeInfo.dir}
-      className={`${poppins.variable} ${syne.variable}`}
+      className={`${poppins.variable} ${syne.variable} ${tajawal.variable}`}
+      // scroll-behavior: smooth (globals.css) : Next.js le suspend pendant les changements de page,
+      // sinon la nouvelle page s'ouvre défilée sous le header
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
-      <head>
+      <body suppressHydrationWarning>
+        {/* Données structurées : Next.js recommande de les placer dans le body */}
         <JsonLd lang={lang} />
-      </head>
-      <body
-        suppressHydrationWarning
-        className="home wp-singular page-template-default page page-id-98 wp-custom-logo wp-embed-responsive wp-theme-hello-elementor wp-child-theme-hello-theme-child-master translatepress-fr_FR jkit-color-scheme hello-elementor-default elementor-default elementor-kit-9 elementor-page elementor-page-98"
-      >
         {children}
       </body>
     </html>
