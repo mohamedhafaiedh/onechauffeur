@@ -152,7 +152,12 @@ export default function HeaderBar({
         <div ref={inMenu ? undefined : langRef} className={styles.lang}>
           <LanguageSwitcher lang={lang} page={page} />
         </div>
-        {!inMenu && (
+        {inMenu ? (
+          // place réservée (invisible) : le sélecteur de langue ne bouge pas à l'ouverture du menu
+          <span className={`${styles.cta} ${styles.ghost}`} aria-hidden="true">
+            {cta.label}
+          </span>
+        ) : (
           <Link href={cta.href} className={styles.cta}>
             {cta.label}
           </Link>

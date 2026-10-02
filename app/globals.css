@@ -126,6 +126,9 @@ html {
   scroll-behavior: smooth;
   /* ancres (#confidentialite, #berline…) : le titre ne passe pas sous l'en-tête collant */
   scroll-padding-top: calc(var(--header-h) + 16px);
+  /* place de la barre de défilement toujours réservée : quand le menu plein écran bloque le défilement,
+     la page ne s'élargit pas et la croix du menu reste exactement sur le burger */
+  scrollbar-gutter: stable;
 }
 
 @media (prefers-reduced-motion: reduce) {
