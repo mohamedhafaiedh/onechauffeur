@@ -29,7 +29,6 @@ export default function Header({ lang, page, highlight = true }: HeaderProps) {
         lang={lang}
         page={page}
         nav={nav}
-        menuItems={[...nav, { href: pagePath("reservation", lang), label: labels.booking, active: isActive("reservation") }]}
         homeHref={pagePath("", lang)}
         cta={{ href: pagePath("reservation", lang), label: t.bookMyDriver }}
         phone={{ href: PHONE_HREF, label: PHONE_DISPLAY }}

@@ -33,7 +33,6 @@ export default function HeaderBar({
   lang,
   page,
   nav,
-  menuItems,
   homeHref,
   cta,
   phone,
@@ -42,7 +41,6 @@ export default function HeaderBar({
   lang: Lang;
   page: PageKey;
   nav: NavItem[];
-  menuItems: NavItem[];
   homeHref: string;
   cta: { href: string; label: string };
   phone: { href: string; label: string };
@@ -222,7 +220,8 @@ export default function HeaderBar({
         <nav className={styles.menu} aria-label={labels.menu}>
           <div className="container">
             <ul>
-              {menuItems.map((item) => (
+              {/* mêmes liens que le menu complet ; la réservation est le bouton sous la liste */}
+              {nav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
