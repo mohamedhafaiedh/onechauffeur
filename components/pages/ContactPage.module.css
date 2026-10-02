@@ -2,10 +2,10 @@
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 40px;
-  align-items: start;
+  align-items: center;
 }
 
-/* Téléphone et WhatsApp : deux blocs compacts cliquables, alignés en haut du formulaire */
+/* Téléphone et WhatsApp : deux blocs compacts cliquables, centrés verticalement à côté du formulaire */
 .channels {
   display: grid;
   gap: 16px;
