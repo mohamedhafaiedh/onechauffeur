@@ -2,25 +2,23 @@
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
   gap: 40px;
-  align-items: stretch;
+  align-items: start;
 }
 
-/* Téléphone et WhatsApp : deux grands blocs qui occupent toute la hauteur à côté du formulaire */
+/* Téléphone et WhatsApp : deux blocs compacts cliquables, alignés en haut du formulaire */
 .channels {
   display: grid;
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 16px;
   list-style: none;
 }
 
 .channel {
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 32px;
-  height: 100%;
-  padding: 36px;
+  align-items: center;
+  gap: 20px;
+  padding: 24px 28px;
+  padding-inline-end: 64px;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-white);
@@ -38,10 +36,11 @@
 
 .icon {
   display: inline-flex;
+  flex: none;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   background: var(--color-gold-soft);
   color: var(--color-gold-text);
@@ -49,13 +48,13 @@
 
 .channelText {
   display: grid;
-  gap: 6px;
+  gap: 2px;
 }
 
 .channelTitle {
   color: var(--color-black);
   font-family: var(--font-heading);
-  font-size: var(--h3);
+  font-size: 19px;
   font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.2;
@@ -64,14 +63,15 @@
 .number {
   justify-self: start;
   color: var(--color-ink);
-  font-size: 18px;
+  font-size: 16.5px;
   font-weight: 500;
 }
 
 .arrow {
   position: absolute;
-  top: 36px;
-  inset-inline-end: 36px;
+  top: 50%;
+  inset-inline-end: 28px;
+  margin-top: -11px;
   color: var(--color-gold-strong);
   transition: transform 0.4s var(--ease);
 }
@@ -126,7 +126,6 @@
   /* Tablette : les deux blocs côte à côte au-dessus du formulaire */
   .channels {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: none;
   }
 }
 
@@ -137,13 +136,13 @@
   }
 
   .channel {
-    gap: 24px;
-    padding: 26px 24px;
+    gap: 16px;
+    padding: 20px 22px;
+    padding-inline-end: 56px;
   }
 
   .arrow {
-    top: 26px;
-    inset-inline-end: 24px;
+    inset-inline-end: 22px;
   }
 
   .card {
